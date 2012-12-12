@@ -1,0 +1,140 @@
+Tclassicnim
+v7
+r1
+cCheck dependencies
+
+N/Users/drewbratcher/Desktop/Nim/../../back1.jpg
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/drewbratcher/Desktop/Nim/../../back2.jpg
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/drewbratcher/Desktop/Nim/BoardView.xib
+c000000004EFF3AC70000000000006E14
+t1325349575
+s28180
+
+N/Users/drewbratcher/Desktop/Nim/Classes/HelpView.xib
+c000000004EFF3B310000000000005F54
+t1325349681
+s24404
+
+N/Users/drewbratcher/Desktop/Nim/Classes/SettingsView.xib
+c000000004EFF3B13000000000000CE51
+t1325349651
+s52817
+
+N/Users/drewbratcher/Desktop/Nim/MainWindow.xib
+c000000004EF2094C0000000000004DF9
+t1324484940
+s19961
+
+N/Users/drewbratcher/Desktop/Nim/NimViewController.xib
+c000000004EFF3BD20000000000007808
+t1325349842
+s30728
+
+N/Users/drewbratcher/Desktop/Nim/StackSettingsView.xib
+c000000004EFF3B4F000000000000E19F
+t1325349711
+s57759
+
+N/Users/drewbratcher/Desktop/Nim/build/Debug/classicnim.app
+t2
+s0
+
+N/Users/drewbratcher/Desktop/Nim/build/Debug/classicnim.app/Contents/Info.plist
+t2
+s0
+
+N/Users/drewbratcher/Desktop/Nim/build/Debug/classicnim.app/Contents/PkgInfo
+t2
+s0
+
+N/Users/drewbratcher/Desktop/Nim/build/Debug/classicnim.app/Contents/Resources/BoardView.nib
+t2
+s0
+
+N/Users/drewbratcher/Desktop/Nim/build/Debug/classicnim.app/Contents/Resources/HelpView.nib
+t2
+s0
+
+N/Users/drewbratcher/Desktop/Nim/build/Debug/classicnim.app/Contents/Resources/MainWindow.nib
+t2
+s0
+
+N/Users/drewbratcher/Desktop/Nim/build/Debug/classicnim.app/Contents/Resources/NimViewController.nib
+t2
+s0
+
+N/Users/drewbratcher/Desktop/Nim/build/Debug/classicnim.app/Contents/Resources/SettingsView.nib
+t2
+s0
+
+N/Users/drewbratcher/Desktop/Nim/build/Debug/classicnim.app/Contents/Resources/StackSettingsView.nib
+t2
+s0
+
+N/Users/drewbratcher/Desktop/Nim/build/Debug/classicnim.app/Contents/Resources/back1.jpg
+t2
+s0
+
+N/Users/drewbratcher/Desktop/Nim/build/Debug/classicnim.app/Contents/Resources/back2.jpg
+t2
+s0
+
+N/Users/drewbratcher/Desktop/Nim/build/Debug/classicnim.app/Contents/Resources/icon.png
+t2
+s0
+
+N/Users/drewbratcher/Desktop/Nim/icon.png
+c000000004F32CAD40000000000001C68
+t1328728788
+s7272
+
+Nclassicnim-Info.plist
+c000000004F32CBEE0000000000000396
+t1328729070
+s918
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies358195408#358195408#0(63"[BEROR]error: There is no SDK with the name or path 'iphoneos'1(4@55"error: There is no SDK with the name or path 'iphoneos'358195408#18446744073709551615#0#0(1@0"0(0#1#0"7947009927035180032#0"0#
+
+CCompileXIB /Users/drewbratcher/Desktop/Nim/BoardView.xib
+r0
+
+CCompileXIB /Users/drewbratcher/Desktop/Nim/Classes/HelpView.xib
+r0
+
+CCompileXIB /Users/drewbratcher/Desktop/Nim/Classes/SettingsView.xib
+r0
+
+CCompileXIB /Users/drewbratcher/Desktop/Nim/MainWindow.xib
+r0
+
+CCompileXIB /Users/drewbratcher/Desktop/Nim/NimViewController.xib
+r0
+
+CCompileXIB /Users/drewbratcher/Desktop/Nim/StackSettingsView.xib
+r0
+
+CCpResource build/Debug/classicnim.app/Contents/Resources/back1.jpg ../../back1.jpg
+r0
+
+CCpResource build/Debug/classicnim.app/Contents/Resources/back2.jpg ../../back2.jpg
+r0
+
+CCpResource build/Debug/classicnim.app/Contents/Resources/icon.png icon.png
+r0
+
+CProcessInfoPlistFile /Users/drewbratcher/Desktop/Nim/build/Debug/classicnim.app/Contents/Info.plist classicnim-Info.plist
+r0
+
+CTouch /Users/drewbratcher/Desktop/Nim/build/Debug/classicnim.app
+r0
+

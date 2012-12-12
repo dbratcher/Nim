@@ -1,0 +1,760 @@
+Tclassicnim
+v7
+r0
+t352136501.146505
+cCheck dependencies
+cCpResource build/Debug-iphoneos/classicnim.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist
+cProcessInfoPlistFile /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/Info.plist classicnim-Info.plist
+cCompileXIB /Users/drew/Desktop/Nim/MainWindow.xib
+cCompileXIB /Users/drew/Desktop/Nim/NimViewController.xib
+cCompileXIB /Users/drew/Desktop/Nim/Classes/HelpView.xib
+cCompileXIB /Users/drew/Desktop/Nim/Classes/SettingsView.xib
+cCompileXIB /Users/drew/Desktop/Nim/BoardView.xib
+cCompileXIB /Users/drew/Desktop/Nim/StackSettingsView.xib
+cCpResource build/Debug-iphoneos/classicnim.app/back1.jpg ../../back1.jpg
+cCpResource build/Debug-iphoneos/classicnim.app/back2.jpg ../../back2.jpg
+cCopyPNGFile /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/icon.png icon.png
+cProcessPCH /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/classicnim_Prefix-cplmedjartcduibcwscmejzaeetu/classicnim_Prefix.pch.gch classicnim_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
+cProcessPCH /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/classicnim_Prefix-cjyorciundfwpagtezoudigkdzpz/classicnim_Prefix.pch.gch classicnim_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/main.o /Users/drew/Desktop/Nim/main.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/NimAppDelegate.o /Users/drew/Desktop/Nim/Classes/NimAppDelegate.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/NimViewController.o /Users/drew/Desktop/Nim/Classes/NimViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/HelpViewController.o /Users/drew/Desktop/Nim/Classes/HelpViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/SettingsViewController.o /Users/drew/Desktop/Nim/Classes/SettingsViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/BoardViewController.o /Users/drew/Desktop/Nim/Classes/BoardViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/StackSettingsViewController.o /Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/main.o /Users/drew/Desktop/Nim/main.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/classicnim normal armv6
+cCompileC build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/NimAppDelegate.o /Users/drew/Desktop/Nim/Classes/NimAppDelegate.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/NimViewController.o /Users/drew/Desktop/Nim/Classes/NimViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/HelpViewController.o /Users/drew/Desktop/Nim/Classes/HelpViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/SettingsViewController.o /Users/drew/Desktop/Nim/Classes/SettingsViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/BoardViewController.o /Users/drew/Desktop/Nim/Classes/BoardViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/StackSettingsViewController.o /Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/classicnim normal armv7
+cCreateUniversalBinary /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/classicnim normal "armv6 armv7"
+cGenerateDSYMFile /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app.dSYM /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/classicnim
+cProcessProductPackaging "/Users/drew/Library/MobileDevice/Provisioning Profiles/515FABE5-F81D-4036-8A71-4A78428BBB8C.mobileprovision" /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/embedded.mobileprovision
+cTouch /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app
+cProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim.xcent
+cCodeSign /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk
+c000000004D71260D0000000000000110
+t1299260941
+s272
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist
+c000000004CB3DFCF00000000000001A7
+t1286856655
+s423
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist
+c000000004CB3DFCF00000000000001E5
+t1286856655
+s485
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004CC10EF500000000003532B0
+t1287720693
+s3486384
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004CC10F4700000000003E1F20
+t1287720775
+s4071200
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004CC10F1C0000000000001466
+t1287720732
+s5222
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004CC11AE60000000000000AA1
+t1287723750
+s2721
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004CC11B750000000000C769F0
+t1287723893
+s13068784
+
+N/Users/drew/Desktop/Nim/../../back1.jpg
+c000000004EFF39B50000000000025C0A
+t1325349301
+s154634
+
+N/Users/drew/Desktop/Nim/../../back2.jpg
+c000000004EFF39CE000000000002247C
+t1325349326
+s140412
+
+N/Users/drew/Desktop/Nim/BoardView.xib
+c000000004EFF3AC70000000000006E14
+t1325349575
+s28180
+
+N/Users/drew/Desktop/Nim/Classes/BoardViewController.h
+c000000004EF6387E000000000000028A
+t1324759166
+s650
+i<UIKit/UIKit.h>
+
+N/Users/drew/Desktop/Nim/Classes/BoardViewController.m
+c000000004EF768E500000000000031E4
+t1324837093
+s12772
+i"BoardViewController.h"
+i"HelpViewController.h"
+
+N/Users/drew/Desktop/Nim/Classes/HelpView.xib
+c000000004EFF3B310000000000005F54
+t1325349681
+s24404
+
+N/Users/drew/Desktop/Nim/Classes/HelpViewController.h
+c000000004EF2181B0000000000000106
+t1324488731
+s262
+i<UIKit/UIKit.h>
+
+N/Users/drew/Desktop/Nim/Classes/HelpViewController.m
+c000000004EF218220000000000000667
+t1324488738
+s1639
+i"HelpViewController.h"
+
+N/Users/drew/Desktop/Nim/Classes/NimAppDelegate.h
+c000000004EF3DD5400000000000001BF
+t1324604756
+s447
+i<UIKit/UIKit.h>
+
+N/Users/drew/Desktop/Nim/Classes/NimAppDelegate.m
+c000000004EF7640C0000000000000D5E
+t1324835852
+s3422
+i"NimAppDelegate.h"
+i"NimViewController.h"
+
+N/Users/drew/Desktop/Nim/Classes/NimViewController.h
+c000000004EF21C590000000000000164
+t1324489817
+s356
+i<UIKit/UIKit.h>
+
+N/Users/drew/Desktop/Nim/Classes/NimViewController.m
+c000000004EF625C00000000000000A0F
+t1324754368
+s2575
+i"NimViewController.h"
+i"HelpViewController.h"
+i"SettingsViewController.h"
+i"BoardViewController.h"
+
+N/Users/drew/Desktop/Nim/Classes/SettingsView.xib
+c000000004EFF3B13000000000000CE51
+t1325349651
+s52817
+
+N/Users/drew/Desktop/Nim/Classes/SettingsViewController.h
+c000000004EF64797000000000000043E
+t1324763031
+s1086
+i<UIKit/UIKit.h>
+
+N/Users/drew/Desktop/Nim/Classes/SettingsViewController.m
+c000000004EF648B90000000000000F8C
+t1324763321
+s3980
+i"SettingsViewController.h"
+i"StackSettingsViewController.h"
+
+N/Users/drew/Desktop/Nim/Classes/StackSettingsViewController.h
+c000000004EF649F3000000000000048B
+t1324763635
+s1163
+i<UIKit/UIKit.h>
+
+N/Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m
+c000000004EF64BF30000000000001014
+t1324764147
+s4116
+i"StackSettingsViewController.h"
+
+N/Users/drew/Desktop/Nim/MainWindow.xib
+c000000004EF2094C0000000000004DF9
+t1324484940
+s19961
+
+N/Users/drew/Desktop/Nim/NimViewController.xib
+c000000004EFF3BD20000000000007808
+t1325349842
+s30728
+
+N/Users/drew/Desktop/Nim/StackSettingsView.xib
+c000000004EFF3B4F000000000000E19F
+t1325349711
+s57759
+
+N/Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app
+t1330443701
+s612
+
+N/Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app.dSYM
+t1330443700
+s102
+
+N/Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/BoardView.nib
+t1330443697
+s2514
+
+N/Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/HelpView.nib
+t1330443696
+s2369
+
+N/Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/Info.plist
+t1330443694
+s828
+
+N/Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/MainWindow.nib
+t1330443695
+s1115
+
+N/Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/NimViewController.nib
+t1330443695
+s2840
+
+N/Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/PkgInfo
+t1330443695
+s8
+
+N/Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/ResourceRules.plist
+t1330443695
+s485
+
+N/Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/SettingsView.nib
+t1330443696
+s4641
+
+N/Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/StackSettingsView.nib
+t1330443697
+s4922
+
+N/Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/back1.jpg
+t1330443697
+s154634
+
+N/Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/back2.jpg
+t1330443697
+s140412
+
+N/Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/classicnim
+t1330443700
+s118256
+
+N/Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/embedded.mobileprovision
+t1330443700
+s7306
+
+N/Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/icon.png
+t1330443698
+s9222
+
+N/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/BoardViewController.o
+t1330443699
+s73448
+
+N/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/HelpViewController.o
+t1330443699
+s38092
+
+N/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/NimAppDelegate.o
+t1330443699
+s52900
+
+N/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/NimViewController.o
+t1330443699
+s43832
+
+N/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/SettingsViewController.o
+t1330443699
+s53452
+
+N/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/StackSettingsViewController.o
+t1330443699
+s55504
+
+N/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/classicnim
+t1330443700
+s56976
+
+N/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/classicnim.LinkFileList
+c000000004F4CF5AE000000000000034A
+t1330443694
+s842
+
+N/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/main.o
+t1330443699
+s6416
+
+N/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/BoardViewController.o
+t1330443700
+s72460
+
+N/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/HelpViewController.o
+t1330443700
+s38056
+
+N/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/NimAppDelegate.o
+t1330443699
+s52784
+
+N/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/NimViewController.o
+t1330443700
+s43760
+
+N/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/SettingsViewController.o
+t1330443700
+s52788
+
+N/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/StackSettingsViewController.o
+t1330443700
+s54744
+
+N/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/classicnim
+t1330443700
+s56816
+
+N/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/classicnim.LinkFileList
+c000000004F4CF5AE000000000000034A
+t1330443694
+s842
+
+N/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/main.o
+t1330443699
+s6400
+
+N/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim.xcent
+t1330443700
+s428
+
+N/Users/drew/Desktop/Nim/classicnim_Prefix.pch
+c000000004EF2094C00000000000000AF
+t1324484940
+s175
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/drew/Desktop/Nim/icon.png
+c000000004F32CAD40000000000001C68
+t1328728788
+s7272
+
+N/Users/drew/Desktop/Nim/main.m
+c000000004EF2094C000000000000015E
+t1324484940
+s350
+i<UIKit/UIKit.h>
+
+N/Users/drew/Library/MobileDevice/Provisioning Profiles/515FABE5-F81D-4036-8A71-4A78428BBB8C.mobileprovision
+c000000004EF76A800000000000001C8A
+t1324837504
+s7306
+
+N/var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/classicnim_Prefix-cjyorciundfwpagtezoudigkdzpz/classicnim_Prefix.pch.gch
+t1330443699
+s10446552
+
+N/var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/classicnim_Prefix-cplmedjartcduibcwscmejzaeetu/classicnim_Prefix.pch.gch
+t1330443699
+s9983704
+
+Nclassicnim-Info.plist
+c000000004F32CBEE0000000000000396
+t1328729070
+s918
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies352136494#352136494#0(0"0(0#1#0"3343187568374212096#0"0#
+
+CCodeSign /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app
+s352136500.792802
+e352136501.146456
+r1
+xCodeSign
+x/Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app
+lSLF07#2@44"CodeSign build/Debug-iphoneos/classicnim.app352136500#352136501#0(0"0(0#0#59"/Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app8603615872#604"    cd /Users/drew/Desktop/Nim    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv _CODESIGN_ALLOCATE_ /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate    /usr/bin/codesign -f -s "iPhone Developer: Drew Bratcher (9H9FYTH7E4)" --resource-rules=/Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/ResourceRules.plist --entitlements /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim.xcent /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app0#
+
+CCompileC build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/BoardViewController.o /Users/drew/Desktop/Nim/Classes/BoardViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s352136499.668377
+e352136499.820176
+r1
+xCompileC
+xbuild/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/BoardViewController.o
+x/Users/drew/Desktop/Nim/Classes/BoardViewController.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@61"Compile /Users/drew/Desktop/Nim/Classes/BoardViewController.m352136499#352136499#0(0"0(0#0#53"/Users/drew/Desktop/Nim/Classes/BoardViewController.m8606092224#1657"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Debug-iphoneos -I/Users/drew/Desktop/Nim/build/Debug-iphoneos/include -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources/armv6 -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/classicnim_Prefix-cplmedjartcduibcwscmejzaeetu/classicnim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/BoardViewController.m -o /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/BoardViewController.o0#
+
+CCompileC build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/HelpViewController.o /Users/drew/Desktop/Nim/Classes/HelpViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s352136499.589563
+e352136499.668286
+r1
+xCompileC
+xbuild/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/HelpViewController.o
+x/Users/drew/Desktop/Nim/Classes/HelpViewController.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@60"Compile /Users/drew/Desktop/Nim/Classes/HelpViewController.m352136499#352136499#0(0"0(0#0#52"/Users/drew/Desktop/Nim/Classes/HelpViewController.m8604106944#1655"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Debug-iphoneos -I/Users/drew/Desktop/Nim/build/Debug-iphoneos/include -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources/armv6 -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/classicnim_Prefix-cplmedjartcduibcwscmejzaeetu/classicnim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/HelpViewController.m -o /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/HelpViewController.o0#
+
+CCompileC build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/NimAppDelegate.o /Users/drew/Desktop/Nim/Classes/NimAppDelegate.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s352136499.449087
+e352136499.589467
+r1
+xCompileC
+xbuild/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/NimAppDelegate.o
+x/Users/drew/Desktop/Nim/Classes/NimAppDelegate.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@56"Compile /Users/drew/Desktop/Nim/Classes/NimAppDelegate.m352136499#352136499#0(0"0(0#0#48"/Users/drew/Desktop/Nim/Classes/NimAppDelegate.m8603377376#1647"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Debug-iphoneos -I/Users/drew/Desktop/Nim/build/Debug-iphoneos/include -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources/armv6 -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/classicnim_Prefix-cplmedjartcduibcwscmejzaeetu/classicnim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/NimAppDelegate.m -o /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/NimAppDelegate.o0#
+
+CCompileC build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/NimViewController.o /Users/drew/Desktop/Nim/Classes/NimViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s352136499.538400
+e352136499.619593
+r1
+xCompileC
+xbuild/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/NimViewController.o
+x/Users/drew/Desktop/Nim/Classes/NimViewController.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@59"Compile /Users/drew/Desktop/Nim/Classes/NimViewController.m352136499#352136499#0(0"0(0#0#51"/Users/drew/Desktop/Nim/Classes/NimViewController.m8604499488#1653"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Debug-iphoneos -I/Users/drew/Desktop/Nim/build/Debug-iphoneos/include -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources/armv6 -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/classicnim_Prefix-cplmedjartcduibcwscmejzaeetu/classicnim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/NimViewController.m -o /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/NimViewController.o0#
+
+CCompileC build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/SettingsViewController.o /Users/drew/Desktop/Nim/Classes/SettingsViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s352136499.619714
+e352136499.746863
+r1
+xCompileC
+xbuild/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/SettingsViewController.o
+x/Users/drew/Desktop/Nim/Classes/SettingsViewController.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@64"Compile /Users/drew/Desktop/Nim/Classes/SettingsViewController.m352136499#352136499#0(0"0(0#0#56"/Users/drew/Desktop/Nim/Classes/SettingsViewController.m8601927104#1663"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Debug-iphoneos -I/Users/drew/Desktop/Nim/build/Debug-iphoneos/include -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources/armv6 -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/classicnim_Prefix-cplmedjartcduibcwscmejzaeetu/classicnim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/SettingsViewController.m -o /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/SettingsViewController.o0#
+
+CCompileC build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/StackSettingsViewController.o /Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s352136499.746951
+e352136499.855735
+r1
+xCompileC
+xbuild/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/StackSettingsViewController.o
+x/Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@69"Compile /Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m352136499#352136499#0(0"0(0#0#61"/Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m8605778976#1673"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Debug-iphoneos -I/Users/drew/Desktop/Nim/build/Debug-iphoneos/include -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources/armv6 -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/classicnim_Prefix-cplmedjartcduibcwscmejzaeetu/classicnim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m -o /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/StackSettingsViewController.o0#
+
+CCompileC build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/main.o /Users/drew/Desktop/Nim/main.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s352136499.447903
+e352136499.538309
+r1
+xCompileC
+xbuild/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/main.o
+x/Users/drew/Desktop/Nim/main.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@38"Compile /Users/drew/Desktop/Nim/main.m352136499#352136499#0(0"0(0#0#30"/Users/drew/Desktop/Nim/main.m8604099232#1619"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Debug-iphoneos -I/Users/drew/Desktop/Nim/build/Debug-iphoneos/include -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources/armv6 -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/classicnim_Prefix-cplmedjartcduibcwscmejzaeetu/classicnim_Prefix.pch -c /Users/drew/Desktop/Nim/main.m -o /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/main.o0#
+
+CCompileC build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/BoardViewController.o /Users/drew/Desktop/Nim/Classes/BoardViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s352136500.183860
+e352136500.333834
+r1
+xCompileC
+xbuild/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/BoardViewController.o
+x/Users/drew/Desktop/Nim/Classes/BoardViewController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@61"Compile /Users/drew/Desktop/Nim/Classes/BoardViewController.m352136500#352136500#0(0"0(0#0#53"/Users/drew/Desktop/Nim/Classes/BoardViewController.m8602237920#1657"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Debug-iphoneos -I/Users/drew/Desktop/Nim/build/Debug-iphoneos/include -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources/armv7 -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/classicnim_Prefix-cjyorciundfwpagtezoudigkdzpz/classicnim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/BoardViewController.m -o /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/BoardViewController.o0#
+
+CCompileC build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/HelpViewController.o /Users/drew/Desktop/Nim/Classes/HelpViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s352136500.011242
+e352136500.068334
+r1
+xCompileC
+xbuild/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/HelpViewController.o
+x/Users/drew/Desktop/Nim/Classes/HelpViewController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@60"Compile /Users/drew/Desktop/Nim/Classes/HelpViewController.m352136500#352136500#0(0"0(0#0#52"/Users/drew/Desktop/Nim/Classes/HelpViewController.m8603513568#1655"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Debug-iphoneos -I/Users/drew/Desktop/Nim/build/Debug-iphoneos/include -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources/armv7 -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/classicnim_Prefix-cjyorciundfwpagtezoudigkdzpz/classicnim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/HelpViewController.m -o /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/HelpViewController.o0#
+
+CCompileC build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/NimAppDelegate.o /Users/drew/Desktop/Nim/Classes/NimAppDelegate.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s352136499.872599
+e352136499.945235
+r1
+xCompileC
+xbuild/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/NimAppDelegate.o
+x/Users/drew/Desktop/Nim/Classes/NimAppDelegate.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@56"Compile /Users/drew/Desktop/Nim/Classes/NimAppDelegate.m352136499#352136499#0(0"0(0#0#48"/Users/drew/Desktop/Nim/Classes/NimAppDelegate.m8602696320#1647"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Debug-iphoneos -I/Users/drew/Desktop/Nim/build/Debug-iphoneos/include -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources/armv7 -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/classicnim_Prefix-cjyorciundfwpagtezoudigkdzpz/classicnim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/NimAppDelegate.m -o /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/NimAppDelegate.o0#
+
+CCompileC build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/NimViewController.o /Users/drew/Desktop/Nim/Classes/NimViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s352136499.945326
+e352136500.011153
+r1
+xCompileC
+xbuild/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/NimViewController.o
+x/Users/drew/Desktop/Nim/Classes/NimViewController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@59"Compile /Users/drew/Desktop/Nim/Classes/NimViewController.m352136499#352136500#0(0"0(0#0#51"/Users/drew/Desktop/Nim/Classes/NimViewController.m8604377504#1653"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Debug-iphoneos -I/Users/drew/Desktop/Nim/build/Debug-iphoneos/include -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources/armv7 -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/classicnim_Prefix-cjyorciundfwpagtezoudigkdzpz/classicnim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/NimViewController.m -o /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/NimViewController.o0#
+
+CCompileC build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/SettingsViewController.o /Users/drew/Desktop/Nim/Classes/SettingsViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s352136500.068426
+e352136500.183608
+r1
+xCompileC
+xbuild/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/SettingsViewController.o
+x/Users/drew/Desktop/Nim/Classes/SettingsViewController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@64"Compile /Users/drew/Desktop/Nim/Classes/SettingsViewController.m352136500#352136500#0(0"0(0#0#56"/Users/drew/Desktop/Nim/Classes/SettingsViewController.m8600095424#1663"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Debug-iphoneos -I/Users/drew/Desktop/Nim/build/Debug-iphoneos/include -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources/armv7 -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/classicnim_Prefix-cjyorciundfwpagtezoudigkdzpz/classicnim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/SettingsViewController.m -o /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/SettingsViewController.o0#
+
+CCompileC build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/StackSettingsViewController.o /Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s352136500.333923
+e352136500.413423
+r1
+xCompileC
+xbuild/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/StackSettingsViewController.o
+x/Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@69"Compile /Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m352136500#352136500#0(0"0(0#0#61"/Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m8602795008#1673"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Debug-iphoneos -I/Users/drew/Desktop/Nim/build/Debug-iphoneos/include -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources/armv7 -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/classicnim_Prefix-cjyorciundfwpagtezoudigkdzpz/classicnim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m -o /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/StackSettingsViewController.o0#
+
+CCompileC build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/main.o /Users/drew/Desktop/Nim/main.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s352136499.820281
+e352136499.872509
+r1
+xCompileC
+xbuild/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/main.o
+x/Users/drew/Desktop/Nim/main.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@38"Compile /Users/drew/Desktop/Nim/main.m352136499#352136499#0(0"0(0#0#30"/Users/drew/Desktop/Nim/main.m8603840192#1619"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Debug-iphoneos -I/Users/drew/Desktop/Nim/build/Debug-iphoneos/include -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources/armv7 -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/classicnim_Prefix-cjyorciundfwpagtezoudigkdzpz/classicnim_Prefix.pch -c /Users/drew/Desktop/Nim/main.m -o /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/main.o0#
+
+CCompileXIB /Users/drew/Desktop/Nim/BoardView.xib
+s352136496.542515
+e352136497.337064
+r1
+xCompileXIB
+x/Users/drew/Desktop/Nim/BoardView.xib
+oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
+lSLF07#2@24"CompileXIB BoardView.xib352136496#352136497#0(84"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#37"/Users/drew/Desktop/Nim/BoardView.xib8602211744#498"    cd /Users/drew/Desktop/Nim    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/BoardView.nib /Users/drew/Desktop/Nim/BoardView.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk0#
+
+CCompileXIB /Users/drew/Desktop/Nim/Classes/HelpView.xib
+s352136495.788591
+e352136496.542357
+r1
+xCompileXIB
+x/Users/drew/Desktop/Nim/Classes/HelpView.xib
+oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
+lSLF07#2@31"CompileXIB Classes/HelpView.xib352136495#352136496#0(84"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#44"/Users/drew/Desktop/Nim/Classes/HelpView.xib8606082496#504"    cd /Users/drew/Desktop/Nim    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/HelpView.nib /Users/drew/Desktop/Nim/Classes/HelpView.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk0#
+
+CCompileXIB /Users/drew/Desktop/Nim/Classes/SettingsView.xib
+s352136495.881955
+e352136496.639109
+r1
+xCompileXIB
+x/Users/drew/Desktop/Nim/Classes/SettingsView.xib
+oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
+lSLF07#2@35"CompileXIB Classes/SettingsView.xib352136495#352136496#0(84"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#48"/Users/drew/Desktop/Nim/Classes/SettingsView.xib8605895744#512"    cd /Users/drew/Desktop/Nim    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/SettingsView.nib /Users/drew/Desktop/Nim/Classes/SettingsView.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk0#
+
+CCompileXIB /Users/drew/Desktop/Nim/MainWindow.xib
+s352136495.037190
+e352136495.788488
+r1
+xCompileXIB
+x/Users/drew/Desktop/Nim/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib352136495#352136495#0(0"0(0#0#38"/Users/drew/Desktop/Nim/MainWindow.xib8603904224#500"    cd /Users/drew/Desktop/Nim    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/MainWindow.nib /Users/drew/Desktop/Nim/MainWindow.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk0#
+
+CCompileXIB /Users/drew/Desktop/Nim/NimViewController.xib
+s352136495.038078
+e352136495.881875
+r1
+xCompileXIB
+x/Users/drew/Desktop/Nim/NimViewController.xib
+oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
+lSLF07#2@32"CompileXIB NimViewController.xib352136495#352136495#0(84"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#45"/Users/drew/Desktop/Nim/NimViewController.xib8603839424#514"    cd /Users/drew/Desktop/Nim    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/NimViewController.nib /Users/drew/Desktop/Nim/NimViewController.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk0#
+
+CCompileXIB /Users/drew/Desktop/Nim/StackSettingsView.xib
+s352136496.639189
+e352136497.561378
+r1
+xCompileXIB
+x/Users/drew/Desktop/Nim/StackSettingsView.xib
+oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
+lSLF07#2@32"CompileXIB StackSettingsView.xib352136496#352136497#0(84"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#45"/Users/drew/Desktop/Nim/StackSettingsView.xib8606146528#514"    cd /Users/drew/Desktop/Nim    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/StackSettingsView.nib /Users/drew/Desktop/Nim/StackSettingsView.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk0#
+
+CCopyPNGFile /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/icon.png icon.png
+s352136497.338267
+e352136498.320263
+r1
+xCopyPNGFile
+x/Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/icon.png
+xicon.png
+lSLF07#2@65"CopyPNGFile build/Debug-iphoneos/classicnim.app/icon.png icon.png352136497#352136498#0(0"0(0#0#32"/Users/drew/Desktop/Nim/icon.png8603909888#514"    cd /Users/drew/Desktop/Nim    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/drew/Desktop/Nim/icon.png /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/icon.png0#
+
+CCpResource build/Debug-iphoneos/classicnim.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist
+s352136494.957581
+e352136495.037099
+r1
+xCpResource
+xbuild/Debug-iphoneos/classicnim.app/ResourceRules.plist
+x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist
+lSLF07#2@94"Copy /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist352136494#352136495#0(0"0(0#0#89"/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist5423551314508738560#467"    cd /Users/drew/Desktop/Nim    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app0#
+
+CCpResource build/Debug-iphoneos/classicnim.app/back1.jpg ../../back1.jpg
+s352136497.337146
+e352136497.519368
+r1
+xCpResource
+xbuild/Debug-iphoneos/classicnim.app/back1.jpg
+x../../back1.jpg
+lSLF07#2@20"Copy ../../back1.jpg352136497#352136497#0(0"0(0#0#39"/Users/drew/Desktop/Nim/../../back1.jpg8604561920#417"    cd /Users/drew/Desktop/Nim    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/drew/Desktop/Nim/../../back1.jpg /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app0#
+
+CCpResource build/Debug-iphoneos/classicnim.app/back2.jpg ../../back2.jpg
+s352136497.337768
+e352136497.519808
+r1
+xCpResource
+xbuild/Debug-iphoneos/classicnim.app/back2.jpg
+x../../back2.jpg
+lSLF07#2@20"Copy ../../back2.jpg352136497#352136497#0(0"0(0#0#39"/Users/drew/Desktop/Nim/../../back2.jpg8604232320#417"    cd /Users/drew/Desktop/Nim    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/drew/Desktop/Nim/../../back2.jpg /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app0#
+
+CCreateUniversalBinary /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/classicnim normal "armv6 armv7"
+s352136500.591948
+e352136500.632558
+r1
+xCreateUniversalBinary
+x/Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/classicnim
+xnormal
+xarmv6 armv7
+lSLF07#2@89"CreateUniversalBinary build/Debug-iphoneos/classicnim.app/classicnim normal "armv6 armv7"352136500#352136500#0(0"0(0#0#35"/Users/drew/Desktop/Nim/armv6 armv78603101472#482"    cd /Users/drew/Desktop/Nim    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/lipo -create /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/classicnim /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/classicnim -output /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/classicnim0#
+
+CGenerateDSYMFile /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app.dSYM /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/classicnim
+s352136500.632636
+e352136500.723471
+r1
+xGenerateDSYMFile
+x/Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app.dSYM
+x/Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/classicnim
+lSLF07#2@104"GenerateDSYMFile build/Debug-iphoneos/classicnim.app.dSYM build/Debug-iphoneos/classicnim.app/classicnim352136500#352136500#0(0"0(0#0#70"/Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/classicnim8601967392#326"    cd /Users/drew/Desktop/Nim    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/classicnim -o /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app.dSYM0#
+
+CLd /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/classicnim normal armv6
+s352136499.855922
+e352136500.377296
+r1
+xLd
+x/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/classicnim
+xnormal
+xarmv6
+lSLF07#2@115"Link /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/classicnim352136499#352136500#0(0"0(0#0#0"8603340768#802"    cd /Users/drew/Desktop/Nim    setenv IPHONEOS_DEPLOYMENT_TARGET 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv6 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -L/Users/drew/Desktop/Nim/build/Debug-iphoneos -F/Users/drew/Desktop/Nim/build/Debug-iphoneos -filelist /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/classicnim.LinkFileList -dead_strip -miphoneos-version-min=4.2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv6/classicnim0#
+
+CLd /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/classicnim normal armv7
+s352136500.413506
+e352136500.591765
+r1
+xLd
+x/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/classicnim
+xnormal
+xarmv7
+lSLF07#2@115"Link /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/classicnim352136500#352136500#0(0"0(0#0#0"8602490432#802"    cd /Users/drew/Desktop/Nim    setenv IPHONEOS_DEPLOYMENT_TARGET 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv7 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -L/Users/drew/Desktop/Nim/build/Debug-iphoneos -F/Users/drew/Desktop/Nim/build/Debug-iphoneos -filelist /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/classicnim.LinkFileList -dead_strip -miphoneos-version-min=4.2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/Objects-normal/armv7/classicnim0#
+
+CProcessInfoPlistFile /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/Info.plist classicnim-Info.plist
+s352136494.995565
+e352136495.013687
+r1
+xProcessInfoPlistFile
+x/Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/Info.plist
+xclassicnim-Info.plist
+lSLF07#2@29"Process classicnim-Info.plist352136494#352136495#0(0"0(0#0#45"/Users/drew/Desktop/Nim/classicnim-Info.plist8604120416#514"    cd /Users/drew/Desktop/Nim    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility classicnim-Info.plist -genpkginfo /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -resourcerulesfile /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/ResourceRules.plist -o /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/Info.plist0#
+
+CProcessPCH /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/classicnim_Prefix-cjyorciundfwpagtezoudigkdzpz/classicnim_Prefix.pch.gch classicnim_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
+s352136498.321339
+e352136499.447787
+r1
+xProcessPCH
+x/var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/classicnim_Prefix-cjyorciundfwpagtezoudigkdzpz/classicnim_Prefix.pch.gch
+xclassicnim_Prefix.pch
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@32"Precompile classicnim_Prefix.pch352136498#352136499#0(0"0(0#0#45"/Users/drew/Desktop/Nim/classicnim_Prefix.pch8603259648#1529"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Debug-iphoneos -I/Users/drew/Desktop/Nim/build/Debug-iphoneos/include -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources/armv7 -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources -c /Users/drew/Desktop/Nim/classicnim_Prefix.pch -o /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/classicnim_Prefix-cjyorciundfwpagtezoudigkdzpz/classicnim_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/classicnim_Prefix-cplmedjartcduibcwscmejzaeetu/classicnim_Prefix.pch.gch classicnim_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
+s352136498.320538
+e352136499.447444
+r1
+xProcessPCH
+x/var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/classicnim_Prefix-cplmedjartcduibcwscmejzaeetu/classicnim_Prefix.pch.gch
+xclassicnim_Prefix.pch
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@32"Precompile classicnim_Prefix.pch352136498#352136499#0(0"0(0#0#45"/Users/drew/Desktop/Nim/classicnim_Prefix.pch8604381152#1529"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Debug-iphoneos -I/Users/drew/Desktop/Nim/build/Debug-iphoneos/include -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources/armv6 -I/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/DerivedSources -c /Users/drew/Desktop/Nim/classicnim_Prefix.pch -o /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/classicnim_Prefix-cplmedjartcduibcwscmejzaeetu/classicnim_Prefix.pch.gch0#
+
+CProcessProductPackaging "/Users/drew/Library/MobileDevice/Provisioning Profiles/515FABE5-F81D-4036-8A71-4A78428BBB8C.mobileprovision" /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/embedded.mobileprovision
+s352136500.723559
+e352136500.724857
+r1
+xProcessProductPackaging
+x/Users/drew/Library/MobileDevice/Provisioning Profiles/515FABE5-F81D-4036-8A71-4A78428BBB8C.mobileprovision
+x/Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/embedded.mobileprovision
+lSLF07#2@194"ProcessProductPackaging "/Users/drew/Library/MobileDevice/Provisioning Profiles/515FABE5-F81D-4036-8A71-4A78428BBB8C.mobileprovision" build/Debug-iphoneos/classicnim.app/embedded.mobileprovision352136500#352136500#0(0"0(0#0#84"/Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/embedded.mobileprovision8604424736#395"    cd /Users/drew/Desktop/Nim    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> "/Users/drew/Library/MobileDevice/Provisioning Profiles/515FABE5-F81D-4036-8A71-4A78428BBB8C.mobileprovision" -o /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app/embedded.mobileprovision0#
+
+CProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim.xcent
+s352136500.765602
+e352136500.792627
+r1
+xProcessProductPackaging
+x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist
+x/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim.xcent
+lSLF07#2@184"ProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim.xcent352136500#352136500#0(0"0(0#0#95"/Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim.xcent8603791040#411"    cd /Users/drew/Desktop/Nim    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist -entitlements -format xml -o /Users/drew/Desktop/Nim/build/classicnim.build/Debug-iphoneos/classicnim.build/classicnim.xcent0#
+
+CTouch /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app
+s352136500.724913
+e352136500.765490
+r1
+xTouch
+x/Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app
+lSLF07#2@65"Touch /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app352136500#352136500#0(0"0(0#0#0"8604202016#237"    cd /Users/drew/Desktop/Nim    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/drew/Desktop/Nim/build/Debug-iphoneos/classicnim.app0#
+

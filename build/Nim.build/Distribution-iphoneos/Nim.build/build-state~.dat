@@ -1,0 +1,764 @@
+TNim
+v7
+r0
+t350419997.485706
+cCheck dependencies
+cCpResource build/Distribution-iphoneos/Nim.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist
+cProcessInfoPlistFile /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/Info.plist Nim-Info.plist
+cCompileXIB /Users/drew/Desktop/Nim/MainWindow.xib
+cCompileXIB /Users/drew/Desktop/Nim/NimViewController.xib
+cCompileXIB /Users/drew/Desktop/Nim/Classes/HelpView.xib
+cCompileXIB /Users/drew/Desktop/Nim/Classes/SettingsView.xib
+cCompileXIB /Users/drew/Desktop/Nim/BoardView.xib
+cCompileXIB /Users/drew/Desktop/Nim/StackSettingsView.xib
+cCpResource build/Distribution-iphoneos/Nim.app/back1.jpg ../../back1.jpg
+cCpResource build/Distribution-iphoneos/Nim.app/back2.jpg ../../back2.jpg
+cProcessPCH /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-gozomhezmhdrzshjrsgizdjtxxbi/Nim_Prefix.pch.gch Nim_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
+cProcessPCH /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-cjdddtnaeujflqdquwumdladlfzu/Nim_Prefix.pch.gch Nim_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/main.o /Users/drew/Desktop/Nim/main.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/NimAppDelegate.o /Users/drew/Desktop/Nim/Classes/NimAppDelegate.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/NimViewController.o /Users/drew/Desktop/Nim/Classes/NimViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/HelpViewController.o /Users/drew/Desktop/Nim/Classes/HelpViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/SettingsViewController.o /Users/drew/Desktop/Nim/Classes/SettingsViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/BoardViewController.o /Users/drew/Desktop/Nim/Classes/BoardViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/StackSettingsViewController.o /Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/main.o /Users/drew/Desktop/Nim/main.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/NimAppDelegate.o /Users/drew/Desktop/Nim/Classes/NimAppDelegate.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/Nim normal armv6
+cCompileC build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/NimViewController.o /Users/drew/Desktop/Nim/Classes/NimViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/HelpViewController.o /Users/drew/Desktop/Nim/Classes/HelpViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/SettingsViewController.o /Users/drew/Desktop/Nim/Classes/SettingsViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/BoardViewController.o /Users/drew/Desktop/Nim/Classes/BoardViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/StackSettingsViewController.o /Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/Nim normal armv7
+cCreateUniversalBinary /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/Nim normal "armv6 armv7"
+cGenerateDSYMFile /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app.dSYM /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/Nim
+cProcessProductPackaging "/Users/drew/Library/MobileDevice/Provisioning Profiles/515FABE5-F81D-4036-8A71-4A78428BBB8C.mobileprovision" /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/embedded.mobileprovision
+cTouch /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app
+cProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim.xcent
+cCodeSign /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app
+cValidate /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk
+c000000004D71260D0000000000000110
+t1299260941
+s272
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist
+c000000004CB3DFCF00000000000001A7
+t1286856655
+s423
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist
+c000000004CB3DFCF00000000000001E5
+t1286856655
+s485
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004CC10EF500000000003532B0
+t1287720693
+s3486384
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004CC10F4700000000003E1F20
+t1287720775
+s4071200
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004CC10F1C0000000000001466
+t1287720732
+s5222
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004CC11AE60000000000000AA1
+t1287723750
+s2721
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004CC11B750000000000C769F0
+t1287723893
+s13068784
+
+N/Users/drew/Desktop/Nim/../../back1.jpg
+c000000004EFF39B50000000000025C0A
+t1325349301
+s154634
+
+N/Users/drew/Desktop/Nim/../../back2.jpg
+c000000004EFF39CE000000000002247C
+t1325349326
+s140412
+
+N/Users/drew/Desktop/Nim/BoardView.xib
+c000000004EFF3AC70000000000006E14
+t1325349575
+s28180
+
+N/Users/drew/Desktop/Nim/Classes/BoardViewController.h
+c000000004EF6387E000000000000028A
+t1324759166
+s650
+i<UIKit/UIKit.h>
+
+N/Users/drew/Desktop/Nim/Classes/BoardViewController.m
+c000000004EF768E500000000000031E4
+t1324837093
+s12772
+i"BoardViewController.h"
+i"HelpViewController.h"
+
+N/Users/drew/Desktop/Nim/Classes/HelpView.xib
+c000000004EFF3B310000000000005F54
+t1325349681
+s24404
+
+N/Users/drew/Desktop/Nim/Classes/HelpViewController.h
+c000000004EF2181B0000000000000106
+t1324488731
+s262
+i<UIKit/UIKit.h>
+
+N/Users/drew/Desktop/Nim/Classes/HelpViewController.m
+c000000004EF218220000000000000667
+t1324488738
+s1639
+i"HelpViewController.h"
+
+N/Users/drew/Desktop/Nim/Classes/NimAppDelegate.h
+c000000004EF3DD5400000000000001BF
+t1324604756
+s447
+i<UIKit/UIKit.h>
+
+N/Users/drew/Desktop/Nim/Classes/NimAppDelegate.m
+c000000004EF7640C0000000000000D5E
+t1324835852
+s3422
+i"NimAppDelegate.h"
+i"NimViewController.h"
+
+N/Users/drew/Desktop/Nim/Classes/NimViewController.h
+c000000004EF21C590000000000000164
+t1324489817
+s356
+i<UIKit/UIKit.h>
+
+N/Users/drew/Desktop/Nim/Classes/NimViewController.m
+c000000004EF625C00000000000000A0F
+t1324754368
+s2575
+i"NimViewController.h"
+i"HelpViewController.h"
+i"SettingsViewController.h"
+i"BoardViewController.h"
+
+N/Users/drew/Desktop/Nim/Classes/SettingsView.xib
+c000000004EFF3B13000000000000CE51
+t1325349651
+s52817
+
+N/Users/drew/Desktop/Nim/Classes/SettingsViewController.h
+c000000004EF64797000000000000043E
+t1324763031
+s1086
+i<UIKit/UIKit.h>
+
+N/Users/drew/Desktop/Nim/Classes/SettingsViewController.m
+c000000004EF648B90000000000000F8C
+t1324763321
+s3980
+i"SettingsViewController.h"
+i"StackSettingsViewController.h"
+
+N/Users/drew/Desktop/Nim/Classes/StackSettingsViewController.h
+c000000004EF649F3000000000000048B
+t1324763635
+s1163
+i<UIKit/UIKit.h>
+
+N/Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m
+c000000004EF64BF30000000000001014
+t1324764147
+s4116
+i"StackSettingsViewController.h"
+
+N/Users/drew/Desktop/Nim/MainWindow.xib
+c000000004EF2094C0000000000004DF9
+t1324484940
+s19961
+
+N/Users/drew/Desktop/Nim/NimViewController.xib
+c000000004EFF3BD20000000000007808
+t1325349842
+s30728
+
+N/Users/drew/Desktop/Nim/Nim_Prefix.pch
+c000000004EF2094C00000000000000AF
+t1324484940
+s175
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/drew/Desktop/Nim/StackSettingsView.xib
+c000000004EFF3B4F000000000000E19F
+t1325349711
+s57759
+
+N/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app
+t1328727197
+s578
+
+N/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app.dSYM
+t1328727196
+s102
+
+N/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/BoardView.nib
+t1328727193
+s2511
+
+N/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/HelpView.nib
+t1328727193
+s2366
+
+N/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/Info.plist
+t1328727192
+s765
+
+N/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/MainWindow.nib
+t1328727192
+s1115
+
+N/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/Nim
+t1328727196
+s101736
+
+N/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/NimViewController.nib
+t1328727192
+s2842
+
+N/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/PkgInfo
+t1328727192
+s8
+
+N/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/ResourceRules.plist
+t1328727192
+s485
+
+N/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/SettingsView.nib
+t1328727193
+s4650
+
+N/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/StackSettingsView.nib
+t1328727194
+s4923
+
+N/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/back1.jpg
+t1328727193
+s154634
+
+N/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/back2.jpg
+t1328727193
+s140412
+
+N/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/embedded.mobileprovision
+t1328727196
+s7306
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim.xcent
+t1328727196
+s412
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/BoardViewController.o
+t1328727195
+s70024
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/HelpViewController.o
+t1328727195
+s38172
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/Nim
+t1328727196
+s48652
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/Nim.LinkFileList
+c000000004F32C4980000000000000319
+t1328727192
+s793
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/NimAppDelegate.o
+t1328727195
+s51768
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/NimViewController.o
+t1328727195
+s43888
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/SettingsViewController.o
+t1328727195
+s52936
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/StackSettingsViewController.o
+t1328727195
+s54864
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/main.o
+t1328727195
+s6480
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/BoardViewController.o
+t1328727196
+s69644
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/HelpViewController.o
+t1328727196
+s38184
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/Nim
+t1328727196
+s48488
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/Nim.LinkFileList
+c000000004F32C4980000000000000319
+t1328727192
+s793
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/NimAppDelegate.o
+t1328727195
+s51776
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/NimViewController.o
+t1328727195
+s43864
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/SettingsViewController.o
+t1328727196
+s52560
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/StackSettingsViewController.o
+t1328727196
+s54460
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/main.o
+t1328727195
+s6460
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/com.apple.build-tools.platform.validate
+t2
+s0
+
+N/Users/drew/Desktop/Nim/main.m
+c000000004EF2094C000000000000015E
+t1324484940
+s350
+i<UIKit/UIKit.h>
+
+N/Users/drew/Library/MobileDevice/Provisioning Profiles/515FABE5-F81D-4036-8A71-4A78428BBB8C.mobileprovision
+c000000004EF76A800000000000001C8A
+t1324837504
+s7306
+
+N/var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-cjdddtnaeujflqdquwumdladlfzu/Nim_Prefix.pch.gch
+t1328727194
+s10249944
+
+N/var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-gozomhezmhdrzshjrsgizdjtxxbi/Nim_Prefix.pch.gch
+t1328727195
+s9783000
+
+NNim-Info.plist
+c000000004EF2094C000000000000038D
+t1324484940
+s909
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies350419992#350419992#0(0"0(0#1#0"8607931552#0"0#
+
+CCodeSign /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app
+s350419996.844186
+e350419997.214966
+r1
+xCodeSign
+x/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app
+lSLF07#2@44"CodeSign build/Distribution-iphoneos/Nim.app350419996#350419997#0(0"0(0#0#59"/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app8603990176#590"    cd /Users/drew/Desktop/Nim    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv _CODESIGN_ALLOCATE_ /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate    /usr/bin/codesign -f -s "iPhone Developer: Drew Bratcher (9H9FYTH7E4)" --resource-rules=/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/ResourceRules.plist --entitlements /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim.xcent /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app0#
+
+CCompileC build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/BoardViewController.o /Users/drew/Desktop/Nim/Classes/BoardViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s350419995.412288
+e350419995.809531
+r1
+xCompileC
+xbuild/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/BoardViewController.o
+x/Users/drew/Desktop/Nim/Classes/BoardViewController.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@61"Compile /Users/drew/Desktop/Nim/Classes/BoardViewController.m350419995#350419995#0(0"0(0#0#53"/Users/drew/Desktop/Nim/Classes/BoardViewController.m8606338528#1604"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Distribution-iphoneos -I/Users/drew/Desktop/Nim/build/Distribution-iphoneos/include -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources/armv6 -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-gozomhezmhdrzshjrsgizdjtxxbi/Nim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/BoardViewController.m -o /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/BoardViewController.o0#
+
+CCompileC build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/HelpViewController.o /Users/drew/Desktop/Nim/Classes/HelpViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s350419995.326875
+e350419995.412193
+r1
+xCompileC
+xbuild/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/HelpViewController.o
+x/Users/drew/Desktop/Nim/Classes/HelpViewController.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@60"Compile /Users/drew/Desktop/Nim/Classes/HelpViewController.m350419995#350419995#0(0"0(0#0#52"/Users/drew/Desktop/Nim/Classes/HelpViewController.m8607929600#1602"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Distribution-iphoneos -I/Users/drew/Desktop/Nim/build/Distribution-iphoneos/include -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources/armv6 -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-gozomhezmhdrzshjrsgizdjtxxbi/Nim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/HelpViewController.m -o /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/HelpViewController.o0#
+
+CCompileC build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/NimAppDelegate.o /Users/drew/Desktop/Nim/Classes/NimAppDelegate.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s350419995.123043
+e350419995.326777
+r1
+xCompileC
+xbuild/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/NimAppDelegate.o
+x/Users/drew/Desktop/Nim/Classes/NimAppDelegate.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@56"Compile /Users/drew/Desktop/Nim/Classes/NimAppDelegate.m350419995#350419995#0(0"0(0#0#48"/Users/drew/Desktop/Nim/Classes/NimAppDelegate.m8605946112#1594"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Distribution-iphoneos -I/Users/drew/Desktop/Nim/build/Distribution-iphoneos/include -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources/armv6 -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-gozomhezmhdrzshjrsgizdjtxxbi/Nim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/NimAppDelegate.m -o /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/NimAppDelegate.o0#
+
+CCompileC build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/NimViewController.o /Users/drew/Desktop/Nim/Classes/NimViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s350419995.286979
+e350419995.384300
+r1
+xCompileC
+xbuild/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/NimViewController.o
+x/Users/drew/Desktop/Nim/Classes/NimViewController.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@59"Compile /Users/drew/Desktop/Nim/Classes/NimViewController.m350419995#350419995#0(0"0(0#0#51"/Users/drew/Desktop/Nim/Classes/NimViewController.m8604290976#1600"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Distribution-iphoneos -I/Users/drew/Desktop/Nim/build/Distribution-iphoneos/include -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources/armv6 -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-gozomhezmhdrzshjrsgizdjtxxbi/Nim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/NimViewController.m -o /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/NimViewController.o0#
+
+CCompileC build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/SettingsViewController.o /Users/drew/Desktop/Nim/Classes/SettingsViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s350419995.384388
+e350419995.569841
+r1
+xCompileC
+xbuild/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/SettingsViewController.o
+x/Users/drew/Desktop/Nim/Classes/SettingsViewController.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@64"Compile /Users/drew/Desktop/Nim/Classes/SettingsViewController.m350419995#350419995#0(0"0(0#0#56"/Users/drew/Desktop/Nim/Classes/SettingsViewController.m8606667168#1610"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Distribution-iphoneos -I/Users/drew/Desktop/Nim/build/Distribution-iphoneos/include -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources/armv6 -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-gozomhezmhdrzshjrsgizdjtxxbi/Nim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/SettingsViewController.m -o /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/SettingsViewController.o0#
+
+CCompileC build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/StackSettingsViewController.o /Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s350419995.569927
+e350419995.740263
+r1
+xCompileC
+xbuild/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/StackSettingsViewController.o
+x/Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@69"Compile /Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m350419995#350419995#0(0"0(0#0#61"/Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m8606546720#1620"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Distribution-iphoneos -I/Users/drew/Desktop/Nim/build/Distribution-iphoneos/include -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources/armv6 -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-gozomhezmhdrzshjrsgizdjtxxbi/Nim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m -o /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/StackSettingsViewController.o0#
+
+CCompileC build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/main.o /Users/drew/Desktop/Nim/main.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s350419995.122165
+e350419995.286892
+r1
+xCompileC
+xbuild/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/main.o
+x/Users/drew/Desktop/Nim/main.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@38"Compile /Users/drew/Desktop/Nim/main.m350419995#350419995#0(0"0(0#0#30"/Users/drew/Desktop/Nim/main.m8606142528#1566"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Distribution-iphoneos -I/Users/drew/Desktop/Nim/build/Distribution-iphoneos/include -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources/armv6 -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-gozomhezmhdrzshjrsgizdjtxxbi/Nim_Prefix.pch -c /Users/drew/Desktop/Nim/main.m -o /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/main.o0#
+
+CCompileC build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/BoardViewController.o /Users/drew/Desktop/Nim/Classes/BoardViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s350419996.216387
+e350419996.548567
+r1
+xCompileC
+xbuild/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/BoardViewController.o
+x/Users/drew/Desktop/Nim/Classes/BoardViewController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@61"Compile /Users/drew/Desktop/Nim/Classes/BoardViewController.m350419996#350419996#0(0"0(0#0#53"/Users/drew/Desktop/Nim/Classes/BoardViewController.m8603933536#1604"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Distribution-iphoneos -I/Users/drew/Desktop/Nim/build/Distribution-iphoneos/include -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources/armv7 -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-cjdddtnaeujflqdquwumdladlfzu/Nim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/BoardViewController.m -o /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/BoardViewController.o0#
+
+CCompileC build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/HelpViewController.o /Users/drew/Desktop/Nim/Classes/HelpViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s350419995.978665
+e350419996.055731
+r1
+xCompileC
+xbuild/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/HelpViewController.o
+x/Users/drew/Desktop/Nim/Classes/HelpViewController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@60"Compile /Users/drew/Desktop/Nim/Classes/HelpViewController.m350419995#350419996#0(0"0(0#0#52"/Users/drew/Desktop/Nim/Classes/HelpViewController.m8603644832#1602"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Distribution-iphoneos -I/Users/drew/Desktop/Nim/build/Distribution-iphoneos/include -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources/armv7 -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-cjdddtnaeujflqdquwumdladlfzu/Nim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/HelpViewController.m -o /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/HelpViewController.o0#
+
+CCompileC build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/NimAppDelegate.o /Users/drew/Desktop/Nim/Classes/NimAppDelegate.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s350419995.796508
+e350419995.892775
+r1
+xCompileC
+xbuild/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/NimAppDelegate.o
+x/Users/drew/Desktop/Nim/Classes/NimAppDelegate.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@56"Compile /Users/drew/Desktop/Nim/Classes/NimAppDelegate.m350419995#350419995#0(0"0(0#0#48"/Users/drew/Desktop/Nim/Classes/NimAppDelegate.m8604579360#1594"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Distribution-iphoneos -I/Users/drew/Desktop/Nim/build/Distribution-iphoneos/include -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources/armv7 -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-cjdddtnaeujflqdquwumdladlfzu/Nim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/NimAppDelegate.m -o /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/NimAppDelegate.o0#
+
+CCompileC build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/NimViewController.o /Users/drew/Desktop/Nim/Classes/NimViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s350419995.892869
+e350419995.978572
+r1
+xCompileC
+xbuild/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/NimViewController.o
+x/Users/drew/Desktop/Nim/Classes/NimViewController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@59"Compile /Users/drew/Desktop/Nim/Classes/NimViewController.m350419995#350419995#0(0"0(0#0#51"/Users/drew/Desktop/Nim/Classes/NimViewController.m8604069440#1600"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Distribution-iphoneos -I/Users/drew/Desktop/Nim/build/Distribution-iphoneos/include -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources/armv7 -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-cjdddtnaeujflqdquwumdladlfzu/Nim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/NimViewController.m -o /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/NimViewController.o0#
+
+CCompileC build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/SettingsViewController.o /Users/drew/Desktop/Nim/Classes/SettingsViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s350419996.055849
+e350419996.216292
+r1
+xCompileC
+xbuild/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/SettingsViewController.o
+x/Users/drew/Desktop/Nim/Classes/SettingsViewController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@64"Compile /Users/drew/Desktop/Nim/Classes/SettingsViewController.m350419996#350419996#0(0"0(0#0#56"/Users/drew/Desktop/Nim/Classes/SettingsViewController.m8598723328#1610"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Distribution-iphoneos -I/Users/drew/Desktop/Nim/build/Distribution-iphoneos/include -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources/armv7 -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-cjdddtnaeujflqdquwumdladlfzu/Nim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/SettingsViewController.m -o /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/SettingsViewController.o0#
+
+CCompileC build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/StackSettingsViewController.o /Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s350419996.239628
+e350419996.407876
+r1
+xCompileC
+xbuild/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/StackSettingsViewController.o
+x/Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@69"Compile /Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m350419996#350419996#0(0"0(0#0#61"/Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m8601393504#1620"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Distribution-iphoneos -I/Users/drew/Desktop/Nim/build/Distribution-iphoneos/include -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources/armv7 -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-cjdddtnaeujflqdquwumdladlfzu/Nim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m -o /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/StackSettingsViewController.o0#
+
+CCompileC build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/main.o /Users/drew/Desktop/Nim/main.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s350419995.740426
+e350419995.796417
+r1
+xCompileC
+xbuild/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/main.o
+x/Users/drew/Desktop/Nim/main.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@38"Compile /Users/drew/Desktop/Nim/main.m350419995#350419995#0(0"0(0#0#30"/Users/drew/Desktop/Nim/main.m8606418016#1566"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Distribution-iphoneos -I/Users/drew/Desktop/Nim/build/Distribution-iphoneos/include -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources/armv7 -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-cjdddtnaeujflqdquwumdladlfzu/Nim_Prefix.pch -c /Users/drew/Desktop/Nim/main.m -o /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/main.o0#
+
+CCompileXIB /Users/drew/Desktop/Nim/BoardView.xib
+s350419993.245911
+e350419993.728312
+r1
+xCompileXIB
+x/Users/drew/Desktop/Nim/BoardView.xib
+oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
+lSLF07#2@24"CompileXIB BoardView.xib350419993#350419993#0(84"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#37"/Users/drew/Desktop/Nim/BoardView.xib8602102336#498"    cd /Users/drew/Desktop/Nim    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/BoardView.nib /Users/drew/Desktop/Nim/BoardView.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk0#
+
+CCompileXIB /Users/drew/Desktop/Nim/Classes/HelpView.xib
+s350419992.799725
+e350419993.245831
+r1
+xCompileXIB
+x/Users/drew/Desktop/Nim/Classes/HelpView.xib
+oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
+lSLF07#2@31"CompileXIB Classes/HelpView.xib350419992#350419993#0(84"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#44"/Users/drew/Desktop/Nim/Classes/HelpView.xib8605854176#504"    cd /Users/drew/Desktop/Nim    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/HelpView.nib /Users/drew/Desktop/Nim/Classes/HelpView.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk0#
+
+CCompileXIB /Users/drew/Desktop/Nim/Classes/SettingsView.xib
+s350419992.943648
+e350419993.580528
+r1
+xCompileXIB
+x/Users/drew/Desktop/Nim/Classes/SettingsView.xib
+oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
+lSLF07#2@35"CompileXIB Classes/SettingsView.xib350419992#350419993#0(84"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#48"/Users/drew/Desktop/Nim/Classes/SettingsView.xib8603891744#512"    cd /Users/drew/Desktop/Nim    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/SettingsView.nib /Users/drew/Desktop/Nim/Classes/SettingsView.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk0#
+
+CCompileXIB /Users/drew/Desktop/Nim/MainWindow.xib
+s350419992.421757
+e350419992.799641
+r1
+xCompileXIB
+x/Users/drew/Desktop/Nim/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib350419992#350419992#0(0"0(0#0#38"/Users/drew/Desktop/Nim/MainWindow.xib8607890048#500"    cd /Users/drew/Desktop/Nim    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/MainWindow.nib /Users/drew/Desktop/Nim/MainWindow.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk0#
+
+CCompileXIB /Users/drew/Desktop/Nim/NimViewController.xib
+s350419992.422867
+e350419992.943567
+r1
+xCompileXIB
+x/Users/drew/Desktop/Nim/NimViewController.xib
+oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
+lSLF07#2@32"CompileXIB NimViewController.xib350419992#350419992#0(84"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#45"/Users/drew/Desktop/Nim/NimViewController.xib8607821472#514"    cd /Users/drew/Desktop/Nim    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/NimViewController.nib /Users/drew/Desktop/Nim/NimViewController.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk0#
+
+CCompileXIB /Users/drew/Desktop/Nim/StackSettingsView.xib
+s350419993.580612
+e350419994.124250
+r1
+xCompileXIB
+x/Users/drew/Desktop/Nim/StackSettingsView.xib
+oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
+lSLF07#2@32"CompileXIB StackSettingsView.xib350419993#350419994#0(84"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#45"/Users/drew/Desktop/Nim/StackSettingsView.xib8607973504#514"    cd /Users/drew/Desktop/Nim    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/StackSettingsView.nib /Users/drew/Desktop/Nim/StackSettingsView.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk0#
+
+CCpResource build/Distribution-iphoneos/Nim.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist
+s350419992.381480
+e350419992.421596
+r1
+xCpResource
+xbuild/Distribution-iphoneos/Nim.app/ResourceRules.plist
+x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist
+lSLF07#2@94"Copy /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist350419992#350419992#0(0"0(0#0#89"/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist8606380896#488"    cd /Users/drew/Desktop/Nim    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app0#
+
+CCpResource build/Distribution-iphoneos/Nim.app/back1.jpg ../../back1.jpg
+s350419993.728392
+e350419993.734059
+r1
+xCpResource
+xbuild/Distribution-iphoneos/Nim.app/back1.jpg
+x../../back1.jpg
+lSLF07#2@20"Copy ../../back1.jpg350419993#350419993#0(0"0(0#0#39"/Users/drew/Desktop/Nim/../../back1.jpg8606672512#438"    cd /Users/drew/Desktop/Nim    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/drew/Desktop/Nim/../../back1.jpg /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app0#
+
+CCpResource build/Distribution-iphoneos/Nim.app/back2.jpg ../../back2.jpg
+s350419993.729462
+e350419993.738245
+r1
+xCpResource
+xbuild/Distribution-iphoneos/Nim.app/back2.jpg
+x../../back2.jpg
+lSLF07#2@20"Copy ../../back2.jpg350419993#350419993#0(0"0(0#0#39"/Users/drew/Desktop/Nim/../../back2.jpg8606522976#438"    cd /Users/drew/Desktop/Nim    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/drew/Desktop/Nim/../../back2.jpg /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app0#
+
+CCreateUniversalBinary /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/Nim normal "armv6 armv7"
+s350419996.730913
+e350419996.763481
+r1
+xCreateUniversalBinary
+x/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/Nim
+xnormal
+xarmv6 armv7
+lSLF07#2@82"CreateUniversalBinary build/Distribution-iphoneos/Nim.app/Nim normal "armv6 armv7"350419996#350419996#0(0"0(0#0#35"/Users/drew/Desktop/Nim/armv6 armv78606579232#447"    cd /Users/drew/Desktop/Nim    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/lipo -create /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/Nim /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/Nim -output /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/Nim0#
+
+CGenerateDSYMFile /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app.dSYM /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/Nim
+s350419996.763588
+e350419996.816183
+r1
+xGenerateDSYMFile
+x/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app.dSYM
+x/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/Nim
+lSLF07#2@97"GenerateDSYMFile build/Distribution-iphoneos/Nim.app.dSYM build/Distribution-iphoneos/Nim.app/Nim350419996#350419996#0(0"0(0#0#63"/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/Nim8606326336#319"    cd /Users/drew/Desktop/Nim    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/Nim -o /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app.dSYM0#
+
+CLd /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/Nim normal armv6
+s350419995.809615
+e350419996.239534
+r1
+xLd
+x/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/Nim
+xnormal
+xarmv6
+lSLF07#2@101"Link /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/Nim350419995#350419996#0(0"0(0#0#0"8604440352#788"    cd /Users/drew/Desktop/Nim    setenv IPHONEOS_DEPLOYMENT_TARGET 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv6 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -L/Users/drew/Desktop/Nim/build/Distribution-iphoneos -F/Users/drew/Desktop/Nim/build/Distribution-iphoneos -filelist /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/Nim.LinkFileList -dead_strip -miphoneos-version-min=4.2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv6/Nim0#
+
+CLd /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/Nim normal armv7
+s350419996.548653
+e350419996.730807
+r1
+xLd
+x/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/Nim
+xnormal
+xarmv7
+lSLF07#2@101"Link /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/Nim350419996#350419996#0(0"0(0#0#0"8604280800#788"    cd /Users/drew/Desktop/Nim    setenv IPHONEOS_DEPLOYMENT_TARGET 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv7 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -L/Users/drew/Desktop/Nim/build/Distribution-iphoneos -F/Users/drew/Desktop/Nim/build/Distribution-iphoneos -filelist /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/Nim.LinkFileList -dead_strip -miphoneos-version-min=4.2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Objects-normal/armv7/Nim0#
+
+CProcessInfoPlistFile /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/Info.plist Nim-Info.plist
+s350419992.382868
+e350419992.400403
+r1
+xProcessInfoPlistFile
+x/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/Info.plist
+xNim-Info.plist
+lSLF07#2@22"Process Nim-Info.plist350419992#350419992#0(0"0(0#0#38"/Users/drew/Desktop/Nim/Nim-Info.plist8606331552#507"    cd /Users/drew/Desktop/Nim    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Nim-Info.plist -genpkginfo /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -resourcerulesfile /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/ResourceRules.plist -o /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/Info.plist0#
+
+CProcessPCH /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-cjdddtnaeujflqdquwumdladlfzu/Nim_Prefix.pch.gch Nim_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
+s350419994.125228
+e350419995.045950
+r1
+xProcessPCH
+x/var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-cjdddtnaeujflqdquwumdladlfzu/Nim_Prefix.pch.gch
+xNim_Prefix.pch
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@25"Precompile Nim_Prefix.pch350419994#350419995#0(0"0(0#0#38"/Users/drew/Desktop/Nim/Nim_Prefix.pch8601663168#1476"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Distribution-iphoneos -I/Users/drew/Desktop/Nim/build/Distribution-iphoneos/include -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources/armv7 -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -c /Users/drew/Desktop/Nim/Nim_Prefix.pch -o /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-cjdddtnaeujflqdquwumdladlfzu/Nim_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-gozomhezmhdrzshjrsgizdjtxxbi/Nim_Prefix.pch.gch Nim_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
+s350419994.124435
+e350419995.122076
+r1
+xProcessPCH
+x/var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-gozomhezmhdrzshjrsgizdjtxxbi/Nim_Prefix.pch.gch
+xNim_Prefix.pch
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@25"Precompile Nim_Prefix.pch350419994#350419995#0(0"0(0#0#38"/Users/drew/Desktop/Nim/Nim_Prefix.pch8602191264#1476"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Distribution-iphoneos -I/Users/drew/Desktop/Nim/build/Distribution-iphoneos/include -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources/armv6 -I/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -c /Users/drew/Desktop/Nim/Nim_Prefix.pch -o /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-gozomhezmhdrzshjrsgizdjtxxbi/Nim_Prefix.pch.gch0#
+
+CProcessProductPackaging "/Users/drew/Library/MobileDevice/Provisioning Profiles/515FABE5-F81D-4036-8A71-4A78428BBB8C.mobileprovision" /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/embedded.mobileprovision
+s350419996.816277
+e350419996.817428
+r1
+xProcessProductPackaging
+x/Users/drew/Library/MobileDevice/Provisioning Profiles/515FABE5-F81D-4036-8A71-4A78428BBB8C.mobileprovision
+x/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/embedded.mobileprovision
+lSLF07#2@194"ProcessProductPackaging "/Users/drew/Library/MobileDevice/Provisioning Profiles/515FABE5-F81D-4036-8A71-4A78428BBB8C.mobileprovision" build/Distribution-iphoneos/Nim.app/embedded.mobileprovision350419996#350419996#0(0"0(0#0#84"/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/embedded.mobileprovision8606382880#395"    cd /Users/drew/Desktop/Nim    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> "/Users/drew/Library/MobileDevice/Provisioning Profiles/515FABE5-F81D-4036-8A71-4A78428BBB8C.mobileprovision" -o /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app/embedded.mobileprovision0#
+
+CProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim.xcent
+s350419996.821100
+e350419996.843977
+r1
+xProcessProductPackaging
+x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist
+x/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim.xcent
+lSLF07#2@170"ProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist build/Nim.build/Distribution-iphoneos/Nim.build/Nim.xcent350419996#350419996#0(0"0(0#0#81"/Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim.xcent8604292928#397"    cd /Users/drew/Desktop/Nim    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist -entitlements -format xml -o /Users/drew/Desktop/Nim/build/Nim.build/Distribution-iphoneos/Nim.build/Nim.xcent0#
+
+CTouch /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app
+s350419996.817484
+e350419996.820918
+r1
+xTouch
+x/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app
+lSLF07#2@65"Touch /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app350419996#350419996#0(0"0(0#0#0"8604303328#237"    cd /Users/drew/Desktop/Nim    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app0#
+
+CValidate /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app
+s350419997.215040
+e350419997.485634
+r1
+xValidate
+x/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app
+o2012-02-08 13:53:17.297 Validation[1228:607] *** Warning: Defaulting to the standard codesign tool
+owarning: iPhone/iPod Touch: Info.plist: Unable to verify icon dimensions, no icon found.  You must define CFBundleIconFile, CFBundleIconFiles, or provide a default Icon.png that is 57x57 (-19013)
+oUnable to validate your application. - (null)
+o
+owarning: Application failed codesign verification.  The signature was invalid, or it was not signed with an Apple submission certificate. (-19011)
+o/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app: valid on disk
+o/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app: satisfies its Designated Requirement
+otest-requirement: failed to satisfy code requirement(s)
+o - (null)
+o
+lSLF07#2@44"Validate build/Distribution-iphoneos/Nim.app350419997#350419997#0(729"2012-02-08 13:53:17.297 Validation[1228:607] *** Warning: Defaulting to the standard codesign toolwarning: iPhone/iPod Touch: Info.plist: Unable to verify icon dimensions, no icon found.  You must define CFBundleIconFile, CFBundleIconFiles, or provide a default Icon.png that is 57x57 (-19013)Unable to validate your application. - (null)warning: Application failed codesign verification.  The signature was invalid, or it was not signed with an Apple submission certificate. (-19011)/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app: valid on disk/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app: satisfies its Designated Requirementtest-requirement: failed to satisfy code requirement(s) - (null)2(22@187" iPhone/iPod Touch: Info.plist: Unable to verify icon dimensions, no icon found.  You must define CFBundleIconFile, CFBundleIconFiles, or provide a default Icon.png that is 57x57 (-19013)350419997#18446744073709551615#0#0(6@0"350419997#0#0#0#0#0"0(22@138" Application failed codesign verification.  The signature was invalid, or it was not signed with an Apple submission certificate. (-19011)350419997#18446744073709551615#0#0(6@0"350419997#0#0#0#0#0"0(0#0#59"/Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app8603708384#346"    cd /Users/drew/Desktop/Nim    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv PRODUCT_TYPE com.apple.product-type.application    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/Validation /Users/drew/Desktop/Nim/build/Distribution-iphoneos/Nim.app0#
+

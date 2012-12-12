@@ -1,0 +1,629 @@
+TNim
+v7
+r0
+t346530941.047741
+cCheck dependencies
+cProcessInfoPlistFile /Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/Info.plist Nim-Info.plist
+cCompileXIB /Users/drew/Desktop/Nim/MainWindow.xib
+cCompileXIB /Users/drew/Desktop/Nim/NimViewController.xib
+cCompileXIB /Users/drew/Desktop/Nim/Classes/HelpView.xib
+cCompileXIB /Users/drew/Desktop/Nim/Classes/SettingsView.xib
+cCompileXIB /Users/drew/Desktop/Nim/BoardView.xib
+cCompileXIB /Users/drew/Desktop/Nim/StackSettingsView.xib
+cCompileXIB /Users/drew/Desktop/Nim/Classes/WinLoseView.xib
+cProcessPCH /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-bawrluzglsbuhkgbfryttswkjiao/Nim_Prefix.pch.gch Nim_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/main.o /Users/drew/Desktop/Nim/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/NimAppDelegate.o /Users/drew/Desktop/Nim/Classes/NimAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/NimViewController.o /Users/drew/Desktop/Nim/Classes/NimViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/HelpViewController.o /Users/drew/Desktop/Nim/Classes/HelpViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/SettingsViewController.o /Users/drew/Desktop/Nim/Classes/SettingsViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/BoardViewController.o /Users/drew/Desktop/Nim/Classes/BoardViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/StackSettingsViewController.o /Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/WinLoseViewController.o /Users/drew/Desktop/Nim/Classes/WinLoseViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/Nim normal i386
+cGenerateDSYMFile /Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app.dSYM /Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/Nim
+cTouch /Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk
+c000000004D7126460000000000000110
+t1299260998
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004CC12246000000000029B310
+t1287725638
+s2732816
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004CC1226D000000000029D5D0
+t1287725677
+s2741712
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004CC1225F0000000000001466
+t1287725663
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.h
+c000000004CC1233C00000000000000C4
+t1287725884
+s196
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c000000004CC12431000000000015CDB0
+t1287726129
+s1428912
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004CC1281F0000000000000AA1
+t1287727135
+s2721
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004CC12883000000000074D7B0
+t1287727235
+s7657392
+
+N/Users/drew/Desktop/Nim/BoardView.xib
+c000000004EF627C300000000000067AC
+t1324754883
+s26540
+
+N/Users/drew/Desktop/Nim/Classes/BoardViewController.h
+c000000004EF6387E000000000000028A
+t1324759166
+s650
+i<UIKit/UIKit.h>
+
+N/Users/drew/Desktop/Nim/Classes/BoardViewController.m
+c000000004EF768E500000000000031E4
+t1324837093
+s12772
+i"BoardViewController.h"
+i"HelpViewController.h"
+
+N/Users/drew/Desktop/Nim/Classes/GameViewController.h
+c000000004EF21B170000000000000103
+t1324489495
+s259
+i<UIKit/UIKit.h>
+
+N/Users/drew/Desktop/Nim/Classes/GameViewController.m
+c000000004EF21B1F0000000000000663
+t1324489503
+s1635
+i"GameViewController.h"
+
+N/Users/drew/Desktop/Nim/Classes/HelpView.xib
+c000000004EF3F4B100000000000058E2
+t1324610737
+s22754
+
+N/Users/drew/Desktop/Nim/Classes/HelpViewController.h
+c000000004EF2181B0000000000000106
+t1324488731
+s262
+i<UIKit/UIKit.h>
+
+N/Users/drew/Desktop/Nim/Classes/HelpViewController.m
+c000000004EF218220000000000000667
+t1324488738
+s1639
+i"HelpViewController.h"
+
+N/Users/drew/Desktop/Nim/Classes/NIMSettings.h
+c000000004EF3D8E10000000000000100
+t1324603617
+s256
+
+N/Users/drew/Desktop/Nim/Classes/NimAppDelegate.h
+c000000004EF3DD5400000000000001BF
+t1324604756
+s447
+i<UIKit/UIKit.h>
+
+N/Users/drew/Desktop/Nim/Classes/NimAppDelegate.m
+c000000004EF7640C0000000000000D5E
+t1324835852
+s3422
+i"NimAppDelegate.h"
+i"NimViewController.h"
+
+N/Users/drew/Desktop/Nim/Classes/NimSettings.h
+c000000004EF3DC7A00000000000000AF
+t1324604538
+s175
+
+N/Users/drew/Desktop/Nim/Classes/NimViewController.h
+c000000004EF21C590000000000000164
+t1324489817
+s356
+i<UIKit/UIKit.h>
+
+N/Users/drew/Desktop/Nim/Classes/NimViewController.m
+c000000004EF625C00000000000000A0F
+t1324754368
+s2575
+i"NimViewController.h"
+i"HelpViewController.h"
+i"SettingsViewController.h"
+i"BoardViewController.h"
+
+N/Users/drew/Desktop/Nim/Classes/SecondView.xib
+c000000004EF218180000000000004858
+t1324488728
+s18520
+
+N/Users/drew/Desktop/Nim/Classes/SecondViewController.h
+c000000004EF20B080000000000000107
+t1324485384
+s263
+i<UIKit/UIKit.h>
+
+N/Users/drew/Desktop/Nim/Classes/SecondViewController.m
+c000000004EF20CD2000000000000066B
+t1324485842
+s1643
+i"SecondViewController.h"
+
+N/Users/drew/Desktop/Nim/Classes/SettingsNib.xib
+c000000004EF20E470000000000001643
+t1324486215
+s5699
+
+N/Users/drew/Desktop/Nim/Classes/SettingsView.xib
+c000000004EF648DC000000000000C89A
+t1324763356
+s51354
+
+N/Users/drew/Desktop/Nim/Classes/SettingsViewController.h
+c000000004EF64797000000000000043E
+t1324763031
+s1086
+i<UIKit/UIKit.h>
+
+N/Users/drew/Desktop/Nim/Classes/SettingsViewController.m
+c000000004EF648B90000000000000F8C
+t1324763321
+s3980
+i"SettingsViewController.h"
+i"StackSettingsViewController.h"
+
+N/Users/drew/Desktop/Nim/Classes/StackSettings.h
+c000000004EF3EF6800000000000000FD
+t1324609384
+s253
+i<UIKit/UIKit.h>
+
+N/Users/drew/Desktop/Nim/Classes/StackSettings.m
+c000000004EF3EF78000000000000065A
+t1324609400
+s1626
+i"StackSettings.h"
+
+N/Users/drew/Desktop/Nim/Classes/StackSettingsViewController.h
+c000000004EF649F3000000000000048B
+t1324763635
+s1163
+i<UIKit/UIKit.h>
+
+N/Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m
+c000000004EF64BF30000000000001014
+t1324764147
+s4116
+i"StackSettingsViewController.h"
+
+N/Users/drew/Desktop/Nim/Classes/WinLoseView.xib
+c000000004EF3F6CA00000000000068D1
+t1324611274
+s26833
+
+N/Users/drew/Desktop/Nim/Classes/WinLoseViewController.h
+c000000004EF3F51700000000000000E3
+t1324610839
+s227
+i<UIKit/UIKit.h>
+
+N/Users/drew/Desktop/Nim/Classes/WinLoseViewController.m
+c000000004EF3F6D70000000000000622
+t1324611287
+s1570
+i"WinLoseViewController.h"
+
+N/Users/drew/Desktop/Nim/Classes/WinLoseViewController.xib
+c000000004EF3F4F90000000000001643
+t1324610809
+s5699
+
+N/Users/drew/Desktop/Nim/MainWindow.xib
+c000000004EF2094C0000000000004DF9
+t1324484940
+s19961
+
+N/Users/drew/Desktop/Nim/NimViewController.xib
+c000000004EF220F500000000000071A0
+t1324490997
+s29088
+
+N/Users/drew/Desktop/Nim/Nim_Prefix.pch
+c000000004EF2094C00000000000000AF
+t1324484940
+s175
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/drew/Desktop/Nim/StackSettingsView.xib
+c000000004EF64BC7000000000000DB3A
+t1324764103
+s56122
+
+N/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app
+t1324837436
+s408
+
+N/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app.dSYM
+t1324837436
+s102
+
+N/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/BoardView.nib
+t1324754886
+s2323
+
+N/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/HelpView.nib
+t1324611857
+s2177
+
+N/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/Info.plist
+t1324604933
+s575
+
+N/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/MainWindow.nib
+t1324604933
+s1115
+
+N/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/Nim
+t1324837436
+s61568
+
+N/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/NimViewController.nib
+t1324604933
+s2655
+
+N/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/PkgInfo
+t1324604933
+s8
+
+N/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/SecondView.nib
+t1324486115
+s1473
+
+N/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/SettingsNib.nib
+t2
+s0
+
+N/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/SettingsView.nib
+t1324763363
+s4460
+
+N/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/StackSettingsView.nib
+t1324764105
+s4730
+
+N/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/WinLoseView.nib
+t1324611857
+s2410
+
+N/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/WinLoseViewController.nib
+t2
+s0
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/BoardViewController.o
+t1324837436
+s74580
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/GameViewController.o
+t2
+s0
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/HelpViewController.o
+t1324604935
+s38256
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/Nim.LinkFileList
+c000000004EF3F90E0000000000000386
+t1324611854
+s902
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/NimAppDelegate.o
+t1324835934
+s53284
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/NimViewController.o
+t1324763182
+s44220
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/SecondViewController.o
+t1324485851
+s38304
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/SettingsViewController.o
+t1324763868
+s55072
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/StackSettings.o
+t2
+s0
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/StackSettingsViewController.o
+t1324764293
+s57620
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/WinLoseViewController.o
+t1324611857
+s37672
+
+N/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/main.o
+t1324604935
+s6272
+
+N/Users/drew/Desktop/Nim/main.m
+c000000004EF2094C000000000000015E
+t1324484940
+s350
+i<UIKit/UIKit.h>
+
+N/var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-bawrluzglsbuhkgbfryttswkjiao/Nim_Prefix.pch.gch
+t1324604935
+s15453392
+
+NNim-Info.plist
+c000000004EF2094C000000000000038D
+t1324484940
+s909
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies346530941#346530941#0(0"0(0#1#0"3343187568374212096#0"0#
+
+CCompileC build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/BoardViewController.o /Users/drew/Desktop/Nim/Classes/BoardViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s346530236.363772
+e346530236.558764
+r1
+xCompileC
+xbuild/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/BoardViewController.o
+x/Users/drew/Desktop/Nim/Classes/BoardViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@61"Compile /Users/drew/Desktop/Nim/Classes/BoardViewController.m346530236#346530236#0(0"0(0#0#53"/Users/drew/Desktop/Nim/Classes/BoardViewController.m8615690688#1707"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Debug-iphonesimulator -I/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/include -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/DerivedSources/i386 -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/DerivedSources -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-bawrluzglsbuhkgbfryttswkjiao/Nim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/BoardViewController.m -o /Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/BoardViewController.o0#
+
+CCompileC build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/GameViewController.o /Users/drew/Desktop/Nim/Classes/GameViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/HelpViewController.o /Users/drew/Desktop/Nim/Classes/HelpViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s346297735.334057
+e346297735.410248
+r1
+xCompileC
+xbuild/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/HelpViewController.o
+x/Users/drew/Desktop/Nim/Classes/HelpViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@60"Compile /Users/drew/Desktop/Nim/Classes/HelpViewController.m346297735#346297735#0(0"0(0#0#52"/Users/drew/Desktop/Nim/Classes/HelpViewController.m8616211040#1705"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Debug-iphonesimulator -I/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/include -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/DerivedSources/i386 -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/DerivedSources -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-bawrluzglsbuhkgbfryttswkjiao/Nim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/HelpViewController.m -o /Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/HelpViewController.o0#
+
+CCompileC build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/NimAppDelegate.o /Users/drew/Desktop/Nim/Classes/NimAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s346528734.105076
+e346528734.269229
+r1
+xCompileC
+xbuild/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/NimAppDelegate.o
+x/Users/drew/Desktop/Nim/Classes/NimAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@56"Compile /Users/drew/Desktop/Nim/Classes/NimAppDelegate.m346528734#346528734#0(0"0(0#0#48"/Users/drew/Desktop/Nim/Classes/NimAppDelegate.m8613125920#1697"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Debug-iphonesimulator -I/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/include -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/DerivedSources/i386 -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/DerivedSources -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-bawrluzglsbuhkgbfryttswkjiao/Nim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/NimAppDelegate.m -o /Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/NimAppDelegate.o0#
+
+CCompileC build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/NimViewController.o /Users/drew/Desktop/Nim/Classes/NimViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s346455982.668799
+e346455982.767076
+r1
+xCompileC
+xbuild/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/NimViewController.o
+x/Users/drew/Desktop/Nim/Classes/NimViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@59"Compile /Users/drew/Desktop/Nim/Classes/NimViewController.m346455982#346455982#0(0"0(0#0#51"/Users/drew/Desktop/Nim/Classes/NimViewController.m8620405568#1703"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Debug-iphonesimulator -I/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/include -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/DerivedSources/i386 -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/DerivedSources -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-bawrluzglsbuhkgbfryttswkjiao/Nim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/NimViewController.m -o /Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/NimViewController.o0#
+
+CCompileC build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/SecondViewController.o /Users/drew/Desktop/Nim/Classes/SecondViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s346178650.980813
+e346178651.108721
+r1
+xCompileC
+xbuild/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/SecondViewController.o
+x/Users/drew/Desktop/Nim/Classes/SecondViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@62"Compile /Users/drew/Desktop/Nim/Classes/SecondViewController.m346178650#346178651#0(0"0(0#0#54"/Users/drew/Desktop/Nim/Classes/SecondViewController.m8611568672#1709"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Debug-iphonesimulator -I/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/include -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/DerivedSources/i386 -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/DerivedSources -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-bawrluzglsbuhkgbfryttswkjiao/Nim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/SecondViewController.m -o /Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/SecondViewController.o0#
+
+CCompileC build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/SettingsViewController.o /Users/drew/Desktop/Nim/Classes/SettingsViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s346456668.472665
+e346456669.003881
+r1
+xCompileC
+xbuild/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/SettingsViewController.o
+x/Users/drew/Desktop/Nim/Classes/SettingsViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@64"Compile /Users/drew/Desktop/Nim/Classes/SettingsViewController.m346456668#346456669#0(0"0(0#0#56"/Users/drew/Desktop/Nim/Classes/SettingsViewController.m8616330656#1713"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Debug-iphonesimulator -I/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/include -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/DerivedSources/i386 -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/DerivedSources -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-bawrluzglsbuhkgbfryttswkjiao/Nim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/SettingsViewController.m -o /Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/SettingsViewController.o0#
+
+CCompileC build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/StackSettings.o /Users/drew/Desktop/Nim/Classes/StackSettings.m normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/StackSettingsViewController.o /Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s346457093.446568
+e346457093.575654
+r1
+xCompileC
+xbuild/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/StackSettingsViewController.o
+x/Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@69"Compile /Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m346457093#346457093#0(0"0(0#0#61"/Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m8620324448#1723"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Debug-iphonesimulator -I/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/include -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/DerivedSources/i386 -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/DerivedSources -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-bawrluzglsbuhkgbfryttswkjiao/Nim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/StackSettingsViewController.m -o /Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/StackSettingsViewController.o0#
+
+CCompileC build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/WinLoseViewController.o /Users/drew/Desktop/Nim/Classes/WinLoseViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s346304657.239520
+e346304657.571486
+r1
+xCompileC
+xbuild/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/WinLoseViewController.o
+x/Users/drew/Desktop/Nim/Classes/WinLoseViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/drew/Desktop/Nim/Classes/WinLoseViewController.m346304657#346304657#0(0"0(0#0#55"/Users/drew/Desktop/Nim/Classes/WinLoseViewController.m8612553472#1711"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Debug-iphonesimulator -I/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/include -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/DerivedSources/i386 -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/DerivedSources -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-bawrluzglsbuhkgbfryttswkjiao/Nim_Prefix.pch -c /Users/drew/Desktop/Nim/Classes/WinLoseViewController.m -o /Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/WinLoseViewController.o0#
+
+CCompileC build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/main.o /Users/drew/Desktop/Nim/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s346297735.247153
+e346297735.305144
+r1
+xCompileC
+xbuild/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/main.o
+x/Users/drew/Desktop/Nim/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@38"Compile /Users/drew/Desktop/Nim/main.m346297735#346297735#0(0"0(0#0#30"/Users/drew/Desktop/Nim/main.m8614030336#1669"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Debug-iphonesimulator -I/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/include -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/DerivedSources/i386 -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/DerivedSources -include /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-bawrluzglsbuhkgbfryttswkjiao/Nim_Prefix.pch -c /Users/drew/Desktop/Nim/main.m -o /Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/main.o0#
+
+CCompileXIB /Users/drew/Desktop/Nim/BoardView.xib
+s346447685.832959
+e346447686.265209
+r1
+xCompileXIB
+x/Users/drew/Desktop/Nim/BoardView.xib
+lSLF07#2@24"CompileXIB BoardView.xib346447685#346447686#0(0"0(0#0#37"/Users/drew/Desktop/Nim/BoardView.xib8616413184#519"    cd /Users/drew/Desktop/Nim    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/BoardView.nib /Users/drew/Desktop/Nim/BoardView.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /Users/drew/Desktop/Nim/Classes/HelpView.xib
+s346304654.574741
+e346304657.175630
+r1
+xCompileXIB
+x/Users/drew/Desktop/Nim/Classes/HelpView.xib
+lSLF07#2@31"CompileXIB Classes/HelpView.xib346304654#346304657#0(0"0(0#0#44"/Users/drew/Desktop/Nim/Classes/HelpView.xib28429466576552032#525"    cd /Users/drew/Desktop/Nim    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/HelpView.nib /Users/drew/Desktop/Nim/Classes/HelpView.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /Users/drew/Desktop/Nim/Classes/SecondView.xib
+s346178915.087441
+e346178915.491120
+r1
+xCompileXIB
+x/Users/drew/Desktop/Nim/Classes/SecondView.xib
+lSLF07#2@33"CompileXIB Classes/SecondView.xib346178915#346178915#0(0"0(0#0#46"/Users/drew/Desktop/Nim/Classes/SecondView.xib8613671104#529"    cd /Users/drew/Desktop/Nim    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/SecondView.nib /Users/drew/Desktop/Nim/Classes/SecondView.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /Users/drew/Desktop/Nim/Classes/SettingsNib.xib
+r0
+
+CCompileXIB /Users/drew/Desktop/Nim/Classes/SettingsView.xib
+s346456163.310179
+e346456163.852323
+r1
+xCompileXIB
+x/Users/drew/Desktop/Nim/Classes/SettingsView.xib
+lSLF07#2@35"CompileXIB Classes/SettingsView.xib346456163#346456163#0(0"0(0#0#48"/Users/drew/Desktop/Nim/Classes/SettingsView.xib8613089536#533"    cd /Users/drew/Desktop/Nim    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/SettingsView.nib /Users/drew/Desktop/Nim/Classes/SettingsView.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /Users/drew/Desktop/Nim/Classes/WinLoseView.xib
+s346304654.661801
+e346304657.156943
+r1
+xCompileXIB
+x/Users/drew/Desktop/Nim/Classes/WinLoseView.xib
+lSLF07#2@34"CompileXIB Classes/WinLoseView.xib346304654#346304657#0(0"0(0#0#47"/Users/drew/Desktop/Nim/Classes/WinLoseView.xib8612365920#531"    cd /Users/drew/Desktop/Nim    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/WinLoseView.nib /Users/drew/Desktop/Nim/Classes/WinLoseView.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /Users/drew/Desktop/Nim/Classes/WinLoseViewController.xib
+r0
+
+CCompileXIB /Users/drew/Desktop/Nim/MainWindow.xib
+s346297733.200360
+e346297733.617360
+r1
+xCompileXIB
+x/Users/drew/Desktop/Nim/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib346297733#346297733#0(0"0(0#0#38"/Users/drew/Desktop/Nim/MainWindow.xib8615815968#521"    cd /Users/drew/Desktop/Nim    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/MainWindow.nib /Users/drew/Desktop/Nim/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /Users/drew/Desktop/Nim/NimViewController.xib
+s346297733.200986
+e346297733.717716
+r1
+xCompileXIB
+x/Users/drew/Desktop/Nim/NimViewController.xib
+lSLF07#2@32"CompileXIB NimViewController.xib346297733#346297733#0(0"0(0#0#45"/Users/drew/Desktop/Nim/NimViewController.xib8615659520#535"    cd /Users/drew/Desktop/Nim    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/NimViewController.nib /Users/drew/Desktop/Nim/NimViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /Users/drew/Desktop/Nim/StackSettingsView.xib
+s346456905.487109
+e346456906.043733
+r1
+xCompileXIB
+x/Users/drew/Desktop/Nim/StackSettingsView.xib
+lSLF07#2@32"CompileXIB StackSettingsView.xib346456905#346456906#0(0"0(0#0#45"/Users/drew/Desktop/Nim/StackSettingsView.xib8615965472#535"    cd /Users/drew/Desktop/Nim    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/StackSettingsView.nib /Users/drew/Desktop/Nim/StackSettingsView.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CGenerateDSYMFile /Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app.dSYM /Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/Nim
+s346530236.587617
+e346530236.614094
+r1
+xGenerateDSYMFile
+x/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app.dSYM
+x/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/Nim
+lSLF07#2@97"GenerateDSYMFile build/Debug-iphonesimulator/Nim.app.dSYM build/Debug-iphonesimulator/Nim.app/Nim346530236#346530236#0(0"0(0#0#63"/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/Nim8615751040#326"    cd /Users/drew/Desktop/Nim    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/Nim -o /Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app.dSYM0#
+
+CLd /Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/Nim normal i386
+s346530236.558861
+e346530236.587520
+r1
+xLd
+x/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/Nim
+xnormal
+xi386
+lSLF07#2@68"Link /Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/Nim346530236#346530236#0(0"0(0#0#0"8616068000#805"    cd /Users/drew/Desktop/Nim    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Users/drew/Desktop/Nim/build/Debug-iphonesimulator -F/Users/drew/Desktop/Nim/build/Debug-iphonesimulator -filelist /Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Objects-normal/i386/Nim.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/Nim0#
+
+CProcessInfoPlistFile /Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/Info.plist Nim-Info.plist
+s346297733.186370
+e346297733.200206
+r1
+xProcessInfoPlistFile
+x/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/Info.plist
+xNim-Info.plist
+lSLF07#2@22"Process Nim-Info.plist346297733#346297733#0(0"0(0#0#38"/Users/drew/Desktop/Nim/Nim-Info.plist8604151488#422"    cd /Users/drew/Desktop/Nim    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Nim-Info.plist -genpkginfo /Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app/Info.plist0#
+
+CProcessPCH /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-bawrluzglsbuhkgbfryttswkjiao/Nim_Prefix.pch.gch Nim_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s346297734.505551
+e346297735.246923
+r1
+xProcessPCH
+x/var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-bawrluzglsbuhkgbfryttswkjiao/Nim_Prefix.pch.gch
+xNim_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@25"Precompile Nim_Prefix.pch346297734#346297735#0(0"0(0#0#38"/Users/drew/Desktop/Nim/Nim_Prefix.pch8612921536#1580"    cd /Users/drew/Desktop/Nim    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-generated-files.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-own-target-headers.hmap -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-all-target-headers.hmap -iquote /Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/Nim-project-headers.hmap -F/Users/drew/Desktop/Nim/build/Debug-iphonesimulator -I/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/include -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/DerivedSources/i386 -I/Users/drew/Desktop/Nim/build/Nim.build/Debug-iphonesimulator/Nim.build/DerivedSources -c /Users/drew/Desktop/Nim/Nim_Prefix.pch -o /var/folders/+2/+2OtBQF-HO4DYvcSA+ZIOk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nim_Prefix-bawrluzglsbuhkgbfryttswkjiao/Nim_Prefix.pch.gch0#
+
+CTouch /Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app
+s346530236.614171
+e346530236.617134
+r1
+xTouch
+x/Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app
+lSLF07#2@65"Touch /Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app346530236#346530236#0(0"0(0#0#0"8615684768#244"    cd /Users/drew/Desktop/Nim    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/drew/Desktop/Nim/build/Debug-iphonesimulator/Nim.app0#
+
