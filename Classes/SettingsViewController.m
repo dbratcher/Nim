@@ -80,15 +80,15 @@ StackSettingsViewController *stack_settings;
 	// Get preset number of stacks
 	NSInteger num_stacks = [defaults integerForKey:@"num_stacks"];
 	stack_slider.value=num_stacks;
-	num_stacks_label.text=[NSString stringWithFormat:@"%d",num_stacks];
+	num_stacks_label.text=[NSString stringWithFormat:@"%ld",(long)num_stacks];
 	// Get preset ai difficulty
 	NSInteger ai_diff = [defaults integerForKey:@"ai_diff"];
 	ai_slider.value=ai_diff;
-	ai_diff_label.text=[NSString stringWithFormat:@"%d",ai_diff];
+	ai_diff_label.text=[NSString stringWithFormat:@"%ld",(long)ai_diff];
 	// Get preset max remove
 	NSInteger max_rem = [defaults integerForKey:@"max_rem"];
 	rem_slider.value=max_rem;
-	removable_label.text=[NSString stringWithFormat:@"%d",max_rem];
+	removable_label.text=[NSString stringWithFormat:@"%ld",(long)max_rem];
     [super viewDidLoad];
 }
 
