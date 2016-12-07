@@ -9,12 +9,42 @@
 #import "BoardViewController.h"
 #import "HelpViewController.h"
 
+@interface StoneButton : UIButton
+
+@end
+
+@implementation StoneButton: UIButton
+
+- (void)setHighlighted:(BOOL)highlighted
+{
+    [super setHighlighted:highlighted];
+    [self updateColor:highlighted];
+}
+
+- (void)setSelected:(BOOL)selected
+{
+    [super setSelected:selected];
+    [self updateColor:selected];
+}
+
+- (void)updateColor:(BOOL)colored
+{
+    if(colored) {
+        [self setBackgroundColor:[UIColor lightGrayColor]];
+    } else {
+        [self setBackgroundColor:[UIColor whiteColor]];
+    }
+}
+
+@end
+
 @implementation BoardViewController
 
 @synthesize player;
 
 HelpViewController *help;
 NSMutableArray *worldstate;
+
 
 -(IBAction)HelpView:(id)sender{
 	help = [[HelpViewController alloc]
@@ -26,12 +56,15 @@ NSMutableArray *worldstate;
 	[self.view removeFromSuperview];
 }
 
-- (void)highlightButton:(UIButton *)b { 
-    [b setHighlighted:YES];
+- (void)highlightButton:(StoneButton *)b {
+    [b setSelected:YES];
 }
 
 -(IBAction)stoneClicked:(id)sender {
 	NSLog(@"User clicked %@",[sender currentTitle]);
+    
+    UIButton *b = (UIButton *)sender;
+    [b setSelected:NO];
 	
 	// process button input into stack and stone
 	NSString *temp=[sender currentTitle];
@@ -83,8 +116,8 @@ NSMutableArray *worldstate;
 	NSLog(@"swapping stone %d and %d",stone+1,stone+2);
 	
 	//swap button positions
-	UIButton *button1=[[worldstate objectAtIndex:selected_stack] objectAtIndex:stone];
-	UIButton *button2=[[worldstate objectAtIndex:selected_stack] objectAtIndex:stone+1];
+	StoneButton *button1=[[worldstate objectAtIndex:selected_stack] objectAtIndex:stone];
+	StoneButton *button2=[[worldstate objectAtIndex:selected_stack] objectAtIndex:stone+1];
 	CGPoint tempcenter=button1.center;
 	button1.center=button2.center;
 	button2.center=tempcenter;
@@ -98,6 +131,7 @@ NSMutableArray *worldstate;
 	[UIView setAnimationDidStopSelector:@selector(Rise_Up_Repeat:finished:context:)];
 	button2.center=button1.center;
 	button1.center=tempcenter;
+    [UIView commitAnimations];
 	 
 	 //change selected to one higher
 	 [selected removeObject:button1];
@@ -140,12 +174,13 @@ NSMutableArray *worldstate;
 	
 	//for each selected button
 	for(int i=0; i<[selected count]; i++){
-		UIButton *abutton=[selected objectAtIndex:i];
+		StoneButton *abutton=[selected objectAtIndex:i];
 		//animate swap back
 		[UIView beginAnimations:nil context:nil];
-		[UIView setAnimationDuration:1.0f];
+		[UIView setAnimationDuration:0.5f];
 		abutton.alpha=0.0;
-		
+        [UIView commitAnimations];
+        
 		//remove from worldstate
 		[[worldstate objectAtIndex:selected_stack] removeObject:abutton];
 	}
@@ -355,13 +390,14 @@ NSMutableArray *worldstate;
 		[selected addObject:[[worldstate objectAtIndex:selected_stack] objectAtIndex:([[worldstate objectAtIndex:selected_stack] count]-1-i)]];
 	}
 	for(int i=0; i<[selected count]; i++){
-		UIButton *abutton=[selected objectAtIndex:i];
+		StoneButton *abutton=[selected objectAtIndex:i];
 		abutton.highlighted=YES;
 		//animate swap back
 		[UIView beginAnimations:nil context:nil];
-		[UIView setAnimationDuration:1.0f];
-		[UIView setAnimationDelay:1.0f];
+		[UIView setAnimationDuration:0.5f];
+		[UIView setAnimationDelay:0.5f];
 		abutton.alpha=0.0;
+        [UIView commitAnimations];
 		
 		//remove from worldstate
 		[[worldstate objectAtIndex:selected_stack] removeObject:abutton];
@@ -427,10 +463,15 @@ NSMutableArray *worldstate;
 		
 		// Make and add a new UIButton for each stone
 		for(int j=0; j<num_stones; j++){
-			UIButton *myButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+			StoneButton *myButton = [StoneButton buttonWithType:UIButtonTypeRoundedRect];
 			//build up from the bottom
 			myButton.frame=CGRectMake(x_spacing+i*x_spacing+25*i,320-j*y_spacing,50,50);
 			[myButton addTarget:self action:@selector(stoneClicked:) forControlEvents:UIControlEventTouchUpInside];
+            
+            [myButton setBackgroundColor:[UIColor whiteColor]];
+            [myButton setTintColor:[UIColor clearColor]];
+            myButton.layer.cornerRadius = 10;
+            
 			[myButton setTitle:[NSString stringWithFormat:@"%d,%d", i, j] forState:UIControlStateNormal];
 			[myButton setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
 			[myButton setTitleColor:[UIColor clearColor] forState:UIControlStateSelected];
