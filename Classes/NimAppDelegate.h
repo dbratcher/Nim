@@ -12,10 +12,8 @@
 
 @interface NimAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
-    NimViewController *viewController;
 }
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet NimViewController *viewController;
 
 @end
 

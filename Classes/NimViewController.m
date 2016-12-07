@@ -45,7 +45,7 @@ BoardViewController *board;
 }
 
 
-/*
+
 // The designated initializer. Override to perform setup that is required before the view is loaded.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -54,7 +54,7 @@ BoardViewController *board;
     }
     return self;
 }
-*/
+
 
 /*
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
@@ -63,12 +63,12 @@ BoardViewController *board;
 */
 
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
-*/
+
 
 
 /*

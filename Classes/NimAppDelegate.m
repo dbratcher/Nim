@@ -12,7 +12,6 @@
 @implementation NimAppDelegate
 
 @synthesize window;
-@synthesize viewController;
 
 
 #pragma mark -
@@ -34,9 +33,11 @@
 	[defaults setObject:[NSNumber numberWithInt:10] forKey:@"ai_diff"];
 	[defaults setObject:[NSNumber numberWithInt:5] forKey:@"max_rem"];
 	[defaults synchronize]; // this method is optional
-	
-    // Add the view controller's view to the window and display.
-    [self.window addSubview:viewController.view];
+    
+    UIViewController *launchViewController = [[NimViewController alloc] initWithNibName:@"NimViewController" bundle:nil];
+    
+    self.window=[[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    [self.window setRootViewController:launchViewController];
     [self.window makeKeyAndVisible];
 
     return YES;
@@ -92,7 +93,6 @@
 
 
 - (void)dealloc {
-    [viewController release];
     [window release];
     [super dealloc];
 }
