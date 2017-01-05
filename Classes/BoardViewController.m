@@ -465,7 +465,7 @@ NSMutableArray *worldstate;
 		for(int j=0; j<num_stones; j++){
 			StoneButton *myButton = [StoneButton buttonWithType:UIButtonTypeRoundedRect];
 			//build up from the bottom
-			myButton.frame=CGRectMake(x_spacing+i*x_spacing+25*i,320-j*y_spacing,50,50);
+			myButton.frame=CGRectMake(x_spacing+i*x_spacing+25*i,340-j*y_spacing,50,50);
 			[myButton addTarget:self action:@selector(stoneClicked:) forControlEvents:UIControlEventTouchUpInside];
             
             [myButton setBackgroundColor:[UIColor whiteColor]];
