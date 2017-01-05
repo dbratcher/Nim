@@ -77,16 +77,16 @@
 	
 	NSInteger stack_1_val = [defaults integerForKey:@"num_stones_stack_1"];
 	stack_1_slider.value=stack_1_val;
-	stack_1_label.text=[NSString stringWithFormat:@"%d",stack_1_val];
+	stack_1_label.text=[NSString stringWithFormat:@"%ld",(long)stack_1_val];
 	NSInteger stack_2_val = [defaults integerForKey:@"num_stones_stack_2"];
 	stack_2_slider.value=stack_2_val;
-	stack_2_label.text=[NSString stringWithFormat:@"%d",stack_2_val];
+	stack_2_label.text=[NSString stringWithFormat:@"%ld",(long)stack_2_val];
 	NSInteger stack_3_val = [defaults integerForKey:@"num_stones_stack_3"];
 	stack_3_slider.value=stack_3_val;
-	stack_3_label.text=[NSString stringWithFormat:@"%d",stack_3_val];
+	stack_3_label.text=[NSString stringWithFormat:@"%ld",(long)stack_3_val];
 	NSInteger stack_4_val = [defaults integerForKey:@"num_stones_stack_4"];
 	stack_4_slider.value=stack_4_val;
-	stack_4_label.text=[NSString stringWithFormat:@"%d",stack_4_val];
+	stack_4_label.text=[NSString stringWithFormat:@"%ld",(long)stack_4_val];
     [super viewDidLoad];
 }
 

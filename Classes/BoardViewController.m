@@ -96,11 +96,12 @@ NSMutableArray *worldstate;
 			}
 		} else {
 			// message same stack rule
-			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Same Stack Rule" 
-				message:@"You must select stones in the same stack." delegate:nil 
-				cancelButtonTitle:@"OK" otherButtonTitles: nil];
-			[alert show];
-			[alert release];
+            NSString *title = @"Same Stack Rule";
+            NSString *message = @"You must select stones in the same stack.";
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle: UIAlertControllerStyleAlert];
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+            [alert addAction:okAction];
+            [self presentViewController:alert animated:YES completion:nil];
 		}
 	} else {
 		// select button
@@ -143,7 +144,7 @@ NSMutableArray *worldstate;
 	// check if to continue rise up cycle...
 	int unsel=0;
 	// find any necessary rise
-	for(int i=[[worldstate objectAtIndex:selected_stack] count]-1; i>=0; i--){
+	for(int i=(int)[[worldstate objectAtIndex:selected_stack] count]-1; i>=0; i--){
 		NSLog(@"looking at stone %d",i);
 		if([selected containsObject:[[worldstate objectAtIndex:selected_stack] objectAtIndex:i]]){
 			if(unsel>0){
@@ -236,36 +237,40 @@ NSMutableArray *worldstate;
 	
 	//if nothing is selected
 	if(selected_stack==-1){
-		//message user
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Select Stones" 
-														message:@"You must select stones to remove." delegate:nil 
-											  cancelButtonTitle:@"OK" otherButtonTitles: nil];
-		[alert show];
-		[alert release];
-		return;
+        //message user
+        NSString *title = @"Select Stones";
+        NSString *message = @"You must select stones to remove.";
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle: UIAlertControllerStyleAlert];
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+        [alert addAction:okAction];
+        [self presentViewController:alert animated:YES completion:nil];
+        
+        return;
 	}
 	
 	//if too many selected
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 	NSInteger max_rem = [defaults integerForKey:@"max_rem"];
 	if([selected count]>max_rem){
-		//message user
-	   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Too Many Stones" 
-													   message:[NSString stringWithFormat:@"There is a max removal setting of %d stones.",max_rem] delegate:nil 
-											 cancelButtonTitle:@"OK" otherButtonTitles: nil];
-	   [alert show];
-	   [alert release];
+        //message user
+        NSString *title = @"Too Many Stones";
+        NSString *message = [NSString stringWithFormat:@"There is a max removal setting of %ld stones.",(long)max_rem];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle: UIAlertControllerStyleAlert];
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+        [alert addAction:okAction];
+        [self presentViewController:alert animated:YES completion:nil];
+        
 		return;
 	}
 	
-	NSLog(@"worldstate has %d stacks", [worldstate count]);
-	NSLog(@"worldstate selected stack %d has %d stones", selected_stack, [[worldstate objectAtIndex:selected_stack] count]);
+	NSLog(@"worldstate has %lu stacks", (unsigned long)[worldstate count]);
+	NSLog(@"worldstate selected stack %d has %lu stones", selected_stack, (unsigned long)[[worldstate objectAtIndex:selected_stack] count]);
 	
 	// start the rise up cycle...
 	int unsel=0;
 	int called=0;
 	// find first necessary rise
-	for(int i=[[worldstate objectAtIndex:selected_stack] count]-1; i>=0; i--){
+	for(int i=(int)[[worldstate objectAtIndex:selected_stack] count]-1; i>=0; i--){
 		NSLog(@"looking at stone %d",i);
 		if([selected containsObject:[[worldstate objectAtIndex:selected_stack] objectAtIndex:i]]){
 			if(unsel>0){
@@ -322,9 +327,9 @@ NSMutableArray *worldstate;
 	// make a better move if theres a certain number of stones left(difficulty factors in here)
 	if(total_stones<ai_diff*2){
 		//xor all heaps
-		int xor_val=[[worldstate objectAtIndex:0] count];
+		int xor_val=(int)[[worldstate objectAtIndex:0] count];
 		for(int i=1; i<num_stacks; i++){
-			xor_val=xor_val^[[worldstate objectAtIndex:i] count];
+			xor_val=xor_val^((int)[[worldstate objectAtIndex:i] count]);
 		}
 		NSLog(@"xorval=%d",xor_val);
 		
@@ -335,7 +340,7 @@ NSMutableArray *worldstate;
 			NSLog(@"should always reach here...");
 			//calc how many to take to make xor 0
 			for(int i=0; i<num_stacks; i++){
-				int stack_count=[[worldstate objectAtIndex:i] count];
+				int stack_count=(int)[[worldstate objectAtIndex:i] count];
 				NSLog(@"Looking at stack %d with s=%d, x=%d, s^x=%d",i,stack_count,xor_val,stack_count^xor_val);
 				if((stack_count^xor_val)<stack_count){
 					NSLog(@"Found stack %d",i);
@@ -343,7 +348,7 @@ NSMutableArray *worldstate;
 					num_stones=stack_count-(stack_count^xor_val);
 					int two_ormore_count=0;
 					for(int j=0; j<num_stacks; j++){
-						int heapcount=[[worldstate objectAtIndex:j] count];
+						int heapcount=(int)[[worldstate objectAtIndex:j] count];
 						if(j==selected_stack){
 							heapcount-=num_stones;
 						}
@@ -355,7 +360,7 @@ NSMutableArray *worldstate;
 						NSLog(@"No stacks with two or more");
 						int stacksofone=0;
 						for(int j=0; j<num_stacks; j++){
-							int heapcount=[[worldstate objectAtIndex:j] count];
+							int heapcount=(int)[[worldstate objectAtIndex:j] count];
 							if(j==selected_stack){
 								heapcount-=num_stones;
 							}
@@ -365,9 +370,9 @@ NSMutableArray *worldstate;
 						}
 						if(stacksofone%2==0){
 							NSLog(@"Even stacks with one");
-							num_stones=[[worldstate objectAtIndex:selected_stack] count];
+							num_stones=(int)[[worldstate objectAtIndex:selected_stack] count];
 						} else {
-							num_stones=[[worldstate objectAtIndex:selected_stack] count]-1;
+							num_stones=(int)[[worldstate objectAtIndex:selected_stack] count]-1;
 						}
 
 					}
