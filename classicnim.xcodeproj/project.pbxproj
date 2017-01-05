@@ -22,9 +22,9 @@
 		3AA184AC14A2426E0005C489 /* HelpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AA184AB14A2426E0005C489 /* HelpView.xib */; };
 		3AA184C714A245920005C489 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA184C614A245920005C489 /* SettingsViewController.m */; };
 		3AA184C914A245C70005C489 /* SettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AA184C814A245C70005C489 /* SettingsView.xib */; };
-		3AC45EF714E3029A00A8B717 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AC45EF614E3029A00A8B717 /* icon.png */; };
 		EA33F9181DF7DCCA0048B1BB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA33F9171DF7DCCA0048B1BB /* Images.xcassets */; };
 		EA33F91A1DF7E1890048B1BB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA33F9191DF7E1890048B1BB /* Default-568h@2x.png */; };
+		EA9BBE6D1E1E2FA000E2A456 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9BBE6C1E1E2FA000E2A456 /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,10 +51,10 @@
 		3AA184C514A245920005C489 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		3AA184C614A245920005C489 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		3AA184C814A245C70005C489 /* SettingsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SettingsView.xib; path = Classes/SettingsView.xib; sourceTree = "<group>"; };
-		3AC45EF614E3029A00A8B717 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* classicnim-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "classicnim-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		EA33F9171DF7DCCA0048B1BB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = classicnim/Images.xcassets; sourceTree = "<group>"; };
 		EA33F9191DF7E1890048B1BB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		EA9BBE6C1E1E2FA000E2A456 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				EA33F9171DF7DCCA0048B1BB /* Images.xcassets */,
-				3AC45EF614E3029A00A8B717 /* icon.png */,
+				EA9BBE6C1E1E2FA000E2A456 /* icon.png */,
 				2899E5210DE3E06400AC0155 /* NimViewController.xib */,
 				3A3D9EF014A252B400E1F69D /* BoardView.xib */,
 				3AA184C814A245C70005C489 /* SettingsView.xib */,
@@ -209,9 +209,9 @@
 				EA33F9181DF7DCCA0048B1BB /* Images.xcassets in Resources */,
 				3AA184C914A245C70005C489 /* SettingsView.xib in Resources */,
 				3A3D9EF114A252B400E1F69D /* BoardView.xib in Resources */,
+				EA9BBE6D1E1E2FA000E2A456 /* icon.png in Resources */,
 				EA33F91A1DF7E1890048B1BB /* Default-568h@2x.png in Resources */,
 				3A940CC314A4270F008FC588 /* StackSettingsView.xib in Resources */,
-				3AC45EF714E3029A00A8B717 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
