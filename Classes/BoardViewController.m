@@ -60,6 +60,16 @@ NSMutableArray *worldstate;
     [b setSelected:YES];
 }
 
+- (void)disableInteraction {
+    self.view.userInteractionEnabled = NO;
+    self.view.superview.userInteractionEnabled = NO;
+}
+
+- (void)enableInteraction {
+    self.view.userInteractionEnabled = YES;
+    self.view.superview.userInteractionEnabled = YES;
+}
+
 -(IBAction)stoneClicked:(id)sender {
 	NSLog(@"User clicked %@",[sender currentTitle]);
     
@@ -164,8 +174,7 @@ NSMutableArray *worldstate;
 
 -(void)remove_pieces{
 	NSLog(@"animate removal of pieces");
-	
-	
+    
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 	
 	// Get preset number of players
@@ -208,6 +217,9 @@ NSMutableArray *worldstate;
 			} else {
 				player.text=@"Player 1 Won!";
 			}
+            
+            [self enableInteraction];
+            
 			return;
 		} else {
 			if([player.text isEqualToString:@"Player 1's Turn"]){
@@ -215,7 +227,10 @@ NSMutableArray *worldstate;
 			} else {
 				player.text=@"Player 1 Won!";
 			}
-			return;
+            
+            [self enableInteraction];
+			
+            return;
 		}
 	}
 	
@@ -233,7 +248,9 @@ NSMutableArray *worldstate;
 }
 
 -(IBAction)removeClicked:(id)sender {
-	NSLog(@"Remove Stones Clicked");
+    NSLog(@"Remove Stones Clicked");
+    
+    [self disableInteraction];
 	
 	//if nothing is selected
 	if(selected_stack==-1){
@@ -244,6 +261,8 @@ NSMutableArray *worldstate;
         UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
         [alert addAction:okAction];
         [self presentViewController:alert animated:YES completion:nil];
+        
+        [self enableInteraction];
         
         return;
 	}
@@ -259,6 +278,8 @@ NSMutableArray *worldstate;
         UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
         [alert addAction:okAction];
         [self presentViewController:alert animated:YES completion:nil];
+        
+        [self enableInteraction];
         
 		return;
 	}
@@ -435,11 +456,16 @@ NSMutableArray *worldstate;
 		} else {
 			player.text=@"Player 1 Won!";
 		}
+        
+        [self enableInteraction];
+        
 		return;
 	}
 	
 	//update label
 	player.text=@"Player 1's Turn";
+    
+    [self enableInteraction];
 }
 
 - (void)viewDidLoad {
