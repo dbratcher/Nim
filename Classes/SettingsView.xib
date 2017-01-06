@@ -29,7 +29,7 @@
                     <rect key="frame" x="15" y="397" width="76" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="18"/>
-                    <state key="normal" title="Go Back">
+                    <state key="normal" title="Save">
                         <color key="titleColor" red="0.55272832670000005" green="0.85135719160000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
