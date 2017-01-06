@@ -413,6 +413,11 @@ NSMutableArray *worldstate;
 			num_stones--;
 		}
 	}
+    
+    // computer must play by the rules
+    if (num_stones > max_rem) {
+        num_stones = (int)max_rem;
+    }
 	
 	//animate selection & removal
 	for(int i=0; i<num_stones; i++){
