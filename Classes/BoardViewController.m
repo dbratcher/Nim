@@ -241,6 +241,9 @@ NSMutableArray *worldstate;
 		} else {
 			player.text=@"Player 1's Turn";
 		}
+        
+        [self enableInteraction];
+        
 	} else {
 		player.text=@"Computer's Turn!";
 		[self performSelector:@selector(run_ai) withObject:nil afterDelay:1.0f];
