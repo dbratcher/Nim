@@ -30,7 +30,7 @@
 	[defaults setObject:[NSNumber numberWithInt:5] forKey:@"num_stones_stack_2"];
 	[defaults setObject:[NSNumber numberWithInt:4] forKey:@"num_stones_stack_3"];
 	[defaults setObject:[NSNumber numberWithInt:3] forKey:@"num_stones_stack_4"];
-	[defaults setObject:[NSNumber numberWithInt:10] forKey:@"ai_diff"];
+	[defaults setObject:[NSNumber numberWithInt:4] forKey:@"ai_diff"];
 	[defaults setObject:[NSNumber numberWithInt:5] forKey:@"max_rem"];
 	[defaults synchronize]; // this method is optional
     
