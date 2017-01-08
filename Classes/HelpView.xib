@@ -48,8 +48,10 @@
 
 -Click the remove stones button to remove the stones and end your turn.
 
--The last player to remove a stone loses.</string>
-                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+-The last player to remove a stone loses.
+
+-Adjust the difficulty by going to settings.</string>
+                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </label>

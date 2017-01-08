@@ -7,6 +7,7 @@
 //
 
 #import "BoardViewController.h"
+#import "SettingsViewController.h"
 #import "HelpViewController.h"
 
 @interface StoneButton : UIButton
@@ -354,7 +355,7 @@ NSMutableArray *worldstate;
 	
 	
 	// make a better move if theres a certain number of stones left(difficulty factors in here)
-	if(total_stones<ai_diff*2){
+	if(total_stones<ai_diff){
 		//xor all heaps
 		int xor_val=(int)[[worldstate objectAtIndex:0] count];
 		for(int i=1; i<num_stacks; i++){
@@ -485,7 +486,7 @@ NSMutableArray *worldstate;
 
 - (void)showWonAlert:(NSString *)title
 {
-    NSString *message = @"Replay or go back to the main menu.";
+    NSString *message = @"Play again? You can also adjust the difficulty in settings.";
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle: UIAlertControllerStyleAlert];
     UIAlertAction *replayAction = [UIAlertAction actionWithTitle:@"Replay" style:UIAlertActionStyleDefault handler: ^(UIAlertAction* action){
         UIView *superview = self.view.superview;
@@ -495,10 +496,19 @@ NSMutableArray *worldstate;
         board.view.backgroundColor = self.tileColor;
         [superview addSubview:board.view];
     }];
+    UIAlertAction *settingsAction = [UIAlertAction actionWithTitle:@"Settings" style:UIAlertActionStyleDefault handler: ^(UIAlertAction* action){
+        UIView *superview = self.view.superview;
+        [self.view removeFromSuperview];
+        SettingsViewController *settings = [[SettingsViewController alloc]
+                                      initWithNibName:@"SettingsView" bundle:nil];
+        settings.view.backgroundColor = self.tileColor;
+        [superview addSubview:settings.view];
+    }];
     UIAlertAction *quitAction = [UIAlertAction actionWithTitle:@"Go Back" style:UIAlertActionStyleDefault handler: ^(UIAlertAction* action){
         [self.view removeFromSuperview];
     }];
     [alert addAction:quitAction];
+    [alert addAction:settingsAction];
     [alert addAction:replayAction];
     [self presentViewController:alert animated:YES completion:nil];
 }
