@@ -213,9 +213,11 @@ NSMutableArray *worldstate;
 		//if two player
 		if(num_players==2){
 			if([player.text isEqualToString:@"Player 1's Turn"]){
-				player.text=@"Player 2 Won!";
+                NSString *title = @"Player 2 Won!";
+                [self showWonAlert:title];
 			} else {
-				player.text=@"Player 1 Won!";
+                NSString *title = @"Player 1 Won!";
+                [self showWonAlert:title];
 			}
             
             [self enableInteraction];
@@ -223,9 +225,11 @@ NSMutableArray *worldstate;
 			return;
 		} else {
 			if([player.text isEqualToString:@"Player 1's Turn"]){
-				player.text=@"Computer Won!";
+                NSString *title = @"Computer Won!";
+                [self showWonAlert:title];
 			} else {
-				player.text=@"Player 1 Won!";
+                NSString *title = @"Player 1 Won!";
+                [self showWonAlert:title];
 			}
             
             [self enableInteraction];
@@ -460,9 +464,11 @@ NSMutableArray *worldstate;
 	//if won update
 	if(all){
 		if([player.text isEqualToString:@"Player 1's Turn"]){
-			player.text=@"Computer Won!";
+            NSString *title = @"Computer Won!";
+            [self showWonAlert:title];
 		} else {
-			player.text=@"Player 1 Won!";
+            NSString *title = @"Player 1 Won!";
+            [self showWonAlert:title];
 		}
         
         [self enableInteraction];
@@ -474,6 +480,34 @@ NSMutableArray *worldstate;
 	player.text=@"Player 1's Turn";
     
     [self enableInteraction];
+}
+
+- (void)showWonAlert:(NSString *)title
+{
+    NSString *message = @"Replay or go back to the main menu.";
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle: UIAlertControllerStyleAlert];
+    UIAlertAction *replayAction = [UIAlertAction actionWithTitle:@"Replay" style:UIAlertActionStyleDefault handler: ^(UIAlertAction* action){
+        UIView *superview = self.view.superview;
+        [self.view removeFromSuperview];
+        BoardViewController *board = [[BoardViewController alloc]
+                                      initWithNibName:@"BoardView" bundle:nil];
+        board.view.backgroundColor = self.tileColor;
+        [superview addSubview:board.view];
+    }];
+    UIAlertAction *quitAction = [UIAlertAction actionWithTitle:@"Go Back" style:UIAlertActionStyleDefault handler: ^(UIAlertAction* action){
+        [self.view removeFromSuperview];
+    }];
+    [alert addAction:quitAction];
+    [alert addAction:replayAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (UIColor *)tileColor
+{
+    UIImage *pattern = [UIImage imageNamed:@"Background"];
+    UIColor *tileColor = [UIColor colorWithPatternImage: pattern];
+    
+    return tileColor;
 }
 
 - (void)viewDidLoad {
