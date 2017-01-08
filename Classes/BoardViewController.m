@@ -49,6 +49,7 @@ NSMutableArray *worldstate;
 -(IBAction)HelpView:(id)sender{
 	help = [[HelpViewController alloc]
 			  initWithNibName:@"HelpView" bundle:nil];
+    help.view.backgroundColor = self.tileColor;
 	[self.view addSubview:help.view];
 }
 
