@@ -566,9 +566,10 @@ NSMutableArray *worldstate;
 		[worldstate addObject:astack];
 	}
     
-    
+    // logic to move computer first, if needed
     NSInteger first_mover = [defaults integerForKey:@"first_mover"];
-    if (first_mover > 0) {
+    NSInteger num_players = [defaults integerForKey:@"num_players"];
+    if ((first_mover > 0) && (num_players != 2)) {
         player.text=@"Computer's Turn!";
         [self performSelector:@selector(run_ai) withObject:nil afterDelay:1.0f];
     }
