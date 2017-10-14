@@ -23,6 +23,7 @@
 	IBOutlet UISlider *ai_slider;
 	IBOutlet UISlider *rem_slider;
 	IBOutlet UISlider *stack_slider;
+    IBOutlet UISegmentedControl *first_mover_control;
 }
 
 -(IBAction)BackToFirstView:(id)sender;
@@ -30,6 +31,7 @@
 -(IBAction)ai_slider_changed:(id)sender;
 -(IBAction)rem_slider_changed:(id)sender;
 -(IBAction)stack_slider_changed:(id)sender;
+-(IBAction)first_move_changed:(id)sender;
 
 @property(nonatomic, retain) UILabel *num_stacks_label;
 @property(nonatomic, retain) UILabel *removable_label;

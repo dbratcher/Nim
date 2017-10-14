@@ -565,6 +565,13 @@ NSMutableArray *worldstate;
 		}
 		[worldstate addObject:astack];
 	}
+    
+    
+    NSInteger first_mover = [defaults integerForKey:@"first_mover"];
+    if (first_mover > 0) {
+        player.text=@"Computer's Turn!";
+        [self performSelector:@selector(run_ai) withObject:nil afterDelay:1.0f];
+    }
 	
     [super viewDidLoad];
 }

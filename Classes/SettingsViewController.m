@@ -42,6 +42,15 @@ StackSettingsViewController *stack_settings;
 	[defaults setObject:[NSNumber numberWithInt:slider_int_val] forKey:@"num_stacks"];
 }
 
+-(IBAction)first_move_changed:(id)sender
+{
+    UISegmentedControl *control = (UISegmentedControl *)sender;
+    
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setInteger:control.selectedSegmentIndex forKey:@"first_mover"];
+}
+
 
 
 -(IBAction)StackSettingsView:(id)sender{
@@ -85,10 +94,13 @@ StackSettingsViewController *stack_settings;
 	NSInteger ai_diff = [defaults integerForKey:@"ai_diff"];
 	ai_slider.value=ai_diff;
 	ai_diff_label.text=[NSString stringWithFormat:@"%ld",(long)ai_diff];
-	// Get preset max remove
-	NSInteger max_rem = [defaults integerForKey:@"max_rem"];
-	rem_slider.value=max_rem;
-	removable_label.text=[NSString stringWithFormat:@"%ld",(long)max_rem];
+    // Get preset max remove
+    NSInteger max_rem = [defaults integerForKey:@"max_rem"];
+    rem_slider.value=max_rem;
+    removable_label.text=[NSString stringWithFormat:@"%ld",(long)max_rem];
+    // Get preset first mover
+    NSInteger first_mover = [defaults integerForKey:@"first_mover"];
+    first_mover_control.selectedSegmentIndex = first_mover;
     [super viewDidLoad];
 }
 
