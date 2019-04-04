@@ -22,6 +22,7 @@
 		3AA184AC14A2426E0005C489 /* HelpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AA184AB14A2426E0005C489 /* HelpView.xib */; };
 		3AA184C714A245920005C489 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA184C614A245920005C489 /* SettingsViewController.m */; };
 		3AA184C914A245C70005C489 /* SettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AA184C814A245C70005C489 /* SettingsView.xib */; };
+		EA0C64AD221F53600020E474 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0C64AC221F53600020E474 /* Main.storyboard */; };
 		EA33F9181DF7DCCA0048B1BB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA33F9171DF7DCCA0048B1BB /* Images.xcassets */; };
 		EA33F91A1DF7E1890048B1BB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA33F9191DF7E1890048B1BB /* Default-568h@2x.png */; };
 		EA9BBE6D1E1E2FA000E2A456 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9BBE6C1E1E2FA000E2A456 /* icon.png */; };
@@ -52,6 +53,7 @@
 		3AA184C614A245920005C489 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		3AA184C814A245C70005C489 /* SettingsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SettingsView.xib; path = Classes/SettingsView.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* classicnim-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "classicnim-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		EA0C64AC221F53600020E474 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EA33F9171DF7DCCA0048B1BB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = classicnim/Images.xcassets; sourceTree = "<group>"; };
 		EA33F9191DF7E1890048B1BB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		EA9BBE6C1E1E2FA000E2A456 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				3AA184AB14A2426E0005C489 /* HelpView.xib */,
 				8D1107310486CEB800E47090 /* classicnim-Info.plist */,
 				3A940CC214A4270F008FC588 /* StackSettingsView.xib */,
+				EA0C64AC221F53600020E474 /* Main.storyboard */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				3AA184C914A245C70005C489 /* SettingsView.xib in Resources */,
 				3A3D9EF114A252B400E1F69D /* BoardView.xib in Resources */,
 				EA9BBE6D1E1E2FA000E2A456 /* icon.png in Resources */,
+				EA0C64AD221F53600020E474 /* Main.storyboard in Resources */,
 				EA33F91A1DF7E1890048B1BB /* Default-568h@2x.png in Resources */,
 				3A940CC314A4270F008FC588 /* StackSettingsView.xib in Resources */,
 			);
