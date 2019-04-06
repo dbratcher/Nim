@@ -24,6 +24,9 @@
                                 <state key="normal" title="1 Player Game">
                                     <color key="titleColor" red="0.6064150333404541" green="0.86524373292922974" blue="0.98662871122360229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="YaH-0X-W7D" kind="presentation" id="oZj-IK-lw2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xlg-AG-6F9">
                                 <rect key="frame" x="100.5" y="406" width="174" height="45"/>
@@ -31,6 +34,9 @@
                                 <state key="normal" title="2 Player Game">
                                     <color key="titleColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="YaH-0X-W7D" kind="presentation" modalTransitionStyle="crossDissolve" id="ibp-19-lqN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5i-pm-aSH">
                                 <rect key="frame" x="134" y="461" width="107" height="45"/>
@@ -38,6 +44,9 @@
                                 <state key="normal" title="Settings">
                                     <color key="titleColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="99i-jL-Baj" kind="presentation" modalTransitionStyle="flipHorizontal" id="NFw-FX-msu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ob-M6-rCo">
                                 <rect key="frame" x="162" y="516" width="51" height="45"/>
@@ -45,6 +54,9 @@
                                 <state key="normal" title="Help">
                                     <color key="titleColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="crK-HL-AK4" kind="presentation" modalTransitionStyle="flipHorizontal" id="4hO-2H-guD"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HYZ-Ei-AFa" userLabel="TitleView">
                                 <rect key="frame" x="0.0" y="20" width="375" height="323.5"/>
@@ -93,5 +105,109 @@
             </objects>
             <point key="canvasLocation" x="57.971014492753625" y="20.758928571428569"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Lk4-ug-olg">
+            <objects>
+                <viewController id="99i-jL-Baj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oin-E4-X9d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.35294117650000001" green="0.28627450980000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="yZE-zv-U30"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ayo-5Z-eqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="418" y="866"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MAB-Qd-9jK">
+            <objects>
+                <viewController id="YaH-0X-W7D" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Le8-4Q-7vn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.35294117650000001" green="0.28627450980000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="jiE-Fx-BGN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rMM-Nr-GJC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1111" y="20"/>
+        </scene>
+        <!--Instructions View Controller-->
+        <scene sceneID="G1n-Gd-USk">
+            <objects>
+                <viewController id="crK-HL-AK4" customClass="InstructionsViewController" customModule="ClassicNim" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7px-Gf-nQR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Yq2-Tx-CiO">
+                                <rect key="frame" x="10" y="115" width="355" height="457.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVx-fh-NmJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="52.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="48"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select stones in a single stack to remove" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebc-F9-LT6">
+                                        <rect key="frame" x="0.0" y="82.5" width="355" height="52.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click the remove stones button to end your turn" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0N-Yj-Fp3">
+                                        <rect key="frame" x="0.0" y="165" width="355" height="52.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The last player to remove a stone loses" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIp-YG-oES">
+                                        <rect key="frame" x="0.0" y="247.5" width="355" height="52.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adjust the difficulty by going to settings" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTm-7C-uHS">
+                                        <rect key="frame" x="0.0" y="330" width="355" height="52.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwr-6X-4EU">
+                                        <rect key="frame" x="0.0" y="412.5" width="355" height="45"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                        <state key="normal" title="Go Back">
+                                            <color key="titleColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goBack:" destination="crK-HL-AK4" eventType="touchUpInside" id="LL5-u3-sdf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="YME-n4-RTz"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.35294117650000001" green="0.28627450980000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Yq2-Tx-CiO" firstAttribute="centerY" secondItem="NJ0-3N-FcG" secondAttribute="centerY" id="AgU-UY-HoK"/>
+                            <constraint firstItem="NJ0-3N-FcG" firstAttribute="leading" secondItem="cVx-fh-NmJ" secondAttribute="leading" constant="-10" id="Hhb-4c-wsd"/>
+                            <constraint firstItem="Yq2-Tx-CiO" firstAttribute="centerX" secondItem="NJ0-3N-FcG" secondAttribute="centerX" id="jVy-HX-Mc2"/>
+                            <constraint firstItem="cVx-fh-NmJ" firstAttribute="trailing" secondItem="NJ0-3N-FcG" secondAttribute="trailing" constant="-10" id="vfT-vA-Ird"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NJ0-3N-FcG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5RO-5s-C7i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-305" y="866"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ibp-19-lqN"/>
+    </inferredMetricsTieBreakers>
 </document>
