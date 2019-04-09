@@ -9,6 +9,9 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+    @IBOutlet weak var firstMove: UISegmentedControl!
+    @IBOutlet weak var difficulty: UISegmentedControl!
+    
     @IBAction func goBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
