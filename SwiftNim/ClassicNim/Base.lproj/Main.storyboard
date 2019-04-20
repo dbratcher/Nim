@@ -151,17 +151,14 @@
                                         </segments>
                                         <color key="tintColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </segmentedControl>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovF-NV-JVA">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbC-tB-k7I">
                                         <rect key="frame" x="0.0" y="311.5" width="300" height="45"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                         <state key="normal" title="Customize Board">
                                             <color key="titleColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="customize:" destination="99i-jL-Baj" eventType="touchUpInside" id="b07-el-x9o"/>
-                                            <action selector="goBack:" destination="crK-HL-AK4" eventType="touchUpInside" id="74O-je-wwL"/>
-                                            <action selector="goBack:" destination="99i-jL-Baj" eventType="touchUpInside" id="yNQ-91-kCU"/>
-                                            <segue destination="S5M-Tk-nKB" kind="presentation" modalTransitionStyle="flipHorizontal" id="Zvg-a0-8yZ"/>
+                                            <segue destination="S5M-Tk-nKB" kind="presentation" modalTransitionStyle="flipHorizontal" id="ypc-JN-dJe"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNR-eL-Fkv">
@@ -172,7 +169,6 @@
                                         </state>
                                         <connections>
                                             <action selector="goBack:" destination="99i-jL-Baj" eventType="touchUpInside" id="Suf-0o-6kL"/>
-                                            <action selector="goBack:" destination="crK-HL-AK4" eventType="touchUpInside" id="mQZ-4x-C42"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -198,10 +194,10 @@
             </objects>
             <point key="canvasLocation" x="-214" y="866"/>
         </scene>
-        <!--View Controller-->
+        <!--Customize Board View Controller-->
         <scene sceneID="nyn-jG-k5R">
             <objects>
-                <viewController id="S5M-Tk-nKB" sceneMemberID="viewController">
+                <viewController id="S5M-Tk-nKB" customClass="CustomizeBoardViewController" customModule="ClassicNim" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SJx-Fe-uoe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -348,8 +344,7 @@
                                             <color key="titleColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="goBack:" destination="99i-jL-Baj" eventType="touchUpInside" id="Oph-uJ-EME"/>
-                                            <action selector="goBack:" destination="crK-HL-AK4" eventType="touchUpInside" id="xiT-vw-rxk"/>
+                                            <action selector="goBack:" destination="S5M-Tk-nKB" eventType="touchUpInside" id="ZEL-Wg-m7T"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -366,6 +361,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fLr-62-fsL"/>
                     </view>
+                    <connections>
+                        <outlet property="stackNumber" destination="QQP-aO-Ue2" id="8kI-Sg-3BG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kkj-fq-vP9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -509,7 +507,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VEc-P9-PiW"/>
+        <segue reference="4hO-2H-guD"/>
         <segue reference="ibp-19-lqN"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EA08E22822583DD100D54BC8 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA08E22722583DD100D54BC8 /* InstructionsViewController.swift */; };
 		EA08E22B22583FB200D54BC8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA08E22A22583FB200D54BC8 /* SettingsViewController.swift */; };
+		EA3592DF226B7C9100AED06A /* CustomizeBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3592DE226B7C9100AED06A /* CustomizeBoardViewController.swift */; };
 		EA86B890225920F3001BA2D7 /* GameBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86B88F225920F2001BA2D7 /* GameBoardViewController.swift */; };
 		EAE5E424225595C100AC934B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5E423225595C100AC934B /* AppDelegate.swift */; };
 		EAE5E426225595C100AC934B /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5E425225595C100AC934B /* MainMenuViewController.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		EA08E22722583DD100D54BC8 /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		EA08E22A22583FB200D54BC8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		EA3592DE226B7C9100AED06A /* CustomizeBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeBoardViewController.swift; sourceTree = "<group>"; };
 		EA86B88F225920F2001BA2D7 /* GameBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardViewController.swift; sourceTree = "<group>"; };
 		EAE5E420225595C100AC934B /* ClassicNim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassicNim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE5E423225595C100AC934B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				EAE5E425225595C100AC934B /* MainMenuViewController.swift */,
 				EA08E22A22583FB200D54BC8 /* SettingsViewController.swift */,
 				EA86B88F225920F2001BA2D7 /* GameBoardViewController.swift */,
+				EA3592DE226B7C9100AED06A /* CustomizeBoardViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				EA08E22822583DD100D54BC8 /* InstructionsViewController.swift in Sources */,
 				EAE5E426225595C100AC934B /* MainMenuViewController.swift in Sources */,
 				EAE5E424225595C100AC934B /* AppDelegate.swift in Sources */,
+				EA3592DF226B7C9100AED06A /* CustomizeBoardViewController.swift in Sources */,
 				EA86B890225920F3001BA2D7 /* GameBoardViewController.swift in Sources */,
 				EA08E22B22583FB200D54BC8 /* SettingsViewController.swift in Sources */,
 			);
