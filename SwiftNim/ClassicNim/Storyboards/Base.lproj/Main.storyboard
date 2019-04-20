@@ -423,6 +423,7 @@
                             <constraint firstItem="qzF-NA-1oz" firstAttribute="centerX" secondItem="jiE-Fx-BGN" secondAttribute="centerX" id="f1X-BX-HCo"/>
                             <constraint firstItem="tHt-Iy-bcS" firstAttribute="leading" secondItem="jiE-Fx-BGN" secondAttribute="leading" constant="16" id="tUo-hn-pe7"/>
                             <constraint firstItem="jiE-Fx-BGN" firstAttribute="bottom" secondItem="qzF-NA-1oz" secondAttribute="bottom" constant="35" id="tbC-cj-xgy"/>
+                            <constraint firstItem="r0H-jk-LBj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tHt-Iy-bcS" secondAttribute="trailing" constant="100" id="vgn-ha-aZr"/>
                             <constraint firstItem="r0H-jk-LBj" firstAttribute="top" secondItem="jiE-Fx-BGN" secondAttribute="top" id="yvu-cN-nZI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jiE-Fx-BGN"/>

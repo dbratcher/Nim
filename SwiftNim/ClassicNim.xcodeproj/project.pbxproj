@@ -76,6 +76,24 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		EA3592E0226B7F4E00AED06A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EAE5E427225595C100AC934B /* Main.storyboard */,
+				EAE5E42C225595C300AC934B /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		EA3592E1226B7F8300AED06A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EAE5E42A225595C300AC934B /* Assets.xcassets */,
+				EAE5E42F225595C300AC934B /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		EAE5E417225595C100AC934B = {
 			isa = PBXGroup;
 			children = (
@@ -97,12 +115,10 @@
 		EAE5E422225595C100AC934B /* ClassicNim */ = {
 			isa = PBXGroup;
 			children = (
+				EA3592E1226B7F8300AED06A /* Resources */,
+				EA3592E0226B7F4E00AED06A /* Storyboards */,
 				EA08E22922583F7300D54BC8 /* View Controllers */,
 				EAE5E423225595C100AC934B /* AppDelegate.swift */,
-				EAE5E427225595C100AC934B /* Main.storyboard */,
-				EAE5E42A225595C300AC934B /* Assets.xcassets */,
-				EAE5E42C225595C300AC934B /* LaunchScreen.storyboard */,
-				EAE5E42F225595C300AC934B /* Info.plist */,
 			);
 			path = ClassicNim;
 			sourceTree = "<group>";
@@ -386,7 +402,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CD69SP6A6Z;
-				INFOPLIST_FILE = ClassicNim/Info.plist;
+				INFOPLIST_FILE = ClassicNim/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -404,7 +420,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CD69SP6A6Z;
-				INFOPLIST_FILE = ClassicNim/Info.plist;
+				INFOPLIST_FILE = ClassicNim/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -423,7 +439,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CD69SP6A6Z;
-				INFOPLIST_FILE = ClassicNimTests/Info.plist;
+				INFOPLIST_FILE = ClassicNimTests/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -444,7 +460,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CD69SP6A6Z;
-				INFOPLIST_FILE = ClassicNimTests/Info.plist;
+				INFOPLIST_FILE = ClassicNimTests/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
