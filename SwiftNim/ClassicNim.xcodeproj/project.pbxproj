@@ -64,16 +64,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EA08E22922583F7300D54BC8 /* View Controllers */ = {
+		EA08E22922583F7300D54BC8 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				EA08E22722583DD100D54BC8 /* InstructionsViewController.swift */,
-				EAE5E425225595C100AC934B /* MainMenuViewController.swift */,
+				EA3592E2226B807B00AED06A /* BoardCustomization */,
 				EA08E22A22583FB200D54BC8 /* SettingsViewController.swift */,
-				EA86B88F225920F2001BA2D7 /* GameBoardViewController.swift */,
-				EA3592DE226B7C9100AED06A /* CustomizeBoardViewController.swift */,
 			);
-			path = "View Controllers";
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		EA3592E0226B7F4E00AED06A /* Storyboards */ = {
@@ -92,6 +89,14 @@
 				EAE5E42F225595C300AC934B /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		EA3592E2226B807B00AED06A /* BoardCustomization */ = {
+			isa = PBXGroup;
+			children = (
+				EA3592DE226B7C9100AED06A /* CustomizeBoardViewController.swift */,
+			);
+			path = BoardCustomization;
 			sourceTree = "<group>";
 		};
 		EAE5E417225595C100AC934B = {
@@ -117,8 +122,11 @@
 			children = (
 				EA3592E1226B7F8300AED06A /* Resources */,
 				EA3592E0226B7F4E00AED06A /* Storyboards */,
-				EA08E22922583F7300D54BC8 /* View Controllers */,
+				EA08E22922583F7300D54BC8 /* Settings */,
 				EAE5E423225595C100AC934B /* AppDelegate.swift */,
+				EA86B88F225920F2001BA2D7 /* GameBoardViewController.swift */,
+				EA08E22722583DD100D54BC8 /* InstructionsViewController.swift */,
+				EAE5E425225595C100AC934B /* MainMenuViewController.swift */,
 			);
 			path = ClassicNim;
 			sourceTree = "<group>";
