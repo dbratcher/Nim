@@ -16,6 +16,8 @@ class CustomizeBoardViewController: UIViewController {
     @IBOutlet weak var stack4: LabeledStepper!
     @IBOutlet weak var stack5: LabeledStepper!
     
+    private let firstStackNumber = 3
+    
     private var stacks: [LabeledStepper] {
         return [stack1, stack2, stack3, stack4, stack5]
     }
@@ -25,19 +27,54 @@ class CustomizeBoardViewController: UIViewController {
             assert(false, "Number changed to invalid segment.")
         }
         // offset index instead of translating strings to numbers
-        let currentNumber = stackNumber.selectedSegmentIndex + 3
-        for index in 0..<stacks.count {
-            // if the index matches the current number of stacks or is higher
-            // then we should hide the stack (since indexs are 0 based)
-            stacks[index].isHidden = index >= currentNumber
-        }
+        let currentNumber = stackNumber.selectedSegmentIndex + firstStackNumber
+        showStacks(currentNumber)
+        updateBoard()
     }
     
     @IBAction func goBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
-    class LabelStepperHandler: LabelStepperDelegate {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let board = GameBoardManager.board()
+        showStacks(board.stacks.count)
+        stackNumber.selectedSegmentIndex = board.stacks.count - firstStackNumber
+    }
+    
+    private func showStacks(_ visibleCount: Int) {
+        // stacks are hidden if index (0 based) is greater or equal to visible count
+        for index in 0..<stacks.count {
+            stacks[index].isHidden = index >= visibleCount
+        }
+    }
+    
+    private func updateBoard() {
+        var board = GameBoardManager.board()
+        var newStacks: [Stack] = []
+        for index in 0..<stacks.count {
+            guard stacks[index].isHidden == false else {
+                continue
+            }
+            
+            // create new stacks if needed
+            guard index < board.stacks.count else {
+                newStacks.append(Stack(identifier: UUID(), stoneCount: stacks[index].value))
+                continue
+            }
+            
+            // otherwise use existing board stack and update it
+            var stack = board.stacks[index]
+            stack.stoneCount = stacks[index].value
+            newStacks.append(stack)
+        }
+        board.stacks = newStacks
+        GameBoardManager.save(board)
+    }
+    
+    private class LabelStepperHandler: LabelStepperDelegate {
         private let stackID: UUID = UUID()
         
         func valueChanged(_ newValue: Int) {

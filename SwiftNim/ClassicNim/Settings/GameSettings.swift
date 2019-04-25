@@ -60,15 +60,6 @@ enum Difficulty: String {
     }
 }
 
-struct Stack {
-    let identifier: String
-    var stoneCount: Int
-}
-
-struct GameBoard {
-    var stacks: [Stack]
-}
-
 struct GameSettings {
     var firstMover: PlayerType = .player1
     var difficulty: Difficulty = .easy
