@@ -11,6 +11,8 @@
 		EA08E22B22583FB200D54BC8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA08E22A22583FB200D54BC8 /* SettingsViewController.swift */; };
 		EA3592DF226B7C9100AED06A /* CustomizeBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3592DE226B7C9100AED06A /* CustomizeBoardViewController.swift */; };
 		EA3592E4226B816800AED06A /* LabeledStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3592E3226B816800AED06A /* LabeledStepper.swift */; };
+		EA6462202271364800C68933 /* UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA64621F2271364800C68933 /* UISegmentedControl.swift */; };
+		EA688A80226E9E1000FDD77C /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA688A7F226E9E1000FDD77C /* GameSettings.swift */; };
 		EA86B890225920F3001BA2D7 /* GameBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86B88F225920F2001BA2D7 /* GameBoardViewController.swift */; };
 		EAE5E424225595C100AC934B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5E423225595C100AC934B /* AppDelegate.swift */; };
 		EAE5E426225595C100AC934B /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5E425225595C100AC934B /* MainMenuViewController.swift */; };
@@ -35,6 +37,8 @@
 		EA08E22A22583FB200D54BC8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EA3592DE226B7C9100AED06A /* CustomizeBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeBoardViewController.swift; sourceTree = "<group>"; };
 		EA3592E3226B816800AED06A /* LabeledStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledStepper.swift; sourceTree = "<group>"; };
+		EA64621F2271364800C68933 /* UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentedControl.swift; sourceTree = "<group>"; };
+		EA688A7F226E9E1000FDD77C /* GameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
 		EA86B88F225920F2001BA2D7 /* GameBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardViewController.swift; sourceTree = "<group>"; };
 		EAE5E420225595C100AC934B /* ClassicNim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassicNim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE5E423225595C100AC934B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +75,7 @@
 			children = (
 				EA3592E2226B807B00AED06A /* BoardCustomization */,
 				EA08E22A22583FB200D54BC8 /* SettingsViewController.swift */,
+				EA688A7F226E9E1000FDD77C /* GameSettings.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -102,6 +107,14 @@
 			path = BoardCustomization;
 			sourceTree = "<group>";
 		};
+		EA64621E2271363800C68933 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EA64621F2271364800C68933 /* UISegmentedControl.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		EAE5E417225595C100AC934B = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +136,7 @@
 		EAE5E422225595C100AC934B /* ClassicNim */ = {
 			isa = PBXGroup;
 			children = (
+				EA64621E2271363800C68933 /* Extensions */,
 				EA3592E1226B7F8300AED06A /* Resources */,
 				EA3592E0226B7F4E00AED06A /* Storyboards */,
 				EA08E22922583F7300D54BC8 /* Settings */,
@@ -244,8 +258,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA688A80226E9E1000FDD77C /* GameSettings.swift in Sources */,
 				EA08E22822583DD100D54BC8 /* InstructionsViewController.swift in Sources */,
 				EAE5E426225595C100AC934B /* MainMenuViewController.swift in Sources */,
+				EA6462202271364800C68933 /* UISegmentedControl.swift in Sources */,
 				EAE5E424225595C100AC934B /* AppDelegate.swift in Sources */,
 				EA3592DF226B7C9100AED06A /* CustomizeBoardViewController.swift in Sources */,
 				EA86B890225920F3001BA2D7 /* GameBoardViewController.swift in Sources */,

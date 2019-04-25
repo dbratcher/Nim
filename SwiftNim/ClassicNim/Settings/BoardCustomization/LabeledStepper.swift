@@ -19,7 +19,7 @@ class LabeledStepper: UIStackView {
     private let stepper = UIStepper(frame: .zero)
     
     private let maxValue = 7
-    private let minValue = 0
+    private let minValue = 1
     private let font = UIFont(name: "MarkerFelt-Thin", size: 24)
     private let color = UIColor.white
     
@@ -55,12 +55,16 @@ class LabeledStepper: UIStackView {
         addArrangedSubview(label)
         addArrangedSubview(countLabel)
         addArrangedSubview(stepper)
+        distribution = .fillEqually
         
         label.font = font
         label.textColor = color
+        label.textAlignment = .center
         countLabel.font = font
         countLabel.textColor = color
         countLabel.textAlignment = .center
+        stepper.maximumValue = Double(maxValue)
+        stepper.minimumValue = Double(minValue)
         stepper.addTarget(self, action: #selector(valueChanged), for: .valueChanged)
     }
     
