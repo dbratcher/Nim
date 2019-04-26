@@ -17,6 +17,7 @@ class CustomizeBoardViewController: UIViewController {
     @IBOutlet weak var stack5: LabeledStepper!
     
     private let firstStackNumber = 3
+    private var board = GameBoardManager.board()
     
     private var stacks: [LabeledStepper] {
         return [stack1, stack2, stack3, stack4, stack5]
@@ -38,8 +39,11 @@ class CustomizeBoardViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        board = GameBoardManager.board()
         
-        let board = GameBoardManager.board()
+        for stack in stacks {
+            stack.delegate = self
+        }
         showStacks(board.stacks.count)
         stackNumber.selectedSegmentIndex = board.stacks.count - firstStackNumber
     }
@@ -48,11 +52,13 @@ class CustomizeBoardViewController: UIViewController {
         // stacks are hidden if index (0 based) is greater or equal to visible count
         for index in 0..<stacks.count {
             stacks[index].isHidden = index >= visibleCount
+            if index < board.stacks.count {
+                stacks[index].value = board.stacks[index].stoneCount
+            }
         }
     }
     
     private func updateBoard() {
-        var board = GameBoardManager.board()
         var newStacks: [Stack] = []
         for index in 0..<stacks.count {
             guard stacks[index].isHidden == false else {
@@ -73,13 +79,11 @@ class CustomizeBoardViewController: UIViewController {
         board.stacks = newStacks
         GameBoardManager.save(board)
     }
-    
-    private class LabelStepperHandler: LabelStepperDelegate {
-        private let stackID: UUID = UUID()
-        
-        func valueChanged(_ newValue: Int) {
-            UserDefaults.standard.set(newValue, forKey: stackID.uuidString)
-        }
+}
+
+extension CustomizeBoardViewController: LabelStepperDelegate {
+    func valueChanged(_ newValue: Int) {
+        updateBoard()
     }
 }
 

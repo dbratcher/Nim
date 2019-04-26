@@ -25,7 +25,7 @@
                                     <color key="titleColor" red="0.6064150333404541" green="0.86524373292922974" blue="0.98662871122360229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="YaH-0X-W7D" kind="presentation" id="oZj-IK-lw2"/>
+                                    <segue destination="YaH-0X-W7D" kind="presentation" modalTransitionStyle="crossDissolve" id="oZj-IK-lw2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xlg-AG-6F9">
@@ -468,6 +468,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="4hO-2H-guD"/>
-        <segue reference="ibp-19-lqN"/>
+        <segue reference="oZj-IK-lw2"/>
     </inferredMetricsTieBreakers>
 </document>

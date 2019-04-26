@@ -104,7 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				EA3592DE226B7C9100AED06A /* CustomizeBoardViewController.swift */,
-				EA3592E3226B816800AED06A /* LabeledStepper.swift */,
 				EA64622122713A2A00C68933 /* GameBoard.swift */,
 			);
 			path = BoardCustomization;
@@ -116,6 +115,14 @@
 				EA64621F2271364800C68933 /* UISegmentedControl.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EA64622322728B7C00C68933 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EA3592E3226B816800AED06A /* LabeledStepper.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		EAE5E417225595C100AC934B = {
@@ -139,6 +146,7 @@
 		EAE5E422225595C100AC934B /* ClassicNim */ = {
 			isa = PBXGroup;
 			children = (
+				EA64622322728B7C00C68933 /* Components */,
 				EA64621E2271363800C68933 /* Extensions */,
 				EA3592E1226B7F8300AED06A /* Resources */,
 				EA3592E0226B7F4E00AED06A /* Storyboards */,
