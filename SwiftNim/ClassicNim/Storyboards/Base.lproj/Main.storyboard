@@ -388,6 +388,7 @@
                         <viewLayoutGuide key="safeArea" id="jiE-Fx-BGN"/>
                     </view>
                     <connections>
+                        <outlet property="removeButton" destination="qzF-NA-1oz" id="aCT-94-iax"/>
                         <outlet property="turnLabel" destination="pQU-3k-exl" id="UMf-2X-UD7"/>
                     </connections>
                 </viewController>
