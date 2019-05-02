@@ -26,6 +26,7 @@ class CustomizeBoardViewController: UIViewController {
     @IBAction func stackNumberChanged(_ sender: Any) {
         if stackNumber.selectedSegmentIndex < 0 || stackNumber.selectedSegmentIndex > stackNumber.numberOfSegments {
             assert(false, "Number changed to invalid segment.")
+            return
         }
         // offset index instead of translating strings to numbers
         let currentNumber = stackNumber.selectedSegmentIndex + firstStackNumber

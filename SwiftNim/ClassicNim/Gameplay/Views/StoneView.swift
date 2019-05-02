@@ -8,10 +8,18 @@
 
 import UIKit
 
+protocol StoneViewDelegate: class {
+    func tap(on view: StoneView, in stack: Stack) -> Bool
+}
+
 class StoneView: UIView {
-    private var isSelected: Bool = false
+    let stack: Stack
+    var isSelected: Bool = false
     
-    init() {
+    weak var delegate: StoneViewDelegate?
+    
+    init(for stack: Stack) {
+        self.stack = stack
         super.init(frame: .zero)
         
         translatesAutoresizingMaskIntoConstraints = false
@@ -19,7 +27,7 @@ class StoneView: UIView {
         backgroundColor = .white
         layer.borderColor = UIColor.gray.cgColor
         layer.borderWidth = 2
-        addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(handleTap)))
+        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -32,6 +40,15 @@ class StoneView: UIView {
     }
     
     @objc func handleTap() {
+        guard let delegate = delegate else {
+            assert(false, "We need a delegate to check if taps are valid.")
+            return
+        }
+        
+        guard delegate.tap(on: self, in: stack) else {
+            return
+        }
+        
         isSelected.toggle()
         backgroundColor = isSelected ? .gray : .white
         setNeedsDisplay()

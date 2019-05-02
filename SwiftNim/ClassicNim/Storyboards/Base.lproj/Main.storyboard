@@ -205,26 +205,26 @@
             <objects>
                 <viewController id="S5M-Tk-nKB" customClass="CustomizeBoardViewController" customModule="ClassicNim" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SJx-Fe-uoe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="rel-Gf-UK4">
-                                <rect key="frame" x="37.5" y="47" width="300" height="593.5"/>
+                                <rect key="frame" x="10" y="-47" width="300" height="594"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customize" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uM6-ZQ-jiA">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="52.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="53"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="48"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Stacks" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EnR-nX-aRo">
-                                        <rect key="frame" x="0.0" y="82.5" width="300" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="83" width="300" height="26.5"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QQP-aO-Ue2">
-                                        <rect key="frame" x="0.0" y="139" width="300" height="29"/>
+                                        <rect key="frame" x="0.0" y="139.5" width="300" height="29"/>
                                         <segments>
                                             <segment title="3 Stacks"/>
                                             <segment title="4 Stacks"/>
@@ -236,13 +236,13 @@
                                         </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stones per Stack" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Mj-ZP-Oy2">
-                                        <rect key="frame" x="0.0" y="197" width="300" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="197.5" width="300" height="26.5"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="e4K-2O-AMk" customClass="LabeledStepper" customModule="ClassicNim" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="253.5" width="300" height="29"/>
+                                        <rect key="frame" x="0.0" y="254" width="300" height="29"/>
                                         <color key="tintColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="text" value="Stack 1:"/>
@@ -252,7 +252,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pNJ-2W-f2u" customClass="LabeledStepper" customModule="ClassicNim" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="312.5" width="300" height="29"/>
+                                        <rect key="frame" x="0.0" y="313" width="300" height="29"/>
                                         <color key="tintColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="text" value="Stack 2:"/>
@@ -262,7 +262,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8TE-hu-uNL" customClass="LabeledStepper" customModule="ClassicNim" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="371.5" width="300" height="29"/>
+                                        <rect key="frame" x="0.0" y="372" width="300" height="29"/>
                                         <color key="tintColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="text" value="Stack 3:"/>
@@ -272,7 +272,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jYv-OB-yUu" customClass="LabeledStepper" customModule="ClassicNim" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="430.5" width="300" height="29"/>
+                                        <rect key="frame" x="0.0" y="431" width="300" height="29"/>
                                         <color key="tintColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="text" value="Stack 4:"/>
@@ -282,7 +282,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ffY-cb-bgw" customClass="LabeledStepper" customModule="ClassicNim" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="489.5" width="300" height="29"/>
+                                        <rect key="frame" x="0.0" y="490" width="300" height="29"/>
                                         <color key="tintColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="text" value="Stack 5:"/>
@@ -292,7 +292,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olG-PJ-rM0">
-                                        <rect key="frame" x="0.0" y="548.5" width="300" height="45"/>
+                                        <rect key="frame" x="0.0" y="549" width="300" height="45"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                         <state key="normal" title="Go Back">
                                             <color key="titleColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

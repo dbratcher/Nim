@@ -9,7 +9,11 @@
 import UIKit
 
 class StoneStackView: UIStackView {
-    init(for stack: Stack) {
+    var hiddenStoneCount: Int {
+        return subviews.filter({ $0 is StoneView && $0.alpha == 0 }).count
+    }
+    
+    init(for stack: Stack, with delegate: StoneViewDelegate) {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
         
@@ -19,7 +23,8 @@ class StoneStackView: UIStackView {
         spacing = 10
         
         for _ in 0..<stack.stoneCount {
-            let stone = StoneView()
+            let stone = StoneView(for: stack)
+            stone.delegate = delegate
             addArrangedSubview(stone)
             stone.widthAnchor.constraint(equalTo: stone.heightAnchor).isActive = true
             let maxHeightConstraint = stone.heightAnchor.constraint(equalToConstant: 150)

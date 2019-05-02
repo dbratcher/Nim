@@ -9,7 +9,7 @@
 import UIKit
 
 class GameBoardView: UIStackView {
-    init(for board: GameBoard) {
+    init(for board: GameBoard, with delegate: StoneViewDelegate) {
         super.init(frame: .zero)
         
         translatesAutoresizingMaskIntoConstraints = false
@@ -19,7 +19,7 @@ class GameBoardView: UIStackView {
         spacing = 20
         
         for stack in board.stacks {
-            addArrangedSubview(StoneStackView(for: stack))
+            addArrangedSubview(StoneStackView(for: stack, with: delegate))
         }
     }
     

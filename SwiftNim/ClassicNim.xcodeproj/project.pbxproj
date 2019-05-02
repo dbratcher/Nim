@@ -12,10 +12,11 @@
 		EA27B30422780611000FD652 /* GameBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B30322780611000FD652 /* GameBoardView.swift */; };
 		EA27B307227807F4000FD652 /* StoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B306227807F4000FD652 /* StoneView.swift */; };
 		EA27B30922780817000FD652 /* StoneStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B30822780817000FD652 /* StoneStackView.swift */; };
+		EA27B30E227954FF000FD652 /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B30D227954FF000FD652 /* GameBoard.swift */; };
 		EA3592DF226B7C9100AED06A /* CustomizeBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3592DE226B7C9100AED06A /* CustomizeBoardViewController.swift */; };
 		EA3592E4226B816800AED06A /* LabeledStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3592E3226B816800AED06A /* LabeledStepper.swift */; };
 		EA6462202271364800C68933 /* UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA64621F2271364800C68933 /* UISegmentedControl.swift */; };
-		EA64622222713A2A00C68933 /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA64622122713A2A00C68933 /* GameBoard.swift */; };
+		EA64622222713A2A00C68933 /* GameBoardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA64622122713A2A00C68933 /* GameBoardManager.swift */; };
 		EA688A80226E9E1000FDD77C /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA688A7F226E9E1000FDD77C /* GameSettings.swift */; };
 		EA86B890225920F3001BA2D7 /* GameBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86B88F225920F2001BA2D7 /* GameBoardViewController.swift */; };
 		EAE5E424225595C100AC934B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5E423225595C100AC934B /* AppDelegate.swift */; };
@@ -42,10 +43,11 @@
 		EA27B30322780611000FD652 /* GameBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardView.swift; sourceTree = "<group>"; };
 		EA27B306227807F4000FD652 /* StoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoneView.swift; sourceTree = "<group>"; };
 		EA27B30822780817000FD652 /* StoneStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoneStackView.swift; sourceTree = "<group>"; };
+		EA27B30D227954FF000FD652 /* GameBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
 		EA3592DE226B7C9100AED06A /* CustomizeBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeBoardViewController.swift; sourceTree = "<group>"; };
 		EA3592E3226B816800AED06A /* LabeledStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledStepper.swift; sourceTree = "<group>"; };
 		EA64621F2271364800C68933 /* UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentedControl.swift; sourceTree = "<group>"; };
-		EA64622122713A2A00C68933 /* GameBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
+		EA64622122713A2A00C68933 /* GameBoardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardManager.swift; sourceTree = "<group>"; };
 		EA688A7F226E9E1000FDD77C /* GameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
 		EA86B88F225920F2001BA2D7 /* GameBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardViewController.swift; sourceTree = "<group>"; };
 		EAE5E420225595C100AC934B /* ClassicNim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassicNim.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +93,7 @@
 		EA27B302227805F5000FD652 /* Gameplay */ = {
 			isa = PBXGroup;
 			children = (
+				EA27B30C227954EA000FD652 /* Models */,
 				EA27B305227807E8000FD652 /* Views */,
 				EA86B88F225920F2001BA2D7 /* GameBoardViewController.swift */,
 			);
@@ -105,6 +108,14 @@
 				EA27B306227807F4000FD652 /* StoneView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		EA27B30C227954EA000FD652 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EA27B30D227954FF000FD652 /* GameBoard.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		EA3592E0226B7F4E00AED06A /* Storyboards */ = {
@@ -129,7 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				EA3592DE226B7C9100AED06A /* CustomizeBoardViewController.swift */,
-				EA64622122713A2A00C68933 /* GameBoard.swift */,
+				EA64622122713A2A00C68933 /* GameBoardManager.swift */,
 			);
 			path = BoardCustomization;
 			sourceTree = "<group>";
@@ -297,7 +308,7 @@
 				EA27B30922780817000FD652 /* StoneStackView.swift in Sources */,
 				EA688A80226E9E1000FDD77C /* GameSettings.swift in Sources */,
 				EA08E22822583DD100D54BC8 /* InstructionsViewController.swift in Sources */,
-				EA64622222713A2A00C68933 /* GameBoard.swift in Sources */,
+				EA64622222713A2A00C68933 /* GameBoardManager.swift in Sources */,
 				EA27B30422780611000FD652 /* GameBoardView.swift in Sources */,
 				EAE5E426225595C100AC934B /* MainMenuViewController.swift in Sources */,
 				EA6462202271364800C68933 /* UISegmentedControl.swift in Sources */,
@@ -307,6 +318,7 @@
 				EA08E22B22583FB200D54BC8 /* SettingsViewController.swift in Sources */,
 				EA27B307227807F4000FD652 /* StoneView.swift in Sources */,
 				EA3592E4226B816800AED06A /* LabeledStepper.swift in Sources */,
+				EA27B30E227954FF000FD652 /* GameBoard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

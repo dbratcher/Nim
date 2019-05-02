@@ -8,27 +8,6 @@
 
 import Foundation
 
-struct Stack {
-    let identifier: UUID
-    var stoneCount: Int
-}
-
-struct GameBoard {
-    var stacks: [Stack]
-    
-    init() {
-        let stack1 = Stack(identifier: UUID(), stoneCount: 4)
-        let stack2 = Stack(identifier: UUID(), stoneCount: 5)
-        let stack3 = Stack(identifier: UUID(), stoneCount: 3)
-        
-        stacks = [stack1, stack2, stack3]
-    }
-    
-    init(stacks: [Stack]) {
-        self.stacks = stacks
-    }
-}
-
 class GameBoardManager {
     static private let boardStackIDListKey = "boardStackIDList"
     static private let stackStoneCountKeySuffix = "-stoneCount"
