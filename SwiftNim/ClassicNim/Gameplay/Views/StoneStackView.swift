@@ -24,7 +24,7 @@ class StoneStackView: UIStackView {
             return
         }
         let newIndex = hiddenStoneCount
-        let duration = Double(newIndex - currentIndex) / 3
+        let duration = Double(newIndex - currentIndex) / 2
         
         UIView.animate(withDuration: duration, animations: {
             stoneView.removeFromSuperview()

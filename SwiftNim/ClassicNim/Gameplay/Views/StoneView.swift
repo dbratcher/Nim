@@ -14,6 +14,7 @@ class StoneView: UIView {
     let stack: Stack
     var isSelected: Bool = false {
         didSet {
+            backgroundColor = isSelected ? .gray : .white
             setNeedsDisplay()
         }
     }
@@ -37,7 +38,6 @@ class StoneView: UIView {
     }
     
     override func draw(_ rect: CGRect) {
-        backgroundColor = isSelected ? .gray : .white
         layer.cornerRadius = frame.width / 3
         super.draw(rect)
     }

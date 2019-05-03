@@ -23,16 +23,13 @@ class SettingsViewController: UIViewController {
         
         settings = GameSettingsStorage.load()
         difficulty.selectSegment(titled: settings.difficulty.toString())
-        firstMover.selectSegment(titled: settings.firstMover.toString())
+        
+        let segmentTitle = settings.player1GoesFirst ? "Player 1" : "Opponent"
+        firstMover.selectSegment(titled: segmentTitle)
     }
     
     @IBAction func firstMoverChanged(_ sender: UISegmentedControl) {
-        guard let playerType = PlayerType(from: sender.selectedTitle) else {
-            assert(false, "Unknown playerType selected.")
-            return
-        }
-        
-        settings.firstMover = playerType
+        settings.player1GoesFirst = firstMover.selectedTitle == "Player 1"
         GameSettingsStorage.save(settings)
     }
     

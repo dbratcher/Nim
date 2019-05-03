@@ -132,7 +132,7 @@
                                         <rect key="frame" x="0.0" y="139" width="201" height="29"/>
                                         <segments>
                                             <segment title="Player 1"/>
-                                            <segment title="Computer"/>
+                                            <segment title="Opponent"/>
                                         </segments>
                                         <color key="tintColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
