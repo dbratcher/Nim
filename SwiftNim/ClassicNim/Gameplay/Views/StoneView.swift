@@ -8,18 +8,20 @@
 
 import UIKit
 
-protocol StoneViewDelegate: class {
-    func tap(on view: StoneView, in stack: Stack) -> Bool
-}
-
 class StoneView: UIView {
+    private let engine: MoveEngine
+    
     let stack: Stack
-    var isSelected: Bool = false
+    var isSelected: Bool = false {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
     
-    weak var delegate: StoneViewDelegate?
-    
-    init(for stack: Stack) {
+    init(for stack: Stack, with engine: MoveEngine) {
         self.stack = stack
+        self.engine = engine
+        
         super.init(frame: .zero)
         
         translatesAutoresizingMaskIntoConstraints = false
@@ -35,22 +37,12 @@ class StoneView: UIView {
     }
     
     override func draw(_ rect: CGRect) {
+        backgroundColor = isSelected ? .gray : .white
         layer.cornerRadius = frame.width / 3
         super.draw(rect)
     }
     
     @objc func handleTap() {
-        guard let delegate = delegate else {
-            assert(false, "We need a delegate to check if taps are valid.")
-            return
-        }
-        
-        guard delegate.tap(on: self, in: stack) else {
-            return
-        }
-        
-        isSelected.toggle()
-        backgroundColor = isSelected ? .gray : .white
-        setNeedsDisplay()
+        engine.tap(on: self, in: stack)
     }
 }

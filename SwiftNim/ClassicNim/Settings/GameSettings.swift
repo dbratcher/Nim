@@ -62,14 +62,15 @@ enum Difficulty: String {
 
 struct GameSettings {
     var firstMover: PlayerType = .player1
+    var opponent: PlayerType = .computer
     var difficulty: Difficulty = .easy
 }
 
-class GameSettingsManager {
+class GameSettingsStorage {
     static private let firstMoverKey = "firstMover"
     static private let difficultyKey = "difficulty"
     
-    static func loadSettings() -> GameSettings {
+    static func load() -> GameSettings {
         var settings = GameSettings()
         
         if let storedFirstMover = UserDefaults.standard.string(forKey: firstMoverKey), let firstMoverPlayerType = PlayerType(rawValue: storedFirstMover) {

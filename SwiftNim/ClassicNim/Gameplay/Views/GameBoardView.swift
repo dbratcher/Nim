@@ -9,7 +9,22 @@
 import UIKit
 
 class GameBoardView: UIStackView {
-    init(for board: GameBoard, with delegate: StoneViewDelegate) {
+    private var stoneStackViews: [StoneStackView] = []
+    
+    var visibleStoneCount: Int {
+        return stoneStackViews.reduce(0, { return $0 + $1.visibleStoneCount })
+    }
+    
+    var currentVisibleBoard: GameBoard {
+        var stacks: [Stack] = []
+        for stoneStack in stoneStackViews {
+            stacks.append(Stack(identifier: UUID(), stoneCount: stoneStack.visibleStoneCount))
+        }
+        
+        return GameBoard(stacks: stacks)
+    }
+    
+    init(for board: GameBoard, with engine: MoveEngine) {
         super.init(frame: .zero)
         
         translatesAutoresizingMaskIntoConstraints = false
@@ -19,7 +34,9 @@ class GameBoardView: UIStackView {
         spacing = 20
         
         for stack in board.stacks {
-            addArrangedSubview(StoneStackView(for: stack, with: delegate))
+            let stoneStackView = StoneStackView(for: stack, with: engine)
+            stoneStackViews.append(stoneStackView)
+            addArrangedSubview(stoneStackView)
         }
     }
     

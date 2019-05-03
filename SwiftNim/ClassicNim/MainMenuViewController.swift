@@ -8,5 +8,16 @@
 
 import UIKit
 
-class MainMenuViewController: UIViewController { }
+class MainMenuViewController: UIViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var settings = GameSettingsStorage.load()
+        if segue.identifier == "1 Player" {
+            settings.opponent = .computer
+        }
+        if segue.identifier == "2 Player" {
+            settings.opponent = .player2
+        }
+        GameSettingsStorage.save(settings)
+    }
+}
 

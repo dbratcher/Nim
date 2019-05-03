@@ -16,15 +16,20 @@ struct Stack: Equatable {
 struct GameBoard {
     var stacks: [Stack]
     
+    init(stacks: [Stack]) {
+        self.stacks = stacks
+    }
+    
     init() {
         let stack1 = Stack(identifier: UUID(), stoneCount: 4)
         let stack2 = Stack(identifier: UUID(), stoneCount: 5)
         let stack3 = Stack(identifier: UUID(), stoneCount: 3)
         
-        stacks = [stack1, stack2, stack3]
+        self.init(stacks: [stack1, stack2, stack3])
     }
-    
-    init(stacks: [Stack]) {
-        self.stacks = stacks
-    }
+}
+
+struct GameState {
+    var currentPlayer: PlayerType
+    var opponent: PlayerType
 }

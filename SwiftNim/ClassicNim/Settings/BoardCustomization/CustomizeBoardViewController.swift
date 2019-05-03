@@ -17,9 +17,9 @@ class CustomizeBoardViewController: UIViewController {
     @IBOutlet weak var stack5: LabeledStepper!
     
     private let firstStackNumber = 3
-    private var board = GameBoardManager.board()
+    private var board = GameBoardStorage.load()
     
-    private var stacks: [LabeledStepper] {
+    private var stackSteppers: [LabeledStepper] {
         return [stack1, stack2, stack3, stack4, stack5]
     }
     
@@ -40,10 +40,9 @@ class CustomizeBoardViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        board = GameBoardManager.board()
         
-        for stack in stacks {
-            stack.delegate = self
+        for stepper in stackSteppers {
+            stepper.delegate = self
         }
         showStacks(board.stacks.count)
         stackNumber.selectedSegmentIndex = board.stacks.count - firstStackNumber
@@ -51,34 +50,34 @@ class CustomizeBoardViewController: UIViewController {
     
     private func showStacks(_ visibleCount: Int) {
         // stacks are hidden if index (0 based) is greater or equal to visible count
-        for index in 0..<stacks.count {
-            stacks[index].isHidden = index >= visibleCount
+        for index in 0..<stackSteppers.count {
+            stackSteppers[index].isHidden = index >= visibleCount
             if index < board.stacks.count {
-                stacks[index].value = board.stacks[index].stoneCount
+                stackSteppers[index].value = board.stacks[index].stoneCount
             }
         }
     }
     
     private func updateBoard() {
         var newStacks: [Stack] = []
-        for index in 0..<stacks.count {
-            guard stacks[index].isHidden == false else {
+        for index in 0..<stackSteppers.count {
+            guard stackSteppers[index].isHidden == false else {
                 continue
             }
             
             // create new stacks if needed
             guard index < board.stacks.count else {
-                newStacks.append(Stack(identifier: UUID(), stoneCount: stacks[index].value))
+                newStacks.append(Stack(identifier: UUID(), stoneCount: stackSteppers[index].value))
                 continue
             }
             
             // otherwise use existing board stack and update it
             var stack = board.stacks[index]
-            stack.stoneCount = stacks[index].value
+            stack.stoneCount = stackSteppers[index].value
             newStacks.append(stack)
         }
         board.stacks = newStacks
-        GameBoardManager.save(board)
+        GameBoardStorage.save(board)
     }
 }
 

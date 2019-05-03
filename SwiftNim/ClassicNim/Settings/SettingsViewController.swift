@@ -12,7 +12,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var firstMover: UISegmentedControl!
     @IBOutlet weak var difficulty: UISegmentedControl!
     
-    private var settings: GameSettings = GameSettingsManager.loadSettings()
+    private var settings: GameSettings = GameSettingsStorage.load()
     
     @IBAction func goBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -21,7 +21,7 @@ class SettingsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        settings = GameSettingsManager.loadSettings()
+        settings = GameSettingsStorage.load()
         difficulty.selectSegment(titled: settings.difficulty.toString())
         firstMover.selectSegment(titled: settings.firstMover.toString())
     }
@@ -33,7 +33,7 @@ class SettingsViewController: UIViewController {
         }
         
         settings.firstMover = playerType
-        GameSettingsManager.save(settings)
+        GameSettingsStorage.save(settings)
     }
     
     @IBAction func difficultyChanged(_ sender: UISegmentedControl) {
@@ -43,6 +43,6 @@ class SettingsViewController: UIViewController {
         }
         
         settings.difficulty = difficulty
-        GameSettingsManager.save(settings)
+        GameSettingsStorage.save(settings)
     }
 }

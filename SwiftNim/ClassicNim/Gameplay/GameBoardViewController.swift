@@ -12,42 +12,20 @@ class GameBoardViewController: UIViewController {
     @IBOutlet weak var turnLabel: UILabel!
     @IBOutlet weak var removeButton: UIButton!
     
-    private var board = GameBoardManager.board()
-    private let horizontalSpacing: CGFloat = 20
-    private let verticalSpacing: CGFloat = 10
-    
-    private var selectedStones: [StoneView] = []
+    private let engine = MoveEngine()
     
     @IBAction func quit(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func removeStones(_ sender: Any) {
-        selectedStones.forEach { stone in
-            UIView.animate(withDuration: 2, animations: {
-                if let stackView = stone.superview as? StoneStackView {
-                    stone.removeFromSuperview()
-                    stackView.insertArrangedSubview(stone, at: stackView.hiddenStoneCount)
-                    stackView.layoutSubviews()
-                }
-            }, completion: { _ in
-                UIView.animate(withDuration: 1, animations: {
-                    stone.alpha = 0
-                })
-            })
-        }
-        selectedStones.removeAll()
+    @IBAction func removeStones() {
+        engine.endTurn()
     }
     
-    override func viewDidLoad() {
-        let settings = GameSettingsManager.loadSettings()
-        turnLabel.text = settings.firstMover.toString()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func loadView() {
+        super.loadView()
         
-        let gameBoardView = GameBoardView(for: board, with: self)
+        let gameBoardView = GameBoardView(for: engine.board, with: engine)
         view.addSubview(gameBoardView)
         gameBoardView.topAnchor.constraint(greaterThanOrEqualTo: turnLabel.bottomAnchor, constant: 20).isActive = true
         gameBoardView.bottomAnchor.constraint(lessThanOrEqualTo: removeButton.topAnchor, constant: -20).isActive = true
@@ -58,23 +36,30 @@ class GameBoardViewController: UIViewController {
     }
 }
 
-extension GameBoardViewController: StoneViewDelegate {
-    func tap(on view: StoneView, in stack: Stack) -> Bool {
-        if view.isSelected {
-            selectedStones.removeAll { $0 == view }
-            return true
-        }
-        
-        if let selectedStack = selectedStones.first?.stack, selectedStack != stack {
-            let sameStackMessage = "You must select stones in the same stack."
-            let alert = UIAlertController(title: "Same Stack Rule", message: sameStackMessage, preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "Ok", style: .default)
-            alert.addAction(okAction)
-            present(alert, animated: true, completion: nil)
-            return false
-        }
-        
-        selectedStones.append(view)
-        return true
+extension GameBoardViewController: MoveEngineDelegate {
+    func presentSameStackAlert() {
+        let sameStackMessage = "You must select stones in the same stack."
+        let alert = UIAlertController(title: "Same Stack Rule", message: sameStackMessage, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func updateViews(for state: GameState) {
+        turnLabel.text = state.currentPlayer.toString()
+        removeButton.isEnabled = state.currentPlayer != .computer
+    }
+    
+    func displayEndPrompt(for state: GameState) {
+        let winner = state.currentPlayer.toString()
+        let endGameMessage = "Play Again? You can also adjust the difficulty in settings."
+        let alert = UIAlertController(title: "\(winner) Won!", message: endGameMessage, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Go Back", style: .default)
+        alert.addAction(okAction)
+        let settingsAction = UIAlertAction(title: "Settings", style: .default)
+        alert.addAction(settingsAction)
+        let playAgainAction = UIAlertAction(title: "Play Again", style: .default)
+        alert.addAction(playAgainAction)
+        present(alert, animated: true, completion: nil)
     }
 }

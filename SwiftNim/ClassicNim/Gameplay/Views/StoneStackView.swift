@@ -9,11 +9,36 @@
 import UIKit
 
 class StoneStackView: UIStackView {
+    let stack: Stack
     var hiddenStoneCount: Int {
         return subviews.filter({ $0 is StoneView && $0.alpha == 0 }).count
     }
     
-    init(for stack: Stack, with delegate: StoneViewDelegate) {
+    var visibleStoneCount: Int {
+        return stack.stoneCount - hiddenStoneCount
+    }
+    
+    func hide(_ stoneView: StoneView, completion: @escaping (Bool) -> ()) {
+        guard let currentIndex = arrangedSubviews.firstIndex(of: stoneView) else {
+            assert(false, "\(self) trying to remove not present stoneView: \(stoneView)")
+            return
+        }
+        let newIndex = hiddenStoneCount
+        let duration = Double(newIndex - currentIndex) / 3
+        
+        UIView.animate(withDuration: duration, animations: {
+            stoneView.removeFromSuperview()
+            self.insertArrangedSubview(stoneView, at: newIndex)
+            self.layoutSubviews()
+        }, completion: { _ in
+            UIView.animate(withDuration: 1, animations: {
+                stoneView.alpha = 0
+            }, completion: completion)
+        })
+    }
+    
+    init(for stack: Stack, with engine: MoveEngine) {
+        self.stack = stack
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
         
@@ -23,8 +48,7 @@ class StoneStackView: UIStackView {
         spacing = 10
         
         for _ in 0..<stack.stoneCount {
-            let stone = StoneView(for: stack)
-            stone.delegate = delegate
+            let stone = StoneView(for: stack, with: engine)
             addArrangedSubview(stone)
             stone.widthAnchor.constraint(equalTo: stone.heightAnchor).isActive = true
             let maxHeightConstraint = stone.heightAnchor.constraint(equalToConstant: 150)

@@ -8,19 +8,21 @@
 
 import Foundation
 
-class GameBoardManager {
+class GameBoardStorage {
     static private let boardStackIDListKey = "boardStackIDList"
     static private let stackStoneCountKeySuffix = "-stoneCount"
     
-    static func board() -> GameBoard {
+    static func load() -> GameBoard {
         let defaultBoard = GameBoard()
         guard let stackIDList = UserDefaults.standard.string(forKey: boardStackIDListKey) else {
+            print("\(self) using a fresh board due to no board customization in user defaults")
             return defaultBoard
         }
         
         let stackIDStrings = stackIDList.components(separatedBy: ",")
         let stackIDs = stackIDStrings.compactMap { UUID(uuidString: $0) }
         guard stackIDs.count > 0 else {
+            assert(false, "\(self) Invalid empty stack list")
             return defaultBoard
         }
         
@@ -29,8 +31,8 @@ class GameBoardManager {
             let stackStoneCountKey = id.uuidString + stackStoneCountKeySuffix
             let stoneCount = UserDefaults.standard.integer(forKey: stackStoneCountKey)
             guard stoneCount > 0 else {
-                assert(false, "Invalid stone count for stack with id: \(id)")
-                continue
+                assert(false, "\(self) Invalid stone count for stack with id: \(id)")
+                return defaultBoard
             }
             
             boardStacks.append(Stack(identifier: id, stoneCount: stoneCount))
@@ -41,7 +43,7 @@ class GameBoardManager {
     
     static func save(_ newBoard: GameBoard) {
         // clear any existing board first
-        let oldBoard = board()
+        let oldBoard = load()
         UserDefaults.standard.removeObject(forKey: boardStackIDListKey)
         for stack in oldBoard.stacks {
             let stackStoneCountKey = stack.identifier.uuidString + stackStoneCountKeySuffix
