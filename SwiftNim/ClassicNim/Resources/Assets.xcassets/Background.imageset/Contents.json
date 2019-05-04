@@ -1,0 +1,26 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "filename" : "pattern.png",
+      "resizing" : {
+        "mode" : "9-part",
+        "center" : {
+          "mode" : "tile",
+          "width" : 512,
+          "height" : 512
+        },
+        "cap-insets" : {
+          "bottom" : 0,
+          "top" : 0,
+          "right" : 0,
+          "left" : 0
+        }
+      }
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

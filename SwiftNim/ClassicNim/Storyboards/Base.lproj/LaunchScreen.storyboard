@@ -18,6 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="I7i-62-znv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckw-q4-2CO" userLabel="TitleView">
                                 <rect key="frame" x="0.0" y="20" width="375" height="323.5"/>
                                 <subviews>
@@ -45,10 +48,14 @@
                         </subviews>
                         <color key="backgroundColor" red="0.35294117650000001" green="0.28627450980000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="I7i-62-znv" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="8xb-OO-Acb"/>
+                            <constraint firstAttribute="bottom" secondItem="I7i-62-znv" secondAttribute="bottom" id="ADp-jw-3Ya"/>
+                            <constraint firstItem="I7i-62-znv" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="DGn-7g-YRI"/>
                             <constraint firstItem="ckw-q4-2CO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NaH-zi-zZd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ckw-q4-2CO" secondAttribute="trailing" id="QOP-kl-Pvf"/>
                             <constraint firstItem="ckw-q4-2CO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RFF-Ow-CWd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="centerY" secondItem="ckw-q4-2CO" secondAttribute="bottom" id="Sqh-Dv-bUN"/>
+                            <constraint firstAttribute="trailing" secondItem="I7i-62-znv" secondAttribute="trailing" id="yIm-T8-czJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -58,4 +65,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="512" height="512"/>
+    </resources>
 </document>

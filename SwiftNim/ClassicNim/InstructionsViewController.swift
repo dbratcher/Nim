@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InstructionsViewController: UIViewController {
+class InstructionsViewController: NimViewController {
     @IBAction func goBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }

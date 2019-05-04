@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GameBoardViewController: UIViewController {
+class GameBoardViewController: NimViewController {
     @IBOutlet weak var turnLabel: UILabel!
     @IBOutlet weak var removeButton: UIButton!
     

@@ -17,6 +17,7 @@
 		EA3592DF226B7C9100AED06A /* CustomizeBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3592DE226B7C9100AED06A /* CustomizeBoardViewController.swift */; };
 		EA3592E4226B816800AED06A /* LabeledStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3592E3226B816800AED06A /* LabeledStepper.swift */; };
 		EA4E9C80227E13870021AAE5 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4E9C7F227E13870021AAE5 /* UIButton.swift */; };
+		EA4E9C82227E2D130021AAE5 /* NimViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4E9C81227E2D130021AAE5 /* NimViewController.swift */; };
 		EA6462202271364800C68933 /* UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA64621F2271364800C68933 /* UISegmentedControl.swift */; };
 		EA64622222713A2A00C68933 /* GameBoardStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA64622122713A2A00C68933 /* GameBoardStorage.swift */; };
 		EA688A80226E9E1000FDD77C /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA688A7F226E9E1000FDD77C /* GameSettings.swift */; };
@@ -50,6 +51,7 @@
 		EA3592DE226B7C9100AED06A /* CustomizeBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeBoardViewController.swift; sourceTree = "<group>"; };
 		EA3592E3226B816800AED06A /* LabeledStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledStepper.swift; sourceTree = "<group>"; };
 		EA4E9C7F227E13870021AAE5 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		EA4E9C81227E2D130021AAE5 /* NimViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimViewController.swift; sourceTree = "<group>"; };
 		EA64621F2271364800C68933 /* UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentedControl.swift; sourceTree = "<group>"; };
 		EA64622122713A2A00C68933 /* GameBoardStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardStorage.swift; sourceTree = "<group>"; };
 		EA688A7F226E9E1000FDD77C /* GameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				EAE5E423225595C100AC934B /* AppDelegate.swift */,
 				EA08E22722583DD100D54BC8 /* InstructionsViewController.swift */,
 				EAE5E425225595C100AC934B /* MainMenuViewController.swift */,
+				EA4E9C81227E2D130021AAE5 /* NimViewController.swift */,
 			);
 			path = ClassicNim;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA27B30922780817000FD652 /* StoneStackView.swift in Sources */,
+				EA4E9C82227E2D130021AAE5 /* NimViewController.swift in Sources */,
 				EA688A80226E9E1000FDD77C /* GameSettings.swift in Sources */,
 				EA08E22822583DD100D54BC8 /* InstructionsViewController.swift in Sources */,
 				EA4E9C80227E13870021AAE5 /* UIButton.swift in Sources */,

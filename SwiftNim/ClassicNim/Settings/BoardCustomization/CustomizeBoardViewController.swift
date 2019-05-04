@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomizeBoardViewController: UIViewController {
+class CustomizeBoardViewController: NimViewController {
     @IBOutlet weak var stackNumber: UISegmentedControl!
     @IBOutlet weak var stack1: LabeledStepper!
     @IBOutlet weak var stack2: LabeledStepper!

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: NimViewController {
     @IBOutlet weak var firstMover: UISegmentedControl!
     @IBOutlet weak var difficulty: UISegmentedControl!
     @IBOutlet weak var randomize: UISwitch!
