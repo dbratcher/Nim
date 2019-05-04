@@ -85,18 +85,13 @@ class MoveEngine {
         
         board.stacks[stackIndex].stoneCount -= selectedStones.count
         
-        for stone in selectedStones {
-            dispatchGroup.enter()
-            guard let stoneStack = stone.superview as? StoneStackView else {
-                let superviewString = String(describing: stone.superview)
-                assert(false, "\(self) Encountered unexpected superview \(superviewString) for \(stone)")
-                return
-            }
-            
-            stoneStack.hide(stone) { _ in
-                dispatchGroup.leave()
-            }
+        guard let stoneStack = firstStone.superview as? StoneStackView else {
+            let superviewString = String(describing: firstStone.superview)
+            assert(false, "\(self) Encountered unexpected superview \(superviewString) for \(firstStone)")
+            return
         }
+        
+        stoneStack.hide(stoneViews: selectedStones, dispatchGroup: dispatchGroup)
         
         selectedStones = []
     }

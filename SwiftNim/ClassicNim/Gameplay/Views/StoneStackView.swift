@@ -14,6 +14,18 @@ class StoneStackView: UIStackView {
         return subviews.filter({ $0 is StoneView && $0.alpha == 0 }).count
     }
     
+    func hide(stoneViews: [StoneView], dispatchGroup: DispatchGroup) {
+        for view in arrangedSubviews.reversed() {
+            guard let stoneView = view as? StoneView else { continue }
+            if stoneViews.contains(stoneView) {
+                dispatchGroup.enter()
+                hide(stoneView) { _ in
+                    dispatchGroup.leave()
+                }
+            }
+        }
+    }
+    
     func hide(_ stoneView: StoneView, completion: @escaping (Bool) -> ()) {
         guard let currentIndex = arrangedSubviews.firstIndex(of: stoneView) else {
             assert(false, "\(self) trying to remove not present stoneView: \(stoneView)")
@@ -26,10 +38,11 @@ class StoneStackView: UIStackView {
             stoneView.removeFromSuperview()
             self.insertArrangedSubview(stoneView, at: newIndex)
             self.layoutSubviews()
-        }, completion: { _ in
+        }, completion: { success in
+            completion(success)
             UIView.animate(withDuration: 1, animations: {
                 stoneView.alpha = 0
-            }, completion: completion)
+            })
         })
     }
     
