@@ -71,6 +71,7 @@ class GameSettingsStorage {
     static private let player1GoesFirstKey = "player1GoesFirst"
     static private let difficultyKey = "difficulty"
     static private let randomizeKey = "randomize"
+    static private let opponentKey = "opponent"
     
     static func load() -> GameSettings {
         var settings = GameSettings()
@@ -81,6 +82,9 @@ class GameSettingsStorage {
             settings.player1GoesFirst = UserDefaults.standard.bool(forKey: player1GoesFirstKey)
             settings.randomizeBoard = UserDefaults.standard.bool(forKey: randomizeKey)
         }
+        if let storedOpponent = UserDefaults.standard.string(forKey: opponentKey), let opponent = PlayerType(rawValue: storedOpponent) {
+            settings.opponent = opponent
+        }
         
         return settings
     }
@@ -89,5 +93,6 @@ class GameSettingsStorage {
         UserDefaults.standard.set(settings.player1GoesFirst, forKey: player1GoesFirstKey)
         UserDefaults.standard.set(settings.difficulty.rawValue, forKey: difficultyKey)
         UserDefaults.standard.set(settings.randomizeBoard, forKey: randomizeKey)
+        UserDefaults.standard.set(settings.opponent.rawValue, forKey: opponentKey)
     }
 }

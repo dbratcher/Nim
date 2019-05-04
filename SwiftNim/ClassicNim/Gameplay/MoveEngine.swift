@@ -17,7 +17,7 @@ protocol MoveEngineDelegate: class {
 }
 
 class MoveEngine {
-    private let settings = GameSettingsStorage.load()
+    private var settings = GameSettingsStorage.load()
     private var gameState = GameState(currentPlayer: .player1, opponent: .computer)
     private var selectedStones: [StoneView] = []
     private var isAnimating = false
@@ -43,6 +43,7 @@ class MoveEngine {
     }
     
     func configureBoard() {
+        settings = GameSettingsStorage.load()
         gameState.currentPlayer = settings.player1GoesFirst ? .player1 : settings.opponent
         gameState.opponent = settings.player1GoesFirst ? settings.opponent : .player1
         if settings.randomizeBoard {
@@ -50,6 +51,8 @@ class MoveEngine {
             if Bool.random() {
                 swapCurrentPlayer()
             }
+        } else {
+            board = GameBoardStorage.load()
         }
     }
     
