@@ -9,15 +9,15 @@
 import UIKit
 
 class MainMenuViewController: NimViewController {
-    @IBOutlet weak var Player1: UIButton!
-    @IBOutlet weak var Player2: UIButton!
-    @IBOutlet weak var Settings: UIButton!
-    @IBOutlet weak var Help: UIButton!
-    
+    @IBOutlet weak var player1: UIButton!
+    @IBOutlet weak var player2: UIButton!
+    @IBOutlet weak var settings: UIButton!
+    @IBOutlet weak var help: UIButton!
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        let buttons = [Player1, Player2, Settings, Help]
+
+        let buttons = [player1, player2, settings, help]
         var duration = 0.3
         for button in buttons {
             button?.alpha = 0.0
@@ -27,7 +27,7 @@ class MainMenuViewController: NimViewController {
             duration += 0.3
         }
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var settings = GameSettingsStorage.load()
         if segue.identifier == "1 Player" {
@@ -43,4 +43,3 @@ class MainMenuViewController: NimViewController {
         performSegue(withIdentifier: "Settings", sender: self)
     }
 }
-

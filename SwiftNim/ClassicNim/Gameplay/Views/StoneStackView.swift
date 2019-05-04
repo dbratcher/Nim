@@ -13,7 +13,7 @@ class StoneStackView: UIStackView {
     var hiddenStoneCount: Int {
         return subviews.filter({ $0 is StoneView && $0.alpha == 0 }).count
     }
-    
+
     func hide(stoneViews: [StoneView], dispatchGroup: DispatchGroup) {
         for view in arrangedSubviews.reversed() {
             guard let stoneView = view as? StoneView else { continue }
@@ -25,15 +25,15 @@ class StoneStackView: UIStackView {
             }
         }
     }
-    
-    func hide(_ stoneView: StoneView, completion: @escaping (Bool) -> ()) {
+
+    func hide(_ stoneView: StoneView, completion: @escaping (Bool) -> Void) {
         guard let currentIndex = arrangedSubviews.firstIndex(of: stoneView) else {
             assert(false, "\(self) trying to remove not present stoneView: \(stoneView)")
             return
         }
         let newIndex = hiddenStoneCount
         let duration = Double(newIndex - currentIndex) / 2
-        
+
         UIView.animate(withDuration: duration, animations: {
             stoneView.removeFromSuperview()
             self.insertArrangedSubview(stoneView, at: newIndex)
@@ -45,22 +45,22 @@ class StoneStackView: UIStackView {
             })
         })
     }
-    
+
     init(for stackID: UUID, with engine: MoveEngine) {
         self.stackID = stackID
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
-        
+
         axis = .vertical
         alignment = .fill
         distribution = .fillEqually
         spacing = 10
-        
+
         guard let stack = engine.stack(for: stackID) else {
             assert(false, "\(self) could not setup for missing stack \(stackID)")
             return
         }
-        
+
         for _ in 0..<stack.stoneCount {
             let stone = StoneView(for: stackID, with: engine)
             addArrangedSubview(stone)
@@ -70,7 +70,7 @@ class StoneStackView: UIStackView {
             maxHeightConstraint.isActive = true
         }
     }
-    
+
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

@@ -105,6 +105,10 @@
                         <outlet property="Player1" destination="zfg-B7-aAF" id="2yK-oF-LIW"/>
                         <outlet property="Player2" destination="Xlg-AG-6F9" id="xSl-iv-DAH"/>
                         <outlet property="Settings" destination="R5i-pm-aSH" id="dMR-ub-0MQ"/>
+                        <outlet property="help" destination="6ob-M6-rCo" id="J6C-Hn-Hdc"/>
+                        <outlet property="player1" destination="zfg-B7-aAF" id="DWC-2k-GQ3"/>
+                        <outlet property="player2" destination="Xlg-AG-6F9" id="82b-tG-Np0"/>
+                        <outlet property="settings" destination="R5i-pm-aSH" id="YMc-NA-gSf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -233,23 +237,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="rel-Gf-UK4">
-                                <rect key="frame" x="37.5" y="47" width="300" height="699"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="rel-Gf-UK4">
+                                <rect key="frame" x="37.5" y="47" width="300" height="593.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customize" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uM6-ZQ-jiA">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="53"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="52.5"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="48"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Stacks" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EnR-nX-aRo">
-                                        <rect key="frame" x="0.0" y="83" width="300" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="82.5" width="300" height="26.5"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QQP-aO-Ue2">
-                                        <rect key="frame" x="0.0" y="139.5" width="300" height="29"/>
+                                        <rect key="frame" x="0.0" y="139" width="300" height="29"/>
                                         <segments>
                                             <segment title="3 Stacks"/>
                                             <segment title="4 Stacks"/>
@@ -261,13 +265,13 @@
                                         </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stones per Stack" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Mj-ZP-Oy2">
-                                        <rect key="frame" x="0.0" y="197.5" width="300" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="197" width="300" height="26.5"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="e4K-2O-AMk" customClass="LabeledStepper" customModule="ClassicNim" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="254" width="300" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="e4K-2O-AMk" customClass="LabeledStepper" customModule="ClassicNim" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="253.5" width="300" height="29"/>
                                         <color key="tintColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="text" value="Stack 1:"/>
@@ -276,8 +280,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pNJ-2W-f2u" customClass="LabeledStepper" customModule="ClassicNim" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="334" width="300" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pNJ-2W-f2u" customClass="LabeledStepper" customModule="ClassicNim" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="312.5" width="300" height="29"/>
                                         <color key="tintColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="text" value="Stack 2:"/>
@@ -286,8 +290,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8TE-hu-uNL" customClass="LabeledStepper" customModule="ClassicNim" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="414" width="300" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8TE-hu-uNL" customClass="LabeledStepper" customModule="ClassicNim" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="371.5" width="300" height="29"/>
                                         <color key="tintColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="text" value="Stack 3:"/>
@@ -296,8 +300,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jYv-OB-yUu" customClass="LabeledStepper" customModule="ClassicNim" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="494" width="300" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jYv-OB-yUu" customClass="LabeledStepper" customModule="ClassicNim" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="430.5" width="300" height="29"/>
                                         <color key="tintColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="text" value="Stack 4:"/>
@@ -306,8 +310,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ffY-cb-bgw" customClass="LabeledStepper" customModule="ClassicNim" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="574" width="300" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ffY-cb-bgw" customClass="LabeledStepper" customModule="ClassicNim" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="489.5" width="300" height="29"/>
                                         <color key="tintColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="text" value="Stack 5:"/>
@@ -316,8 +320,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olG-PJ-rM0">
-                                        <rect key="frame" x="0.0" y="654" width="300" height="45"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olG-PJ-rM0">
+                                        <rect key="frame" x="0.0" y="548.5" width="300" height="45"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                         <state key="normal" title="Go Back">
                                             <color key="titleColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -336,6 +340,7 @@
                         <constraints>
                             <constraint firstItem="rel-Gf-UK4" firstAttribute="centerX" secondItem="fLr-62-fsL" secondAttribute="centerX" id="1bf-u4-6vC"/>
                             <constraint firstItem="rel-Gf-UK4" firstAttribute="centerY" secondItem="fLr-62-fsL" secondAttribute="centerY" id="8Pq-t5-IWm"/>
+                            <constraint firstItem="rel-Gf-UK4" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fLr-62-fsL" secondAttribute="top" constant="10" id="DrG-Kb-sI4"/>
                             <constraint firstItem="rel-Gf-UK4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fLr-62-fsL" secondAttribute="leading" constant="10" id="LxV-QG-6QS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fLr-62-fsL"/>

@@ -12,7 +12,7 @@ enum PlayerType: String {
     case player1
     case player2
     case computer
-    
+
     init?(from title: String?) {
         if title == "Player 1" {
             self = .player1
@@ -24,7 +24,7 @@ enum PlayerType: String {
             return nil
         }
     }
-    
+
     func toString() -> String {
         switch self {
         case .player1: return "Player 1"
@@ -38,7 +38,7 @@ enum Difficulty: String {
     case easy
     case medium
     case hard
-    
+
     init?(from title: String?) {
         if title == "Easy" {
             self = .easy
@@ -50,7 +50,7 @@ enum Difficulty: String {
             return nil
         }
     }
-    
+
     func toString() -> String {
         switch self {
         case .easy: return "Easy"
@@ -72,23 +72,23 @@ class GameSettingsStorage {
     static private let difficultyKey = "difficulty"
     static private let randomizeKey = "randomize"
     static private let opponentKey = "opponent"
-    
+
     static func load() -> GameSettings {
         var settings = GameSettings()
-        
+
         // use presence of difficulty key to determine if player1GoesFirst was stored too
-        if let storedDifficulty = UserDefaults.standard.string(forKey: difficultyKey), let difficulty = Difficulty(rawValue: storedDifficulty) {
+        if let difficulty = Difficulty(rawValue: UserDefaults.standard.string(forKey: difficultyKey) ?? "") {
             settings.difficulty = difficulty
             settings.player1GoesFirst = UserDefaults.standard.bool(forKey: player1GoesFirstKey)
             settings.randomizeBoard = UserDefaults.standard.bool(forKey: randomizeKey)
         }
-        if let storedOpponent = UserDefaults.standard.string(forKey: opponentKey), let opponent = PlayerType(rawValue: storedOpponent) {
+        if let opponent = PlayerType(rawValue: UserDefaults.standard.string(forKey: opponentKey) ?? "") {
             settings.opponent = opponent
         }
-        
+
         return settings
     }
-    
+
     static func save(_ settings: GameSettings) {
         UserDefaults.standard.set(settings.player1GoesFirst, forKey: player1GoesFirstKey)
         UserDefaults.standard.set(settings.difficulty.rawValue, forKey: difficultyKey)

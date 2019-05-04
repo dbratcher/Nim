@@ -17,16 +17,15 @@ extension UISegmentedControl {
             assert(false, "Invalid segment number returned.")
             return nil
         }
-        
+
         guard let title = titleForSegment(at: selectedSegmentIndex) else {
             assert(false, "Segment without title selected.")
             return nil
         }
-        
+
         return title
     }
-    
-    
+
     /// Returns the index for the segment with the given title if one exists
     ///
     /// - Parameter title: The title of the segment to return the index for
@@ -37,10 +36,10 @@ extension UISegmentedControl {
                 return index
             }
         }
-        
+
         return nil
     }
-    
+
     /// Select a segment for a given title
     ///
     /// - Parameter title: The title of the segment to select
@@ -52,4 +51,3 @@ extension UISegmentedControl {
         }
     }
 }
-

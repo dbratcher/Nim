@@ -17,14 +17,14 @@ class LabeledStepper: UIStackView {
     private let label = UILabel(frame: .zero)
     private let countLabel = UILabel(frame: .zero)
     private let stepper = UIStepper(frame: .zero)
-    
+
     private let maxValue = 7
     private let minValue = 1
     private let font = UIFont(name: "MarkerFelt-Thin", size: 24)
     private let color = UIColor.white
-    
+
     public weak var delegate: LabelStepperDelegate?
-    
+
     @IBInspectable
     var text: String = "Stepper:" {
         didSet {
@@ -32,7 +32,7 @@ class LabeledStepper: UIStackView {
             label.isHidden = text.isEmpty
         }
     }
-    
+
     @IBInspectable
     var value: Int = 1 {
         didSet {
@@ -40,23 +40,23 @@ class LabeledStepper: UIStackView {
             stepper.value = Double(value)
         }
     }
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
     }
-    
+
     required init(coder: NSCoder) {
         super.init(coder: coder)
         setupView()
     }
-    
+
     private func setupView() {
         addArrangedSubview(label)
         addArrangedSubview(countLabel)
         addArrangedSubview(stepper)
         distribution = .fillEqually
-        
+
         label.font = font
         label.textColor = color
         label.textAlignment = .center
@@ -68,7 +68,7 @@ class LabeledStepper: UIStackView {
         stepper.minimumValue = Double(minValue)
         stepper.addTarget(self, action: #selector(valueChanged), for: .valueChanged)
     }
-    
+
     @objc func valueChanged() {
         value = Int(stepper.value)
         delegate?.valueChanged(value)

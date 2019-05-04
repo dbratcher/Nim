@@ -12,10 +12,10 @@ class NimViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let backgroundImage = #imageLiteral(resourceName: "Background")
         view.backgroundColor = UIColor(patternImage: backgroundImage)
     }
