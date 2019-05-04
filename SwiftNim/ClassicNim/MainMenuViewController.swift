@@ -19,5 +19,9 @@ class MainMenuViewController: UIViewController {
         }
         GameSettingsStorage.save(settings)
     }
+
+    func navigateToSettings() {
+        performSegue(withIdentifier: "Settings", sender: self)
+    }
 }
 

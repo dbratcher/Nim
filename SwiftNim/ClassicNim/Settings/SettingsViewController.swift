@@ -11,6 +11,8 @@ import UIKit
 class SettingsViewController: UIViewController {
     @IBOutlet weak var firstMover: UISegmentedControl!
     @IBOutlet weak var difficulty: UISegmentedControl!
+    @IBOutlet weak var randomize: UISwitch!
+    @IBOutlet weak var customizeBoard: UIButton!
     
     private var settings: GameSettings = GameSettingsStorage.load()
     
@@ -18,11 +20,20 @@ class SettingsViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func randomizeChanged(_ sender: Any) {
+        settings.randomizeBoard = randomize.isOn
+        customizeBoard.isEnabled = randomize.isOn == false
+        GameSettingsStorage.save(settings)
+    }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         settings = GameSettingsStorage.load()
         difficulty.selectSegment(titled: settings.difficulty.toString())
+        randomize.isOn = settings.randomizeBoard
+        customizeBoard.isEnabled = randomize.isOn == false
         
         let segmentTitle = settings.player1GoesFirst ? "Player 1" : "Opponent"
         firstMover.selectSegment(titled: segmentTitle)

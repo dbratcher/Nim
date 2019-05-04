@@ -9,13 +9,9 @@
 import UIKit
 
 class StoneStackView: UIStackView {
-    let stack: Stack
+    let stackID: UUID
     var hiddenStoneCount: Int {
         return subviews.filter({ $0 is StoneView && $0.alpha == 0 }).count
-    }
-    
-    var visibleStoneCount: Int {
-        return stack.stoneCount - hiddenStoneCount
     }
     
     func hide(_ stoneView: StoneView, completion: @escaping (Bool) -> ()) {
@@ -37,8 +33,8 @@ class StoneStackView: UIStackView {
         })
     }
     
-    init(for stack: Stack, with engine: MoveEngine) {
-        self.stack = stack
+    init(for stackID: UUID, with engine: MoveEngine) {
+        self.stackID = stackID
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
         
@@ -47,8 +43,13 @@ class StoneStackView: UIStackView {
         distribution = .fillEqually
         spacing = 10
         
+        guard let stack = engine.stack(for: stackID) else {
+            assert(false, "\(self) could not setup for missing stack \(stackID)")
+            return
+        }
+        
         for _ in 0..<stack.stoneCount {
-            let stone = StoneView(for: stack, with: engine)
+            let stone = StoneView(for: stackID, with: engine)
             addArrangedSubview(stone)
             stone.widthAnchor.constraint(equalTo: stone.heightAnchor).isActive = true
             let maxHeightConstraint = stone.heightAnchor.constraint(equalToConstant: 150)

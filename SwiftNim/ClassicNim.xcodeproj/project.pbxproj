@@ -16,6 +16,7 @@
 		EA27B310227BF021000FD652 /* MoveEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B30F227BF021000FD652 /* MoveEngine.swift */; };
 		EA3592DF226B7C9100AED06A /* CustomizeBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3592DE226B7C9100AED06A /* CustomizeBoardViewController.swift */; };
 		EA3592E4226B816800AED06A /* LabeledStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3592E3226B816800AED06A /* LabeledStepper.swift */; };
+		EA4E9C80227E13870021AAE5 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4E9C7F227E13870021AAE5 /* UIButton.swift */; };
 		EA6462202271364800C68933 /* UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA64621F2271364800C68933 /* UISegmentedControl.swift */; };
 		EA64622222713A2A00C68933 /* GameBoardStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA64622122713A2A00C68933 /* GameBoardStorage.swift */; };
 		EA688A80226E9E1000FDD77C /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA688A7F226E9E1000FDD77C /* GameSettings.swift */; };
@@ -48,6 +49,7 @@
 		EA27B30F227BF021000FD652 /* MoveEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveEngine.swift; sourceTree = "<group>"; };
 		EA3592DE226B7C9100AED06A /* CustomizeBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeBoardViewController.swift; sourceTree = "<group>"; };
 		EA3592E3226B816800AED06A /* LabeledStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledStepper.swift; sourceTree = "<group>"; };
+		EA4E9C7F227E13870021AAE5 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		EA64621F2271364800C68933 /* UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentedControl.swift; sourceTree = "<group>"; };
 		EA64622122713A2A00C68933 /* GameBoardStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardStorage.swift; sourceTree = "<group>"; };
 		EA688A7F226E9E1000FDD77C /* GameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				EA64621F2271364800C68933 /* UISegmentedControl.swift */,
+				EA4E9C7F227E13870021AAE5 /* UIButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				EA27B30922780817000FD652 /* StoneStackView.swift in Sources */,
 				EA688A80226E9E1000FDD77C /* GameSettings.swift in Sources */,
 				EA08E22822583DD100D54BC8 /* InstructionsViewController.swift in Sources */,
+				EA4E9C80227E13870021AAE5 /* UIButton.swift in Sources */,
 				EA64622222713A2A00C68933 /* GameBoardStorage.swift in Sources */,
 				EA27B30422780611000FD652 /* GameBoardView.swift in Sources */,
 				EAE5E426225595C100AC934B /* MainMenuViewController.swift in Sources */,

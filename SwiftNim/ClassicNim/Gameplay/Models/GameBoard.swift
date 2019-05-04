@@ -8,13 +8,9 @@
 
 import Foundation
 
-struct Stack: Equatable {
+struct Stack {
     let identifier: UUID
     var stoneCount: Int
-    
-    static func == (lhs: Stack, rhs: Stack) -> Bool {
-        return lhs.identifier == rhs.identifier
-    }
 }
 
 struct GameBoard {
@@ -43,6 +39,17 @@ struct GameBoard {
         let stack3 = Stack(identifier: UUID(), stoneCount: 3)
         
         self.init(stacks: [stack1, stack2, stack3])
+    }
+    
+    static func randomBoard() -> GameBoard {
+        let numStacks = Int.random(in: 3...5)
+        var stacks: [Stack] = []
+        for _ in 0..<numStacks {
+            let stoneCount = Int.random(in: 1...7)
+            stacks.append(Stack(identifier: UUID(), stoneCount: stoneCount))
+        }
+        
+        return GameBoard(stacks: stacks)
     }
 }
 

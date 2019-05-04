@@ -9,6 +9,7 @@
 import Foundation
 
 protocol MoveEngineDelegate: class {
+    func presentRandomModeAlert(firstMovePlayer: PlayerType)
     func presentSameStackAlert()
     func updateViews(for state: GameState)
     func views(for stones: Int, in stack: Stack) -> [StoneView]
@@ -24,11 +25,11 @@ class MoveEngine {
     var board = GameBoardStorage.load()
     weak var delegate: MoveEngineDelegate?
     
-    func tap(on stone: StoneView, in stack: Stack) {
+    func tap(on stone: StoneView, in stackID: UUID) {
         if isAnimating { return }
         if gameState.currentPlayer == .computer { return }
         
-        if selectedStones.contains(where: { $0.stack != stack }) {
+        if selectedStones.contains(where: { $0.stackID != stackID }) {
             delegate?.presentSameStackAlert()
             return
         }
@@ -37,9 +38,27 @@ class MoveEngine {
         stone.isSelected.toggle()
     }
     
-    func start() {
+    func stack(for id: UUID) -> Stack? {
+        return board.stacks.first(where: { $0.identifier == id})
+    }
+    
+    func configureBoard() {
         gameState.currentPlayer = settings.player1GoesFirst ? .player1 : settings.opponent
-        delegate?.updateViews(for: gameState)
+        gameState.opponent = settings.player1GoesFirst ? settings.opponent : .player1
+        if settings.randomizeBoard {
+            board = GameBoard.randomBoard()
+            if Bool.random() {
+                swapCurrentPlayer()
+            }
+        }
+    }
+    
+    func start() {
+        if settings.randomizeBoard {
+            delegate?.presentRandomModeAlert(firstMovePlayer: gameState.currentPlayer)
+        } else {
+            updateGameState()
+        }
     }
     
     func endTurn() {
@@ -52,14 +71,16 @@ class MoveEngine {
             dispatchGroup.wait()
             DispatchQueue.main.async {
                 self.isAnimating = false
+                self.swapCurrentPlayer()
                 self.updateGameState()
             }
         }
     }
     
     private func animateRemovingStones(in dispatchGroup: DispatchGroup) {
-        guard let firstStone = selectedStones.first, let stackIndex = board.stacks.firstIndex(of: firstStone.stack) else {
-            return // empty or malformed selected stones
+        guard let firstStone = selectedStones.first, let stackIndex = board.stacks.firstIndex(where: { $0.identifier == firstStone.stackID }) else {
+            assert(false, "\(self) was asked to animate removing empty or malformed stones")
+            return
         }
         
         board.stacks[stackIndex].stoneCount -= selectedStones.count
@@ -80,8 +101,7 @@ class MoveEngine {
         selectedStones = []
     }
     
-    private func updateGameState() {
-        swapCurrentPlayer()
+    func updateGameState() {
         delegate?.updateViews(for: gameState)
         
         if someoneWon() {
@@ -166,16 +186,30 @@ class MoveEngine {
         }
         
         if xorSum == 0 {
-            // no way to win, stall
+            // hopefully we're in the endgame with stacks of one
+            // otherwise there is no way to win, stall
             return (1, board.randomStack)
         }
         
         for stack in board.stacks {
-            if xorSum < stack.stoneCount {
-                return (xorSum, stack)
+            let stackXor = xorSum ^ stack.stoneCount
+            if stackXor < stack.stoneCount {
+                var idealStoneCount = stack.stoneCount - stackXor
+                if board.stacks.allSatisfy( { $0.stoneCount <= 1 || $0.identifier == stack.identifier }) {
+                    // handle endgame of stacks of 1
+                    let stacksOfOne = board.stacks.filter({ $0.stoneCount == 1 }).count
+                    if stacksOfOne % 2 == 0 {
+                        idealStoneCount -= 1
+                    } else {
+                        idealStoneCount = stack.stoneCount
+                    }
+                }
+                
+                return (idealStoneCount, stack)
             }
         }
         
+        assert(false, "\(self) we could not determine a way to win, although there should be an ideal move if xorSum > 0")
         return (1, board.randomStack)
     }
 }

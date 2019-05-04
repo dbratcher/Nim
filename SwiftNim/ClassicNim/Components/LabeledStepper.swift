@@ -60,6 +60,7 @@ class LabeledStepper: UIStackView {
         label.font = font
         label.textColor = color
         label.textAlignment = .center
+        label.numberOfLines = 0
         countLabel.font = font
         countLabel.textColor = color
         countLabel.textAlignment = .center

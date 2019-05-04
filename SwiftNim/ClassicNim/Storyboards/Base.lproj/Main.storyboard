@@ -45,7 +45,7 @@
                                     <color key="titleColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="99i-jL-Baj" kind="presentation" modalTransitionStyle="flipHorizontal" id="NFw-FX-msu"/>
+                                    <segue destination="99i-jL-Baj" kind="presentation" identifier="Settings" modalTransitionStyle="flipHorizontal" id="NFw-FX-msu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ob-M6-rCo">
@@ -114,22 +114,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="gE3-s8-vc6">
-                                <rect key="frame" x="87" y="128" width="201" height="431.5"/>
+                                <rect key="frame" x="70.5" y="97.5" width="234" height="492.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTE-vr-b90">
-                                        <rect key="frame" x="0.0" y="0.0" width="201" height="52.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="234" height="52.5"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="48"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who Goes First" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lot-7u-vgx">
-                                        <rect key="frame" x="0.0" y="82.5" width="201" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="82.5" width="234" height="26.5"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hm0-br-Hp8">
-                                        <rect key="frame" x="0.0" y="139" width="201" height="29"/>
+                                        <rect key="frame" x="0.0" y="139" width="234" height="29"/>
                                         <segments>
                                             <segment title="Player 1"/>
                                             <segment title="Opponent"/>
@@ -140,13 +140,13 @@
                                         </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer Difficulty" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRD-q3-5T6">
-                                        <rect key="frame" x="0.0" y="197" width="201" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="197" width="234" height="26.5"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XVC-0I-JYQ">
-                                        <rect key="frame" x="0.0" y="253.5" width="201" height="29"/>
+                                        <rect key="frame" x="0.0" y="253.5" width="234" height="29"/>
                                         <segments>
                                             <segment title="Easy"/>
                                             <segment title="Medium"/>
@@ -157,8 +157,25 @@
                                             <action selector="difficultyChanged:" destination="99i-jL-Baj" eventType="valueChanged" id="Vk3-Vc-zW6"/>
                                         </connections>
                                     </segmentedControl>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5F9-np-65Q">
+                                        <rect key="frame" x="0.0" y="311.5" width="234" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Randomize Board:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAx-FT-1pF">
+                                                <rect key="frame" x="0.0" y="2" width="175" height="26.5"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="57t-Up-lLg">
+                                                <rect key="frame" x="185" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="randomizeChanged:" destination="99i-jL-Baj" eventType="valueChanged" id="z4s-s5-Lfx"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbC-tB-k7I">
-                                        <rect key="frame" x="0.0" y="311.5" width="201" height="45"/>
+                                        <rect key="frame" x="0.0" y="372.5" width="234" height="45"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                         <state key="normal" title="Customize Board">
                                             <color key="titleColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -168,7 +185,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNR-eL-Fkv">
-                                        <rect key="frame" x="0.0" y="386.5" width="201" height="45"/>
+                                        <rect key="frame" x="0.0" y="447.5" width="234" height="45"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                         <state key="normal" title="Go Back">
                                             <color key="titleColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -192,13 +209,15 @@
                         <viewLayoutGuide key="safeArea" id="yZE-zv-U30"/>
                     </view>
                     <connections>
+                        <outlet property="customizeBoard" destination="vbC-tB-k7I" id="nFQ-4I-ahQ"/>
                         <outlet property="difficulty" destination="XVC-0I-JYQ" id="omE-l7-SUV"/>
                         <outlet property="firstMover" destination="hm0-br-Hp8" id="Xgi-TZ-sFo"/>
+                        <outlet property="randomize" destination="57t-Up-lLg" id="SU5-MZ-7Ot"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ayo-5Z-eqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-214" y="866"/>
+            <point key="canvasLocation" x="-215.19999999999999" y="865.81709145427294"/>
         </scene>
         <!--Customize Board View Controller-->
         <scene sceneID="nyn-jG-k5R">
@@ -357,7 +376,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1's Turn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQU-3k-exl">
-                                <rect key="frame" x="49" y="73" width="277" height="53"/>
+                                <rect key="frame" x="49.5" y="73" width="276.5" height="52.5"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="48"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -468,7 +487,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="4hO-2H-guD"/>
+        <segue reference="VEc-P9-PiW"/>
         <segue reference="oZj-IK-lw2"/>
     </inferredMetricsTieBreakers>
 </document>

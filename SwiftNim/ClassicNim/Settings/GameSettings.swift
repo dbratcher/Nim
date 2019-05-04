@@ -61,6 +61,7 @@ enum Difficulty: String {
 }
 
 struct GameSettings {
+    var randomizeBoard: Bool = false
     var player1GoesFirst: Bool = true
     var opponent: PlayerType = .computer
     var difficulty: Difficulty = .easy
@@ -69,6 +70,7 @@ struct GameSettings {
 class GameSettingsStorage {
     static private let player1GoesFirstKey = "player1GoesFirst"
     static private let difficultyKey = "difficulty"
+    static private let randomizeKey = "randomize"
     
     static func load() -> GameSettings {
         var settings = GameSettings()
@@ -77,6 +79,7 @@ class GameSettingsStorage {
         if let storedDifficulty = UserDefaults.standard.string(forKey: difficultyKey), let difficulty = Difficulty(rawValue: storedDifficulty) {
             settings.difficulty = difficulty
             settings.player1GoesFirst = UserDefaults.standard.bool(forKey: player1GoesFirstKey)
+            settings.randomizeBoard = UserDefaults.standard.bool(forKey: randomizeKey)
         }
         
         return settings
@@ -85,5 +88,6 @@ class GameSettingsStorage {
     static func save(_ settings: GameSettings) {
         UserDefaults.standard.set(settings.player1GoesFirst, forKey: player1GoesFirstKey)
         UserDefaults.standard.set(settings.difficulty.rawValue, forKey: difficultyKey)
+        UserDefaults.standard.set(settings.randomizeBoard, forKey: randomizeKey)
     }
 }

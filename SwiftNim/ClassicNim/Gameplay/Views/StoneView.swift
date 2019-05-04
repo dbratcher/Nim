@@ -10,8 +10,8 @@ import UIKit
 
 class StoneView: UIView {
     private let engine: MoveEngine
+    let stackID: UUID
     
-    let stack: Stack
     var isSelected: Bool = false {
         didSet {
             backgroundColor = isSelected ? .gray : .white
@@ -19,8 +19,8 @@ class StoneView: UIView {
         }
     }
     
-    init(for stack: Stack, with engine: MoveEngine) {
-        self.stack = stack
+    init(for stackID: UUID, with engine: MoveEngine) {
+        self.stackID = stackID
         self.engine = engine
         
         super.init(frame: .zero)
@@ -43,6 +43,6 @@ class StoneView: UIView {
     }
     
     @objc func handleTap() {
-        engine.tap(on: self, in: stack)
+        engine.tap(on: self, in: stackID)
     }
 }

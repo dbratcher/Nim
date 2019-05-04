@@ -25,8 +25,19 @@ class GameBoardViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
+        engine.delegate = self
+        configureBoardView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        engine.start()
+    }
+    
+    func configureBoardView() {
+        engine.configureBoard()
         
-        let gameBoardView = GameBoardView(for: engine.board, with: engine)
+        let gameBoardView = GameBoardView(for: engine)
         self.gameBoardView = gameBoardView
         view.addSubview(gameBoardView)
         gameBoardView.topAnchor.constraint(greaterThanOrEqualTo: turnLabel.bottomAnchor, constant: 20).isActive = true
@@ -35,23 +46,40 @@ class GameBoardViewController: UIViewController {
         gameBoardView.rightAnchor.constraint(lessThanOrEqualTo: view.rightAnchor, constant: -20).isActive = true
         gameBoardView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         gameBoardView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        
-        engine.delegate = self
-        engine.start()
     }
 }
 
 extension GameBoardViewController: MoveEngineDelegate {
+    func presentRandomModeAlert(firstMovePlayer: PlayerType) {
+        let randomModeMessage = "Each game will have a random board and a random player will start first. You can disble this mode in settings. This game \(firstMovePlayer.toString()) goes first."
+        let alert = UIAlertController(title: "Random Mode", message: randomModeMessage, preferredStyle: .alert)
+        let settingsAction = UIAlertAction(title: "Settings", style: .default) { (_) in
+            guard let mainMenu = self.presentingViewController as? MainMenuViewController else {
+                assert(false, "\(self) could not find main menu while dismissing")
+                return
+            }
+            self.dismiss(animated: true, completion: {
+                mainMenu.navigateToSettings()
+            })
+        }
+        alert.addAction(settingsAction)
+        let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
+            self.engine.updateGameState()
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+    
     func presentSameStackAlert() {
         let sameStackMessage = "You must select stones in the same stack."
         let alert = UIAlertController(title: "Same Stack Rule", message: sameStackMessage, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default)
         alert.addAction(okAction)
-        present(alert, animated: true, completion: nil)
+        present(alert, animated: true)
     }
     
     func updateViews(for state: GameState) {
-        turnLabel.text = state.currentPlayer.toString()
+        turnLabel.text = "\(state.currentPlayer.toString())'s Turn"
         removeButton.isEnabled = state.currentPlayer != .computer
     }
     
@@ -62,7 +90,7 @@ extension GameBoardViewController: MoveEngineDelegate {
         }
         
         guard let stoneStack = gameBoardView.arrangedSubviews.first(where: { (view) -> Bool in
-            return (view as? StoneStackView)?.stack == stack
+            return (view as? StoneStackView)?.stackID == stack.identifier
         }) as? StoneStackView else {
             assert(false, "\(self) Could not get requested stack for stones.")
             return []
@@ -72,6 +100,7 @@ extension GameBoardViewController: MoveEngineDelegate {
         for view in stoneStack.arrangedSubviews {
             guard views.count < stones else { break }
             guard let stoneView = view as? StoneView else { continue }
+            guard stoneView.alpha > 0 else { continue }
             
             views.append(stoneView)
         }
@@ -83,12 +112,26 @@ extension GameBoardViewController: MoveEngineDelegate {
         let winner = state.currentPlayer.toString()
         let endGameMessage = "Play Again? You can also adjust the difficulty in settings."
         let alert = UIAlertController(title: "\(winner) Won!", message: endGameMessage, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Go Back", style: .default)
+        let okAction = UIAlertAction(title: "Main Menu", style: .default) { (_) in
+            self.dismiss(animated: true)
+        }
         alert.addAction(okAction)
-        let settingsAction = UIAlertAction(title: "Settings", style: .default)
+        let settingsAction = UIAlertAction(title: "Settings", style: .default) { (_) in
+            guard let mainMenu = self.presentingViewController as? MainMenuViewController else {
+                assert(false, "\(self) could not find main menu while dismissing")
+                return
+            }
+            self.dismiss(animated: true, completion: {
+                mainMenu.navigateToSettings()
+            })
+        }
         alert.addAction(settingsAction)
-        let playAgainAction = UIAlertAction(title: "Play Again", style: .default)
+        let playAgainAction = UIAlertAction(title: "New Game", style: .default) { (_) in
+            self.gameBoardView?.removeFromSuperview()
+            self.configureBoardView()
+            self.engine.updateGameState()
+        }
         alert.addAction(playAgainAction)
-        present(alert, animated: true, completion: nil)
+        present(alert, animated: true)
     }
 }
