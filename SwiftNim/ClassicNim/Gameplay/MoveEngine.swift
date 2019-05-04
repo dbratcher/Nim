@@ -34,8 +34,11 @@ class MoveEngine {
             return
         }
 
-        selectedStones.append(stone)
+        selectedStones.removeAll(where: { $0 == stone })
         stone.isSelected.toggle()
+        if stone.isSelected {
+            selectedStones.append(stone)
+        }
     }
 
     func stack(for stackID: UUID) -> Stack? {
