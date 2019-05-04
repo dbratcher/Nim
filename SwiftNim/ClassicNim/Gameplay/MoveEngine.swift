@@ -147,12 +147,13 @@ class MoveEngine {
                 return
             }
             selectedStones = stoneViews
-        case .medium: // random stack ideal number of stones if possible
-            let randomStack = board.randomStack
-            let randomInt = Int.random(in: 1...randomStack.stoneCount)
-            let (idealStones, _) = idealMove()
-            let removedStones = idealStones < randomStack.stoneCount ? idealStones : randomInt
-            guard let stoneViews = delegate?.views(for: removedStones, in: randomStack) else {
+        case .medium: // random move if more than 8 stones on the board
+            var chosenStack = board.randomStack
+            var chosenStones = Int.random(in: 1...chosenStack.stoneCount)
+            if board.totalStones < 8 {
+                (chosenStones, chosenStack) = idealMove()
+            }
+            guard let stoneViews = delegate?.views(for: chosenStones, in: chosenStack) else {
                 assert(false, "Can't get random stack")
                 return
             }
