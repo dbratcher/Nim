@@ -31,15 +31,19 @@ class SettingsViewController: NimViewController {
 
         settings = GameSettingsStorage.load()
         difficulty.selectSegment(titled: settings.difficulty.toString())
+        firstMover.selectSegment(titled: settings.firstMove.toString())
         randomize.isOn = settings.randomizeBoard
         customizeBoard.isEnabled = randomize.isOn == false
 
-        let segmentTitle = settings.player1GoesFirst ? "Player 1" : "Opponent"
-        firstMover.selectSegment(titled: segmentTitle)
     }
 
     @IBAction func firstMoverChanged(_ sender: UISegmentedControl) {
-        settings.player1GoesFirst = firstMover.selectedTitle == "Player 1"
+        guard let firstMove = FirstMoveType(from: sender.selectedTitle) else {
+            assert(false, "Unknown first move selected.")
+            return
+        }
+
+        settings.firstMove = firstMove
         GameSettingsStorage.save(settings)
     }
 

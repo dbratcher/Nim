@@ -8,6 +8,32 @@
 
 import Foundation
 
+enum FirstMoveType: String {
+    case player1
+    case opponent
+    case random
+
+    init?(from title: String?) {
+        if title == "Player 1" {
+            self = .player1
+        } else if title == "Opponent" {
+            self = .opponent
+        } else if title == "Random" {
+            self = .random
+        } else {
+            return nil
+        }
+    }
+
+    func toString() -> String {
+        switch self {
+        case .player1: return "Player 1"
+        case .opponent: return "Opponent"
+        case .random: return "Random"
+        }
+    }
+}
+
 enum PlayerType: String {
     case player1
     case player2
@@ -62,13 +88,13 @@ enum Difficulty: String {
 
 struct GameSettings {
     var randomizeBoard: Bool = false
-    var player1GoesFirst: Bool = true
+    var firstMove: FirstMoveType = .player1
     var opponent: PlayerType = .computer
     var difficulty: Difficulty = .easy
 }
 
 class GameSettingsStorage {
-    static private let player1GoesFirstKey = "player1GoesFirst"
+    static private let firstMoveKey = "firstMove"
     static private let difficultyKey = "difficulty"
     static private let randomizeKey = "randomize"
     static private let opponentKey = "opponent"
@@ -76,12 +102,16 @@ class GameSettingsStorage {
     static func load() -> GameSettings {
         var settings = GameSettings()
 
-        // use presence of difficulty key to determine if player1GoesFirst was stored too
+        // use presence of difficulty key to determine if randomizeBoard was stored too
         if let difficulty = Difficulty(rawValue: UserDefaults.standard.string(forKey: difficultyKey) ?? "") {
             settings.difficulty = difficulty
-            settings.player1GoesFirst = UserDefaults.standard.bool(forKey: player1GoesFirstKey)
             settings.randomizeBoard = UserDefaults.standard.bool(forKey: randomizeKey)
         }
+
+        if let firstMove = FirstMoveType(rawValue: UserDefaults.standard.string(forKey: firstMoveKey) ?? "") {
+            settings.firstMove = firstMove
+        }
+
         if let opponent = PlayerType(rawValue: UserDefaults.standard.string(forKey: opponentKey) ?? "") {
             settings.opponent = opponent
         }
@@ -90,7 +120,7 @@ class GameSettingsStorage {
     }
 
     static func save(_ settings: GameSettings) {
-        UserDefaults.standard.set(settings.player1GoesFirst, forKey: player1GoesFirstKey)
+        UserDefaults.standard.set(settings.firstMove.rawValue, forKey: firstMoveKey)
         UserDefaults.standard.set(settings.difficulty.rawValue, forKey: difficultyKey)
         UserDefaults.standard.set(settings.randomizeBoard, forKey: randomizeKey)
         UserDefaults.standard.set(settings.opponent.rawValue, forKey: opponentKey)

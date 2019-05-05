@@ -142,6 +142,7 @@
                                         <segments>
                                             <segment title="Player 1"/>
                                             <segment title="Opponent"/>
+                                            <segment title="Random"/>
                                         </segments>
                                         <color key="tintColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>

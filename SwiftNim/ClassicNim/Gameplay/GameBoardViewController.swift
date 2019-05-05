@@ -30,7 +30,6 @@ class GameBoardViewController: NimViewController {
         super.loadView()
         engine.delegate = self
         configureBoardView()
-        engine.start()
     }
 
     func configureBoardView() {
@@ -49,27 +48,6 @@ class GameBoardViewController: NimViewController {
 }
 
 extension GameBoardViewController: MoveEngineDelegate {
-    func presentRandomModeAlert(firstMovePlayer: PlayerType) {
-        var randomModeMessage = "Each game will have a random board and a random player will start first."
-        randomModeMessage += "You can disble this mode in settings. This game \(firstMovePlayer.toString()) goes first."
-        let alert = UIAlertController(title: "Random Mode", message: randomModeMessage, preferredStyle: .alert)
-        let settingsAction = UIAlertAction(title: "Settings", style: .default) { (_) in
-            guard let mainMenu = self.presentingViewController as? MainMenuViewController else {
-                assert(false, "\(self) could not find main menu while dismissing")
-                return
-            }
-            self.dismiss(animated: true, completion: {
-                mainMenu.navigateToSettings()
-            })
-        }
-        alert.addAction(settingsAction)
-        let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
-            self.engine.updateGameState()
-        }
-        alert.addAction(okAction)
-        present(alert, animated: true)
-    }
-
     func presentSameStackAlert() {
         let sameStackMessage = "You must select stones in the same stack."
         let alert = UIAlertController(title: "Same Stack Rule", message: sameStackMessage, preferredStyle: .alert)
@@ -129,7 +107,6 @@ extension GameBoardViewController: MoveEngineDelegate {
         let playAgainAction = UIAlertAction(title: "New Game", style: .default) { (_) in
             self.gameBoardView?.removeFromSuperview()
             self.configureBoardView()
-            self.engine.updateGameState()
         }
         alert.addAction(playAgainAction)
         present(alert, animated: true)

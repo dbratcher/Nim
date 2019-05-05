@@ -9,7 +9,6 @@
 import Foundation
 
 protocol MoveEngineDelegate: class {
-    func presentRandomModeAlert(firstMovePlayer: PlayerType)
     func presentSameStackAlert()
     func updateViews(for state: GameState)
     func views(for stones: Int, in stack: Stack) -> [StoneView]
@@ -47,23 +46,27 @@ class MoveEngine {
 
     func configureBoard() {
         settings = GameSettingsStorage.load()
-        gameState.currentPlayer = settings.player1GoesFirst ? .player1 : settings.opponent
-        gameState.opponent = settings.player1GoesFirst ? settings.opponent : .player1
-        if settings.randomizeBoard {
-            board = GameBoard.randomBoard()
-            if Bool.random() {
-                swapCurrentPlayer()
-            }
-        } else {
-            board = GameBoardStorage.load()
+        switch settings.firstMove {
+        case .player1:
+            gameState.currentPlayer = .player1
+            gameState.opponent = settings.opponent
+        case .opponent:
+            gameState.currentPlayer = settings.opponent
+            gameState.opponent = .player1
+        case .random :
+            let mixItUp = Bool.random()
+            gameState.currentPlayer = mixItUp ? settings.opponent : .player1
+            gameState.opponent = mixItUp ? .player1 : settings.opponent
         }
-    }
 
-    func start() {
-        if settings.randomizeBoard {
-            delegate?.presentRandomModeAlert(firstMovePlayer: gameState.currentPlayer)
-        } else {
-            updateGameState()
+        board = settings.randomizeBoard ? GameBoard.randomBoard() : GameBoardStorage.load()
+
+        delegate?.updateViews(for: gameState)
+        if gameState.currentPlayer == .computer {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                // wait a second for user to get bearings before moving computer
+                self.updateGameState()
+            }
         }
     }
 
