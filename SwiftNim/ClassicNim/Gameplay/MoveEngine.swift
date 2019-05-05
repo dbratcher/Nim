@@ -19,9 +19,9 @@ protocol MoveEngineDelegate: class {
 class MoveEngine {
     private var settings = GameSettingsStorage.load()
     private var gameState = GameState(currentPlayer: .player1, opponent: .computer)
-    private var selectedStones: [StoneView] = []
     private var isAnimating = false
 
+    var selectedStones: [StoneView] = []
     var board = GameBoardStorage.load()
     weak var delegate: MoveEngineDelegate?
 
