@@ -13,7 +13,8 @@ class GameBoardViewController: NimViewController {
     @IBOutlet weak var removeButton: UIButton!
 
     private let engine = MoveEngine()
-    private var gameBoardView: GameBoardView?
+    var gameBoardView: GameBoardView?
+    var currentWinner = ""
 
     @IBAction func quit(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -87,28 +88,13 @@ extension GameBoardViewController: MoveEngineDelegate {
     }
 
     func displayEndPrompt(for state: GameState) {
-        let winner = state.currentPlayer.toString()
-        let endGameMessage = "Play Again? You can also adjust the difficulty in settings."
-        let alert = UIAlertController(title: "\(winner) Won!", message: endGameMessage, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Main Menu", style: .default) { (_) in
-            self.dismiss(animated: true)
+        performSegue(withIdentifier: "endGame", sender: self)
+        currentWinner = state.currentPlayer.toString()
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let endGame = segue.destination as? EndGameViewController {
+            endGame.winner = currentWinner
         }
-        alert.addAction(okAction)
-        let settingsAction = UIAlertAction(title: "Settings", style: .default) { (_) in
-            guard let mainMenu = self.presentingViewController as? MainMenuViewController else {
-                assert(false, "\(self) could not find main menu while dismissing")
-                return
-            }
-            self.dismiss(animated: true, completion: {
-                mainMenu.navigateToSettings()
-            })
-        }
-        alert.addAction(settingsAction)
-        let playAgainAction = UIAlertAction(title: "New Game", style: .default) { (_) in
-            self.gameBoardView?.removeFromSuperview()
-            self.configureBoardView()
-        }
-        alert.addAction(playAgainAction)
-        present(alert, animated: true)
     }
 }

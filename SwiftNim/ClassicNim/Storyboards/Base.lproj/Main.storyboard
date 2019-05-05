@@ -358,6 +358,95 @@
             </objects>
             <point key="canvasLocation" x="-216" y="1668"/>
         </scene>
+        <!--End Game View Controller-->
+        <scene sceneID="Y8O-W1-hyR">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="4o2-56-74j" customClass="EndGameViewController" customModule="ClassicNim" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dc8-IP-B6w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VHT-Pz-1iG">
+                                <rect key="frame" x="20" y="20" width="335" height="360"/>
+                                <color key="backgroundColor" red="0.35294117650000001" green="0.28627450980000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="360" id="c4A-Mk-mXt"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Puw-9n-g6S">
+                                <rect key="frame" x="30" y="50" width="315" height="300"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akM-1S-13x">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="52.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="48"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play Again? You can also adjust the difficulty in settings." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5p-yP-81o">
+                                        <rect key="frame" x="0.0" y="67.5" width="315" height="52.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PK4-B5-44y">
+                                        <rect key="frame" x="0.0" y="135" width="315" height="45"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                        <state key="normal" title="Main Menu">
+                                            <color key="titleColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="mainMenu:" destination="4o2-56-74j" eventType="touchUpInside" id="RaF-by-NUg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kv-2r-W3q">
+                                        <rect key="frame" x="0.0" y="195" width="315" height="45"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                        <state key="normal" title="Settings">
+                                            <color key="titleColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="settings:" destination="4o2-56-74j" eventType="touchUpInside" id="kwa-yc-6Lg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxH-6I-Rsi">
+                                        <rect key="frame" x="0.0" y="255" width="315" height="45"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                        <state key="normal" title="New Game">
+                                            <color key="titleColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="newGame:" destination="4o2-56-74j" eventType="touchUpInside" id="QlU-yq-op0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.35294117650000001" green="0.28627450980000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="i4r-JN-fR1"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.6990094866071429" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VHT-Pz-1iG" firstAttribute="width" secondItem="Dc8-IP-B6w" secondAttribute="width" constant="-40" id="5gs-vY-lby"/>
+                            <constraint firstItem="Puw-9n-g6S" firstAttribute="centerY" secondItem="P05-IX-WG2" secondAttribute="centerY" id="7Uw-zL-Ufu"/>
+                            <constraint firstItem="Puw-9n-g6S" firstAttribute="centerX" secondItem="P05-IX-WG2" secondAttribute="centerX" id="f9Z-5q-K2A"/>
+                            <constraint firstItem="VHT-Pz-1iG" firstAttribute="centerY" secondItem="P05-IX-WG2" secondAttribute="centerY" id="ftQ-5w-Tnc"/>
+                            <constraint firstItem="VHT-Pz-1iG" firstAttribute="centerX" secondItem="P05-IX-WG2" secondAttribute="centerX" id="g22-A2-vT0"/>
+                            <constraint firstItem="Puw-9n-g6S" firstAttribute="width" secondItem="Dc8-IP-B6w" secondAttribute="width" constant="-60" id="uGp-ZW-c4y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="P05-IX-WG2"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="400"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="VHT-Pz-1iG" id="RG9-pX-h6B"/>
+                        <outlet property="titleLabel" destination="akM-1S-13x" id="JQU-NS-ccK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C4c-QN-pz1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1609" y="20"/>
+        </scene>
         <!--Game Board View Controller-->
         <scene sceneID="MAB-Qd-9jK">
             <objects>
@@ -383,7 +472,7 @@
                                     <color key="titleColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="crK-HL-AK4" kind="presentation" modalTransitionStyle="flipHorizontal" id="VEc-P9-PiW"/>
+                                    <segue destination="crK-HL-AK4" kind="presentation" id="wBl-qd-GFk"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1's Turn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQU-3k-exl">
@@ -420,6 +509,7 @@
                     <connections>
                         <outlet property="removeButton" destination="qzF-NA-1oz" id="aCT-94-iax"/>
                         <outlet property="turnLabel" destination="pQU-3k-exl" id="UMf-2X-UD7"/>
+                        <segue destination="4o2-56-74j" kind="presentation" identifier="endGame" modalPresentationStyle="overCurrentContext" id="8Xr-dR-dzB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rMM-Nr-GJC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -509,7 +599,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="4hO-2H-guD"/>
+        <segue reference="wBl-qd-GFk"/>
         <segue reference="oZj-IK-lw2"/>
     </inferredMetricsTieBreakers>
 </document>
