@@ -445,7 +445,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C4c-QN-pz1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1609" y="20"/>
+            <point key="canvasLocation" x="1764" y="212"/>
         </scene>
         <!--Game Board View Controller-->
         <scene sceneID="MAB-Qd-9jK">
@@ -509,7 +509,8 @@
                     <connections>
                         <outlet property="removeButton" destination="qzF-NA-1oz" id="aCT-94-iax"/>
                         <outlet property="turnLabel" destination="pQU-3k-exl" id="UMf-2X-UD7"/>
-                        <segue destination="4o2-56-74j" kind="presentation" identifier="endGame" modalPresentationStyle="overCurrentContext" id="8Xr-dR-dzB"/>
+                        <segue destination="4o2-56-74j" kind="presentation" identifier="endGame" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="8Xr-dR-dzB"/>
+                        <segue destination="BcG-gF-Tma" kind="presentation" identifier="sameStack" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="3gg-ca-SiC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rMM-Nr-GJC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -596,6 +597,75 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5RO-5s-C7i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="497" y="866"/>
+        </scene>
+        <!--Same Stack Error View Controller-->
+        <scene sceneID="PzT-tR-7CN">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="BcG-gF-Tma" customClass="SameStackErrorViewController" customModule="ClassicNim" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WOe-Jo-5yA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mSB-8z-jo4">
+                                <rect key="frame" x="20" y="100" width="335" height="200"/>
+                                <color key="backgroundColor" red="0.35294117650000001" green="0.28627450980000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="2Sw-1J-Uhb"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="BlO-C2-dbF">
+                                <rect key="frame" x="30" y="125" width="315" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Same Stack Rule" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITB-li-A1g">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="39.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="36"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You must select stones in the same stack." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVv-ji-I0w">
+                                        <rect key="frame" x="0.0" y="42" width="315" height="52.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFx-Kd-h9g">
+                                        <rect key="frame" x="0.0" y="97" width="315" height="53"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                        <state key="normal" title="Ok">
+                                            <color key="titleColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="ok:" destination="BcG-gF-Tma" eventType="touchUpInside" id="b9d-Nm-25n"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.35294117650000001" green="0.28627450980000002" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="sMB-XM-Zbw"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.69900948659999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mSB-8z-jo4" firstAttribute="width" secondItem="WOe-Jo-5yA" secondAttribute="width" constant="-40" id="0Ui-ob-mSb"/>
+                            <constraint firstItem="mSB-8z-jo4" firstAttribute="centerX" secondItem="I3n-ZR-obw" secondAttribute="centerX" id="EgJ-rE-et2"/>
+                            <constraint firstItem="BlO-C2-dbF" firstAttribute="width" secondItem="WOe-Jo-5yA" secondAttribute="width" constant="-60" id="aUj-F3-pPt"/>
+                            <constraint firstItem="mSB-8z-jo4" firstAttribute="centerY" secondItem="I3n-ZR-obw" secondAttribute="centerY" id="foI-HT-deg"/>
+                            <constraint firstItem="BlO-C2-dbF" firstAttribute="centerY" secondItem="I3n-ZR-obw" secondAttribute="centerY" id="y2Q-WR-Asd"/>
+                            <constraint firstItem="BlO-C2-dbF" firstAttribute="centerX" secondItem="I3n-ZR-obw" secondAttribute="centerX" id="zVI-Wq-ehf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="I3n-ZR-obw"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="400"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="mSB-8z-jo4" id="K6d-Gu-QwQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WEE-TS-ITs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1764" y="-222"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

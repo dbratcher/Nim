@@ -50,11 +50,7 @@ class GameBoardViewController: NimViewController {
 
 extension GameBoardViewController: MoveEngineDelegate {
     func presentSameStackAlert() {
-        let sameStackMessage = "You must select stones in the same stack."
-        let alert = UIAlertController(title: "Same Stack Rule", message: sameStackMessage, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ok", style: .default)
-        alert.addAction(okAction)
-        present(alert, animated: true)
+        performSegue(withIdentifier: "sameStack", sender: self)
     }
 
     func updateViews(for state: GameState) {
