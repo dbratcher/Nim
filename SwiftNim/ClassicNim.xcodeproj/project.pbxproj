@@ -24,6 +24,7 @@
 		EA86B890225920F3001BA2D7 /* GameBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86B88F225920F2001BA2D7 /* GameBoardViewController.swift */; };
 		EAB7C7E7227F9433006D9383 /* EndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB7C7E6227F9433006D9383 /* EndGameViewController.swift */; };
 		EAE5C75F2282814800297664 /* SameStackErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5C75E2282814800297664 /* SameStackErrorViewController.swift */; };
+		EAE5C7612282843F00297664 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5C7602282843F00297664 /* TutorialViewController.swift */; };
 		EAE5E424225595C100AC934B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5E423225595C100AC934B /* AppDelegate.swift */; };
 		EAE5E426225595C100AC934B /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5E425225595C100AC934B /* MainMenuViewController.swift */; };
 		EAE5E429225595C100AC934B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAE5E427225595C100AC934B /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		EA86B88F225920F2001BA2D7 /* GameBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardViewController.swift; sourceTree = "<group>"; };
 		EAB7C7E6227F9433006D9383 /* EndGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndGameViewController.swift; sourceTree = "<group>"; };
 		EAE5C75E2282814800297664 /* SameStackErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SameStackErrorViewController.swift; sourceTree = "<group>"; };
+		EAE5C7602282843F00297664 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		EAE5E420225595C100AC934B /* ClassicNim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassicNim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE5E423225595C100AC934B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAE5E425225595C100AC934B /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				EA08E22722583DD100D54BC8 /* InstructionsViewController.swift */,
 				EAE5E425225595C100AC934B /* MainMenuViewController.swift */,
 				EA4E9C81227E2D130021AAE5 /* NimViewController.swift */,
+				EAE5C7602282843F00297664 /* TutorialViewController.swift */,
 			);
 			path = ClassicNim;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 			files = (
 				EA27B30922780817000FD652 /* StoneStackView.swift in Sources */,
 				EA4E9C82227E2D130021AAE5 /* NimViewController.swift in Sources */,
+				EAE5C7612282843F00297664 /* TutorialViewController.swift in Sources */,
 				EA688A80226E9E1000FDD77C /* GameSettings.swift in Sources */,
 				EA08E22822583DD100D54BC8 /* InstructionsViewController.swift in Sources */,
 				EA4E9C80227E13870021AAE5 /* UIButton.swift in Sources */,

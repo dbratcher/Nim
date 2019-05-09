@@ -26,6 +26,11 @@ class MainMenuViewController: NimViewController {
             }
             duration += 0.3
         }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+            let tutorial = TutorialViewController()
+            self.present(tutorial, animated: true, completion: nil)
+        })
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
