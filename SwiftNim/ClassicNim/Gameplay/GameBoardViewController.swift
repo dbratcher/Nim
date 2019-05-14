@@ -84,8 +84,8 @@ extension GameBoardViewController: MoveEngineDelegate {
     }
 
     func displayEndPrompt(for state: GameState) {
-        performSegue(withIdentifier: "endGame", sender: self)
         currentWinner = state.currentPlayer.toString()
+        performSegue(withIdentifier: "endGame", sender: self)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -10,8 +10,10 @@ import UIKit
 
 class EndGameViewController: UIViewController {
 
+    @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var messageLabel: UILabel!
     var winner = ""
 
     override func viewDidLoad() {

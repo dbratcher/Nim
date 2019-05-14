@@ -52,7 +52,7 @@ extension TutorialViewController: UIPageViewControllerDataSource {
         guard index < pageTitles.count else { return nil }
 
         let pageContent = TutorialContentController(text: pageTitles[index], imageName: pageImages[index])
-        
+
         return pageContent
     }
 
