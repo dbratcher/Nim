@@ -11,6 +11,16 @@ import UIKit
 typealias PageVC = UIPageViewController
 
 class TutorialViewController: PageVC {
+
+    static func create() -> TutorialViewController {
+        let tutorialTitles = ["Each game starts with a board of stones",
+                              "Select stones in a single stack to remove 🔘",
+                              "Players take turns each removing stones 🤼",
+                              "Last person to remove a stone loses 😁"]
+        let tutorialImages = ["GameBoard", "SelectStones", "RemoveStones", "DontLose"]
+        return TutorialViewController(titles: tutorialTitles, images: tutorialImages, bgColor: #colorLiteral(red: 0.3529411765, green: 0.2862745098, blue: 0.2549019608, alpha: 1))
+    }
+
     private let titles: [String]
     private let images: [String]
     private let bgColor: UIColor
@@ -123,7 +133,7 @@ class TutorialContentController: UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.distribution = .equalSpacing
-        stackView.spacing = 20
+        stackView.spacing = 15
         view.addSubview(stackView)
         view.backgroundColor = bgColor
 
@@ -131,7 +141,7 @@ class TutorialContentController: UIViewController {
         skipButton.heightAnchor.constraint(greaterThanOrEqualToConstant: 20).isActive = true
         stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        stackView.topAnchor.constraint(greaterThanOrEqualTo: view.topAnchor, constant: 50).isActive = true
+        stackView.topAnchor.constraint(greaterThanOrEqualTo: view.topAnchor, constant: 40).isActive = true
         stackView.leftAnchor.constraint(greaterThanOrEqualTo: view.leftAnchor, constant: 20).isActive = true
         stackView.heightAnchor.constraint(lessThanOrEqualToConstant: 800).isActive = true
         stackView.widthAnchor.constraint(lessThanOrEqualToConstant: 400).isActive = true

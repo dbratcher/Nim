@@ -31,13 +31,10 @@ class MainMenuViewController: NimViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        let tutorialTitles = ["Each game starts with a board of stones",
-                              "Select stones in a single stack to remove 🔘",
-                              "Players take turns each removing stones 🤼",
-                              "Last person to remove a stone loses 😁"]
-        let tutorialImages = ["GameBoard", "SelectStones", "RemoveStones", "DontLose"]
-        let tutorial = TutorialViewController(titles: tutorialTitles, images: tutorialImages, bgColor: #colorLiteral(red: 0.3529411765, green: 0.2862745098, blue: 0.2549019608, alpha: 1))
-        self.present(tutorial, animated: true, completion: nil)
+        if UserDefaults.standard.bool(forKey: "viewedTutorial") != true {
+            self.present(TutorialViewController.create(), animated: true, completion: nil)
+            UserDefaults.standard.set(true, forKey: "viewedTutorial")
+        }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

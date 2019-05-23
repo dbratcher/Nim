@@ -15,6 +15,10 @@ class InstructionsViewController: NimViewController {
         dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func viewTutorial(_ sender: Any) {
+        present(TutorialViewController.create(), animated: true, completion: nil)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
