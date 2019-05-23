@@ -27,6 +27,7 @@ class EndGameViewController: UIViewController {
     @IBAction func mainMenu(_ sender: Any) {
         guard let parentViewController = self.presentingViewController else {
             assert(false, "We could not dismiss whoever presented this view controller.")
+            return
         }
         dismiss(animated: true) {
             parentViewController.dismiss(animated: true, completion: nil)
@@ -36,9 +37,11 @@ class EndGameViewController: UIViewController {
     @IBAction func settings(_ sender: Any) {
         guard let parentViewController = self.presentingViewController else {
             assert(false, "We could not dismiss whoever presented this view controller.")
+            return
         }
         guard let mainMenu = self.presentingViewController?.presentingViewController as? MainMenuViewController else {
             assert(false, "We could not find a reference to the main menu view controller.")
+            return
         }
         dismiss(animated: true) {
             parentViewController.dismiss(animated: true, completion: {
@@ -50,6 +53,7 @@ class EndGameViewController: UIViewController {
     @IBAction func newGame(_ sender: Any) {
         guard let gameBoard = self.presentingViewController as? GameBoardViewController else {
             assert(false, "We could not find a reference to the game board view controller.")
+            return
         }
         dismiss(animated: true) {
             gameBoard.gameBoardView?.removeFromSuperview()
