@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import AVFoundation
 
 class MainMenuViewController: NimViewController {
     @IBOutlet weak var player1: UIButton!
     @IBOutlet weak var player2: UIButton!
     @IBOutlet weak var settings: UIButton!
     @IBOutlet weak var help: UIButton!
+
+    private let soundManager = SoundManager()
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -35,6 +38,8 @@ class MainMenuViewController: NimViewController {
             self.present(TutorialViewController.create(), animated: true, completion: nil)
             UserDefaults.standard.set(true, forKey: "viewedTutorial")
         }
+
+        soundManager.playEndGameSound()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -12,6 +12,7 @@ class GameBoardViewController: NimViewController {
     @IBOutlet weak var turnLabel: UILabel!
     @IBOutlet weak var removeButton: UIButton!
 
+    private let soundManager = SoundManager()
     private let engine = MoveEngine()
     var gameBoardView: GameBoardView?
     var currentWinner = ""
@@ -51,6 +52,7 @@ class GameBoardViewController: NimViewController {
 extension GameBoardViewController: MoveEngineDelegate {
     func presentSameStackAlert() {
         performSegue(withIdentifier: "sameStack", sender: self)
+        soundManager.playEndGameSound()
     }
 
     func updateViews(for state: GameState) {
@@ -86,6 +88,7 @@ extension GameBoardViewController: MoveEngineDelegate {
     func displayEndPrompt(for state: GameState) {
         currentWinner = state.currentPlayer.toString()
         performSegue(withIdentifier: "endGame", sender: self)
+        soundManager.playEndGameSound()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

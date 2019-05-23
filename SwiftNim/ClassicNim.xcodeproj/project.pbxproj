@@ -23,6 +23,10 @@
 		EA688A80226E9E1000FDD77C /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA688A7F226E9E1000FDD77C /* GameSettings.swift */; };
 		EA86B890225920F3001BA2D7 /* GameBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86B88F225920F2001BA2D7 /* GameBoardViewController.swift */; };
 		EAB7C7E7227F9433006D9383 /* EndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB7C7E6227F9433006D9383 /* EndGameViewController.swift */; };
+		EADA52F322965AC9001731E2 /* endgame.m4a in Resources */ = {isa = PBXBuildFile; fileRef = EADA52F222965AC9001731E2 /* endgame.m4a */; };
+		EADA52F522965ACF001731E2 /* select.m4a in Resources */ = {isa = PBXBuildFile; fileRef = EADA52F422965ACF001731E2 /* select.m4a */; };
+		EADA52F722965B7B001731E2 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADA52F622965B7B001731E2 /* SoundManager.swift */; };
+		EADA52F922965D09001731E2 /* swoosh.m4a in Resources */ = {isa = PBXBuildFile; fileRef = EADA52F822965D09001731E2 /* swoosh.m4a */; };
 		EAE5C75F2282814800297664 /* SameStackErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5C75E2282814800297664 /* SameStackErrorViewController.swift */; };
 		EAE5C7612282843F00297664 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5C7602282843F00297664 /* TutorialViewController.swift */; };
 		EAE5E424225595C100AC934B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5E423225595C100AC934B /* AppDelegate.swift */; };
@@ -61,6 +65,10 @@
 		EA688A7F226E9E1000FDD77C /* GameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
 		EA86B88F225920F2001BA2D7 /* GameBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardViewController.swift; sourceTree = "<group>"; };
 		EAB7C7E6227F9433006D9383 /* EndGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndGameViewController.swift; sourceTree = "<group>"; };
+		EADA52F222965AC9001731E2 /* endgame.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = endgame.m4a; sourceTree = "<group>"; };
+		EADA52F422965ACF001731E2 /* select.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = select.m4a; sourceTree = "<group>"; };
+		EADA52F622965B7B001731E2 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		EADA52F822965D09001731E2 /* swoosh.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = swoosh.m4a; sourceTree = "<group>"; };
 		EAE5C75E2282814800297664 /* SameStackErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SameStackErrorViewController.swift; sourceTree = "<group>"; };
 		EAE5C7602282843F00297664 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		EAE5E420225595C100AC934B /* ClassicNim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassicNim.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +154,7 @@
 		EA3592E1226B7F8300AED06A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EAE92FE622965A9000B9E2A8 /* Sounds */,
 				EAE5E42A225595C300AC934B /* Assets.xcassets */,
 				EAE5E42F225595C300AC934B /* Info.plist */,
 			);
@@ -211,6 +220,7 @@
 				EA08E22722583DD100D54BC8 /* InstructionsViewController.swift */,
 				EAE5E425225595C100AC934B /* MainMenuViewController.swift */,
 				EA4E9C81227E2D130021AAE5 /* NimViewController.swift */,
+				EADA52F622965B7B001731E2 /* SoundManager.swift */,
 			);
 			path = ClassicNim;
 			sourceTree = "<group>";
@@ -222,6 +232,16 @@
 				EAE5E43A225595C300AC934B /* Info.plist */,
 			);
 			path = ClassicNimTests;
+			sourceTree = "<group>";
+		};
+		EAE92FE622965A9000B9E2A8 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				EADA52F822965D09001731E2 /* swoosh.m4a */,
+				EADA52F422965ACF001731E2 /* select.m4a */,
+				EADA52F222965AC9001731E2 /* endgame.m4a */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,9 +331,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EADA52F322965AC9001731E2 /* endgame.m4a in Resources */,
 				EAE5E42E225595C300AC934B /* LaunchScreen.storyboard in Resources */,
 				EAE5E42B225595C300AC934B /* Assets.xcassets in Resources */,
 				EAE5E429225595C100AC934B /* Main.storyboard in Resources */,
+				EADA52F522965ACF001731E2 /* select.m4a in Resources */,
+				EADA52F922965D09001731E2 /* swoosh.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +379,7 @@
 				EAE5C7612282843F00297664 /* TutorialViewController.swift in Sources */,
 				EA688A80226E9E1000FDD77C /* GameSettings.swift in Sources */,
 				EA08E22822583DD100D54BC8 /* InstructionsViewController.swift in Sources */,
+				EADA52F722965B7B001731E2 /* SoundManager.swift in Sources */,
 				EA4E9C80227E13870021AAE5 /* UIButton.swift in Sources */,
 				EA64622222713A2A00C68933 /* GameBoardStorage.swift in Sources */,
 				EA27B30422780611000FD652 /* GameBoardView.swift in Sources */,
