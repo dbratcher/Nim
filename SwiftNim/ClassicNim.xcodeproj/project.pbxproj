@@ -173,6 +173,7 @@
 		EA64622322728B7C00C68933 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				EAE5C7602282843F00297664 /* TutorialViewController.swift */,
 				EA3592E3226B816800AED06A /* LabeledStepper.swift */,
 			);
 			path = Components;
@@ -210,7 +211,6 @@
 				EA08E22722583DD100D54BC8 /* InstructionsViewController.swift */,
 				EAE5E425225595C100AC934B /* MainMenuViewController.swift */,
 				EA4E9C81227E2D130021AAE5 /* NimViewController.swift */,
-				EAE5C7602282843F00297664 /* TutorialViewController.swift */,
 			);
 			path = ClassicNim;
 			sourceTree = "<group>";
