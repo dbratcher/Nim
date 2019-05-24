@@ -16,6 +16,7 @@ protocol MoveEngineDelegate: class {
 }
 
 class MoveEngine {
+    private let soundManager = SoundManager()
     private var settings = GameSettingsStorage.load()
     private var gameState = GameState(currentPlayer: .player1, opponent: .computer)
     private var isAnimating = false
@@ -32,6 +33,8 @@ class MoveEngine {
             delegate?.presentSameStackAlert()
             return
         }
+
+        soundManager.playSelectSound()
 
         selectedStones.removeAll(where: { $0 == stone })
         stone.isSelected.toggle()

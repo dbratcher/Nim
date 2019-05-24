@@ -24,15 +24,21 @@ class MainMenuViewController: NimViewController {
         var duration = 0.3
         for button in buttons {
             button?.alpha = 0.0
-            UIView.animate(withDuration: duration) {
-                button?.alpha = 1.0
-            }
             duration += 0.3
         }
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+
+        let buttons = [player1, player2, settings, help]
+        var duration = 0.3
+        for button in buttons {
+            UIView.animate(withDuration: duration) {
+                button?.alpha = 1.0
+            }
+            duration += 0.3
+        }
 
         if UserDefaults.standard.bool(forKey: "viewedTutorial") != true {
             self.present(TutorialViewController.create(), animated: true, completion: nil)

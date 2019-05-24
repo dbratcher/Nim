@@ -9,7 +9,6 @@
 import UIKit
 
 class StoneView: UIView {
-    private let soundManager = SoundManager()
     private let engine: MoveEngine
     let stackID: UUID
 
@@ -45,6 +44,5 @@ class StoneView: UIView {
 
     @objc func handleTap() {
         engine.tap(on: self, in: stackID)
-        soundManager.playSelectSound()
     }
 }

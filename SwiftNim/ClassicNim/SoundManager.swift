@@ -13,6 +13,8 @@ class SoundManager {
     private let player = AVQueuePlayer()
 
     func playEndGameSound() {
+        try? AVAudioSession.sharedInstance().setCategory(.ambient)
+        try? AVAudioSession.sharedInstance().setActive(true, options: [])
         if let url = Bundle.main.url(forResource: "endgame", withExtension: "m4a") {
             player.removeAllItems()
             player.insert(AVPlayerItem(url: url), after: nil)
@@ -21,6 +23,8 @@ class SoundManager {
     }
 
     func playSelectSound() {
+        try? AVAudioSession.sharedInstance().setCategory(.ambient)
+        try? AVAudioSession.sharedInstance().setActive(true, options: [])
         if let url = Bundle.main.url(forResource: "select", withExtension: "m4a") {
             player.removeAllItems()
             player.insert(AVPlayerItem(url: url), after: nil)
@@ -29,6 +33,8 @@ class SoundManager {
     }
 
     func playSwooshSound() {
+        try? AVAudioSession.sharedInstance().setCategory(.ambient)
+        try? AVAudioSession.sharedInstance().setActive(true, options: [])
         if let url = Bundle.main.url(forResource: "swoosh", withExtension: "m4a") {
             player.removeAllItems()
             player.insert(AVPlayerItem(url: url), after: nil)
