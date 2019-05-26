@@ -36,9 +36,8 @@ class TutorialViewController: PageVC {
         dataSource = self
         guard let firstVC = viewControllerAtIndex(index: 0) else {
             assert(false, "Failed to setup page view controller.")
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                self.dismiss(animated: true, completion: nil)
-            }
+            dismiss(animated: true, completion: nil)
+            
             return
         }
         setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)

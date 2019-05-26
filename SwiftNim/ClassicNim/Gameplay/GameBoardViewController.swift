@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import StoreKit
 
 class GameBoardViewController: NimViewController {
     @IBOutlet weak var turnLabel: UILabel!
@@ -89,6 +90,10 @@ extension GameBoardViewController: MoveEngineDelegate {
         currentWinner = state.currentPlayer.toString()
         performSegue(withIdentifier: "endGame", sender: self)
         soundManager.playEndGameSound()
+
+        if UserDefaults.standard.bool(forKey: "askedForRating") != true && (state.currentPlayer == .player1) {
+            SKStoreReviewController.requestReview()
+        }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

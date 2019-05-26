@@ -20,6 +20,12 @@ class SettingsViewController: NimViewController {
         dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func rateApp(_ sender: Any) {
+        let urlString = "https://itunes.apple.com/us/app/classic-nim/id501414326?ls=1&mt=8&action=write-review"
+        guard let validURL = URL(string: urlString) else { return }
+        UIApplication.shared.open(validURL, options: [:], completionHandler: nil)
+    }
+
     @IBAction func randomizeChanged(_ sender: Any) {
         settings.randomizeBoard = randomize.isOn
         customizeBoard.isEnabled = randomize.isOn == false

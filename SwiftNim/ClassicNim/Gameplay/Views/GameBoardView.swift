@@ -9,7 +9,7 @@
 import UIKit
 
 class GameBoardView: UIStackView {
-    private var stoneStackViews: [StoneStackView] = []
+    var stoneStackViews: [StoneStackView] = []
 
     init(for engine: MoveEngine) {
         super.init(frame: .zero)

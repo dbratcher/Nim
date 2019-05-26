@@ -13,6 +13,7 @@ protocol MoveEngineDelegate: class {
     func updateViews(for state: GameState)
     func views(for stones: Int, in stack: Stack) -> [StoneView]
     func displayEndPrompt(for state: GameState)
+    var isBeingDismissed: Bool { get }
 }
 
 class MoveEngine {
