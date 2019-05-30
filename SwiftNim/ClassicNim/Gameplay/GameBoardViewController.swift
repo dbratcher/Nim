@@ -91,8 +91,10 @@ extension GameBoardViewController: MoveEngineDelegate {
         performSegue(withIdentifier: "endGame", sender: self)
         soundManager.playEndGameSound()
 
-        if UserDefaults.standard.bool(forKey: "askedForRating") != true && (state.currentPlayer == .player1) {
+        let askedForRatingKey = "askedForRating"
+        if UserDefaults.standard.bool(forKey: askedForRatingKey) != true && (state.currentPlayer == .player1) {
             SKStoreReviewController.requestReview()
+            UserDefaults.standard.set(true, forKey: askedForRatingKey)
         }
     }
 
