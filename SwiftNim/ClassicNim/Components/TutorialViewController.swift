@@ -37,7 +37,7 @@ class TutorialViewController: PageVC {
         guard let firstVC = viewControllerAtIndex(index: 0) else {
             assert(false, "Failed to setup page view controller.")
             dismiss(animated: true, completion: nil)
-            
+
             return
         }
         setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)

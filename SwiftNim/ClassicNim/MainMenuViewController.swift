@@ -45,7 +45,7 @@ class MainMenuViewController: NimViewController {
             UserDefaults.standard.set(true, forKey: "viewedTutorial")
         }
 
-        soundManager.playEndGameSound()
+        soundManager.play(sound: .endgame)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -53,7 +53,7 @@ class GameBoardViewController: NimViewController {
 extension GameBoardViewController: MoveEngineDelegate {
     func presentSameStackAlert() {
         performSegue(withIdentifier: "sameStack", sender: self)
-        soundManager.playEndGameSound()
+        soundManager.play(sound: .endgame)
     }
 
     func updateViews(for state: GameState) {
@@ -89,7 +89,7 @@ extension GameBoardViewController: MoveEngineDelegate {
     func displayEndPrompt(for state: GameState) {
         currentWinner = state.currentPlayer.toString()
         performSegue(withIdentifier: "endGame", sender: self)
-        soundManager.playEndGameSound()
+        soundManager.play(sound: .endgame)
 
         let askedForRatingKey = "askedForRating"
         if UserDefaults.standard.bool(forKey: askedForRatingKey) != true && (state.currentPlayer == .player1) {

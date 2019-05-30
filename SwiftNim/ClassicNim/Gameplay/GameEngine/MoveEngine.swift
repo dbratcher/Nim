@@ -35,7 +35,7 @@ class MoveEngine {
             return
         }
 
-        soundManager.playSelectSound()
+        soundManager.play(sound: .select)
 
         selectedStones.removeAll(where: { $0 == stone })
         stone.isSelected.toggle()

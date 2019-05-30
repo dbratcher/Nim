@@ -114,11 +114,11 @@
 		EA27B302227805F5000FD652 /* Gameplay */ = {
 			isa = PBXGroup;
 			children = (
+				EA6310F6229F9453006E99F4 /* GameEngine */,
 				EA27B30C227954EA000FD652 /* Models */,
 				EA27B305227807E8000FD652 /* Views */,
 				EA86B88F225920F2001BA2D7 /* GameBoardViewController.swift */,
 				EAB7C7E6227F9433006D9383 /* EndGameViewController.swift */,
-				EA27B30F227BF021000FD652 /* MoveEngine.swift */,
 				EAE5C75E2282814800297664 /* SameStackErrorViewController.swift */,
 			);
 			path = Gameplay;
@@ -168,6 +168,15 @@
 				EA64622122713A2A00C68933 /* GameBoardStorage.swift */,
 			);
 			path = BoardCustomization;
+			sourceTree = "<group>";
+		};
+		EA6310F6229F9453006E99F4 /* GameEngine */ = {
+			isa = PBXGroup;
+			children = (
+				EA27B30F227BF021000FD652 /* MoveEngine.swift */,
+				EADA52F622965B7B001731E2 /* SoundManager.swift */,
+			);
+			path = GameEngine;
 			sourceTree = "<group>";
 		};
 		EA64621E2271363800C68933 /* Extensions */ = {
@@ -220,7 +229,6 @@
 				EA08E22722583DD100D54BC8 /* InstructionsViewController.swift */,
 				EAE5E425225595C100AC934B /* MainMenuViewController.swift */,
 				EA4E9C81227E2D130021AAE5 /* NimViewController.swift */,
-				EADA52F622965B7B001731E2 /* SoundManager.swift */,
 			);
 			path = ClassicNim;
 			sourceTree = "<group>";

@@ -35,7 +35,7 @@ class StoneStackView: UIStackView {
         let newIndex = hiddenStoneCount
         let duration = Double(newIndex - currentIndex)
 
-        soundManager.playSwooshSound()
+        soundManager.play(sound: .swoosh)
         UIView.animate(withDuration: duration, animations: {
             stoneView.removeFromSuperview()
             self.insertArrangedSubview(stoneView, at: newIndex)
