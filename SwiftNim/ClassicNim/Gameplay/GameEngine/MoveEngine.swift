@@ -148,34 +148,14 @@ class MoveEngine {
     }
 
     private func moveForComputer() {
-        switch settings.difficulty {
-        case .easy: // random stack random number of stones
-            let randomStack = board.randomStack
-            let randomInt = Int.random(in: 1...randomStack.stoneCount)
-            guard let stoneViews = delegate?.views(for: randomInt, in: randomStack) else {
-                assert(false, "Can't get random stack")
-                return
-            }
-            selectedStones = stoneViews
-        case .medium: // random move if more than 8 stones on the board
-            var chosenStack = board.randomStack
-            var chosenStones = Int.random(in: 1...chosenStack.stoneCount)
-            if board.totalStones < 8 {
-                (chosenStones, chosenStack) = idealMove()
-            }
-            guard let stoneViews = delegate?.views(for: chosenStones, in: chosenStack) else {
-                assert(false, "Can't get random stack")
-                return
-            }
-            selectedStones = stoneViews
-        case .hard: // ideal stack ideal number of stones
-            let (idealStones, idealStack) = idealMove()
-            guard let stoneViews = delegate?.views(for: idealStones, in: idealStack) else {
-                assert(false, "Can't get random stack")
-                return
-            }
-            selectedStones = stoneViews
+        let computer = AIEngine(difficulty: settings.difficulty)
+        let (stones, stack) = computer.nextMove(for: board)
+
+        guard let stoneViews = delegate?.views(for: stones, in: stack) else {
+            assert(false, "Can't get random stack")
+            return
         }
+        selectedStones = stoneViews
 
         // chain selecting stones
         var delay: Double = 0.5
@@ -190,40 +170,5 @@ class MoveEngine {
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
             self.endTurn()
         }
-    }
-
-    private func idealMove() -> (Int, Stack) {
-        // the ideal strategy is based on xor of all stack stone counts
-        var xorSum: Int = 0
-        for stack in board.stacks {
-            xorSum = xorSum ^ stack.stoneCount
-        }
-
-        if xorSum == 0 {
-            // hopefully we're in the endgame with stacks of one
-            // otherwise there is no way to win, stall
-            return (1, board.randomStack)
-        }
-
-        for stack in board.stacks {
-            let stackXor = xorSum ^ stack.stoneCount
-            if stackXor < stack.stoneCount {
-                var idealStoneCount = stack.stoneCount - stackXor
-                if board.stacks.allSatisfy({ $0.stoneCount <= 1 || $0.identifier == stack.identifier }) {
-                    // handle endgame of stacks of 1
-                    let stacksOfOne = board.stacks.filter({ $0.stoneCount == 1 }).count
-                    if stacksOfOne % 2 == 0 {
-                        idealStoneCount -= 1
-                    } else {
-                        idealStoneCount = stack.stoneCount
-                    }
-                }
-
-                return (idealStoneCount, stack)
-            }
-        }
-
-        assert(false, "\(self) we could not determine a way to win, there should be an ideal move if xorSum > 0")
-        return (1, board.randomStack)
     }
 }

@@ -21,6 +21,7 @@
 		EA6462202271364800C68933 /* UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA64621F2271364800C68933 /* UISegmentedControl.swift */; };
 		EA64622222713A2A00C68933 /* GameBoardStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA64622122713A2A00C68933 /* GameBoardStorage.swift */; };
 		EA688A80226E9E1000FDD77C /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA688A7F226E9E1000FDD77C /* GameSettings.swift */; };
+		EA74BDFF22A0F324001CBF39 /* AIEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA74BDFE22A0F324001CBF39 /* AIEngine.swift */; };
 		EA86B890225920F3001BA2D7 /* GameBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86B88F225920F2001BA2D7 /* GameBoardViewController.swift */; };
 		EAB7C7E7227F9433006D9383 /* EndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB7C7E6227F9433006D9383 /* EndGameViewController.swift */; };
 		EADA52F322965AC9001731E2 /* endgame.m4a in Resources */ = {isa = PBXBuildFile; fileRef = EADA52F222965AC9001731E2 /* endgame.m4a */; };
@@ -63,6 +64,7 @@
 		EA64621F2271364800C68933 /* UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentedControl.swift; sourceTree = "<group>"; };
 		EA64622122713A2A00C68933 /* GameBoardStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardStorage.swift; sourceTree = "<group>"; };
 		EA688A7F226E9E1000FDD77C /* GameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
+		EA74BDFE22A0F324001CBF39 /* AIEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIEngine.swift; sourceTree = "<group>"; };
 		EA86B88F225920F2001BA2D7 /* GameBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardViewController.swift; sourceTree = "<group>"; };
 		EAB7C7E6227F9433006D9383 /* EndGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndGameViewController.swift; sourceTree = "<group>"; };
 		EADA52F222965AC9001731E2 /* endgame.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = endgame.m4a; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			children = (
 				EA27B30F227BF021000FD652 /* MoveEngine.swift */,
 				EADA52F622965B7B001731E2 /* SoundManager.swift */,
+				EA74BDFE22A0F324001CBF39 /* AIEngine.swift */,
 			);
 			path = GameEngine;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA27B30922780817000FD652 /* StoneStackView.swift in Sources */,
+				EA74BDFF22A0F324001CBF39 /* AIEngine.swift in Sources */,
 				EA4E9C82227E2D130021AAE5 /* NimViewController.swift in Sources */,
 				EAE5C7612282843F00297664 /* TutorialViewController.swift in Sources */,
 				EA688A80226E9E1000FDD77C /* GameSettings.swift in Sources */,
