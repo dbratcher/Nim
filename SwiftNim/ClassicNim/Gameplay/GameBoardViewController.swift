@@ -23,7 +23,7 @@ class GameBoardViewController: NimViewController {
     }
 
     @IBAction func removeStones() {
-        guard engine.selectedStones.count > 0 else { return }
+        guard engine.selectedStones.isEmpty == false else { return }
 
         removeButton.isEnabled = false
         engine.endTurn()

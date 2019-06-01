@@ -21,7 +21,7 @@ class GameBoardStorage {
 
         let stackIDStrings = stackIDList.components(separatedBy: ",")
         let stackIDs = stackIDStrings.compactMap { UUID(uuidString: $0) }
-        guard stackIDs.count > 0 else {
+        guard stackIDs.isEmpty == false else {
             assert(false, "\(self) Invalid empty stack list")
             return defaultBoard
         }
