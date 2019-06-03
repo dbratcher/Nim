@@ -6,8 +6,8 @@
 //  Copyright © 2019 Drew Bratcher. All rights reserved.
 //
 
-import Foundation
 import AVFoundation
+import Foundation
 
 class SoundManager {
     private let player = AVQueuePlayer()

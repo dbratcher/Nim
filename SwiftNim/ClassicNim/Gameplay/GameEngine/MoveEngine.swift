@@ -8,12 +8,13 @@
 
 import Foundation
 
-protocol MoveEngineDelegate: class {
+protocol MoveEngineDelegate: AnyObject {
+    var isBeingDismissed: Bool { get }
+
     func presentSameStackAlert()
     func updateViews(for state: GameState)
     func views(for stones: Int, in stack: Stack) -> [StoneView]
     func displayEndPrompt(for state: GameState)
-    var isBeingDismissed: Bool { get }
 }
 
 class MoveEngine {
@@ -37,7 +38,7 @@ class MoveEngine {
 
         soundManager.play(sound: .select)
 
-        selectedStones.removeAll(where: { $0 == stone })
+        selectedStones.removeAll { $0 == stone }
         stone.isSelected.toggle()
         if stone.isSelected {
             selectedStones.append(stone)
@@ -45,7 +46,7 @@ class MoveEngine {
     }
 
     func stack(for stackID: UUID) -> Stack? {
-        return board.stacks.first(where: { $0.identifier == stackID})
+        return board.stacks.first { $0.identifier == stackID }
     }
 
     func configureBoard() {

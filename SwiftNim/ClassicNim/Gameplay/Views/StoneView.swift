@@ -42,7 +42,8 @@ class StoneView: UIView {
         super.draw(rect)
     }
 
-    @objc func handleTap() {
+    @objc
+    func handleTap() {
         engine.tap(on: self, in: stackID)
     }
 }

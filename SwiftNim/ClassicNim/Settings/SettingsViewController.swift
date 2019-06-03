@@ -9,24 +9,24 @@
 import UIKit
 
 class SettingsViewController: NimViewController {
-    @IBOutlet weak var firstMover: UISegmentedControl!
-    @IBOutlet weak var difficulty: UISegmentedControl!
-    @IBOutlet weak var randomize: UISwitch!
-    @IBOutlet weak var customizeBoard: UIButton!
+    @IBOutlet private weak var firstMover: UISegmentedControl!
+    @IBOutlet private weak var difficulty: UISegmentedControl!
+    @IBOutlet private weak var randomize: UISwitch!
+    @IBOutlet private weak var customizeBoard: UIButton!
 
     private var settings: GameSettings = GameSettingsStorage.load()
 
-    @IBAction func goBack(_ sender: Any) {
+    @IBAction private func goBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
 
-    @IBAction func rateApp(_ sender: Any) {
+    @IBAction private func rateApp(_ sender: Any) {
         let urlString = "https://itunes.apple.com/us/app/classic-nim/id501414326?ls=1&mt=8&action=write-review"
         guard let validURL = URL(string: urlString) else { return }
         UIApplication.shared.open(validURL, options: [:], completionHandler: nil)
     }
 
-    @IBAction func randomizeChanged(_ sender: Any) {
+    @IBAction private func randomizeChanged(_ sender: Any) {
         settings.randomizeBoard = randomize.isOn
         customizeBoard.isEnabled = randomize.isOn == false
         GameSettingsStorage.save(settings)
@@ -43,7 +43,7 @@ class SettingsViewController: NimViewController {
 
     }
 
-    @IBAction func firstMoverChanged(_ sender: UISegmentedControl) {
+    @IBAction private func firstMoverChanged(_ sender: UISegmentedControl) {
         guard let firstMove = FirstMoveType(from: sender.selectedTitle) else {
             assert(false, "Unknown first move selected.")
             return
@@ -53,7 +53,7 @@ class SettingsViewController: NimViewController {
         GameSettingsStorage.save(settings)
     }
 
-    @IBAction func difficultyChanged(_ sender: UISegmentedControl) {
+    @IBAction private func difficultyChanged(_ sender: UISegmentedControl) {
         guard let difficulty = Difficulty(from: sender.selectedTitle) else {
             assert(false, "Unknown difficulty selected.")
             return

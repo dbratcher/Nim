@@ -10,10 +10,10 @@ import UIKit
 
 class EndGameViewController: UIViewController {
 
-    @IBOutlet weak var stackView: UIStackView!
-    @IBOutlet weak var backgroundView: UIView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet private weak var stackView: UIStackView!
+    @IBOutlet private weak var backgroundView: UIView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var messageLabel: UILabel!
     var winner = ""
 
     override func viewDidLoad() {
@@ -24,7 +24,7 @@ class EndGameViewController: UIViewController {
         titleLabel.text = "\(winner) Won!"
     }
 
-    @IBAction func mainMenu(_ sender: Any) {
+    @IBAction private func mainMenu(_ sender: Any) {
         guard let parentViewController = self.presentingViewController else {
             assert(false, "We could not dismiss whoever presented this view controller.")
             return
@@ -34,7 +34,7 @@ class EndGameViewController: UIViewController {
         }
     }
 
-    @IBAction func settings(_ sender: Any) {
+    @IBAction private func settings(_ sender: Any) {
         guard let parentViewController = self.presentingViewController else {
             assert(false, "We could not dismiss whoever presented this view controller.")
             return
@@ -50,7 +50,7 @@ class EndGameViewController: UIViewController {
         }
     }
 
-    @IBAction func newGame(_ sender: Any) {
+    @IBAction private func newGame(_ sender: Any) {
         guard let gameBoard = self.presentingViewController as? GameBoardViewController else {
             assert(false, "We could not find a reference to the game board view controller.")
             return

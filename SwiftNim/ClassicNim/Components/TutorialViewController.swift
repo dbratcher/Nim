@@ -146,7 +146,8 @@ class TutorialContentController: UIViewController {
         stackView.widthAnchor.constraint(lessThanOrEqualToConstant: 400).isActive = true
     }
 
-    @objc func skip() {
+    @objc
+    func skip() {
         dismiss(animated: true, completion: nil)
     }
 

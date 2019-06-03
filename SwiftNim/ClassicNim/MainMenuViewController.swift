@@ -6,14 +6,14 @@
 //  Copyright © 2019 Drew Bratcher. All rights reserved.
 //
 
-import UIKit
 import AVFoundation
+import UIKit
 
 class MainMenuViewController: NimViewController {
-    @IBOutlet weak var player1: UIButton!
-    @IBOutlet weak var player2: UIButton!
-    @IBOutlet weak var settings: UIButton!
-    @IBOutlet weak var help: UIButton!
+    @IBOutlet private weak var player1: UIButton!
+    @IBOutlet private weak var player2: UIButton!
+    @IBOutlet private weak var settings: UIButton!
+    @IBOutlet private weak var help: UIButton!
 
     private let soundManager = SoundManager()
 

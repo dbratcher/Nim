@@ -93,11 +93,11 @@ struct GameSettings {
     var difficulty: Difficulty = .easy
 }
 
-class GameSettingsStorage {
-    static private let firstMoveKey = "firstMove"
-    static private let difficultyKey = "difficulty"
-    static private let randomizeKey = "randomize"
-    static private let opponentKey = "opponent"
+enum GameSettingsStorage {
+    private static let firstMoveKey = "firstMove"
+    private static let difficultyKey = "difficulty"
+    private static let randomizeKey = "randomize"
+    private static let opponentKey = "opponent"
 
     static func load() -> GameSettings {
         var settings = GameSettings()

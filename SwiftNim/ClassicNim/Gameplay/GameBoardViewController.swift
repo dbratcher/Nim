@@ -6,23 +6,23 @@
 //  Copyright © 2019 Drew Bratcher. All rights reserved.
 //
 
-import UIKit
 import StoreKit
+import UIKit
 
 class GameBoardViewController: NimViewController {
-    @IBOutlet weak var turnLabel: UILabel!
-    @IBOutlet weak var removeButton: UIButton!
+    @IBOutlet private weak var turnLabel: UILabel!
+    @IBOutlet private weak var removeButton: UIButton!
 
     private let soundManager = SoundManager()
     private let engine = MoveEngine()
     var gameBoardView: GameBoardView?
     var currentWinner = ""
 
-    @IBAction func quit(_ sender: Any) {
+    @IBAction private func quit(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
 
-    @IBAction func removeStones() {
+    @IBAction private func removeStones() {
         guard engine.selectedStones.isEmpty == false else { return }
 
         removeButton.isEnabled = false
@@ -30,7 +30,6 @@ class GameBoardViewController: NimViewController {
     }
 
     override func loadView() {
-        super.loadView()
         engine.delegate = self
         configureBoardView()
     }
@@ -67,8 +66,8 @@ extension GameBoardViewController: MoveEngineDelegate {
             return []
         }
 
-        guard let stoneStack = gameBoardView.arrangedSubviews.first(where: { (view) -> Bool in
-            return (view as? StoneStackView)?.stackID == stack.identifier
+        guard let stoneStack = gameBoardView.arrangedSubviews.first(where: { view -> Bool in
+            (view as? StoneStackView)?.stackID == stack.identifier
         }) as? StoneStackView else {
             assert(false, "\(self) Could not get requested stack for stones.")
             return []

@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol LabelStepperDelegate: class {
+protocol LabelStepperDelegate: AnyObject {
     func valueChanged(_ newValue: Int)
 }
 
@@ -25,16 +25,14 @@ class LabeledStepper: UIStackView {
 
     public weak var delegate: LabelStepperDelegate?
 
-    @IBInspectable
-    var text: String = "Stepper:" {
+    @IBInspectable var text: String = "Stepper:" {
         didSet {
             label.text = text
             label.isHidden = text.isEmpty
         }
     }
 
-    @IBInspectable
-    var value: Int = 1 {
+    @IBInspectable var value: Int = 1 {
         didSet {
             countLabel.text = "\(value)"
             stepper.value = Double(value)
@@ -69,7 +67,8 @@ class LabeledStepper: UIStackView {
         stepper.addTarget(self, action: #selector(valueChanged), for: .valueChanged)
     }
 
-    @objc func valueChanged() {
+    @objc
+    func valueChanged() {
         value = Int(stepper.value)
         delegate?.valueChanged(value)
     }

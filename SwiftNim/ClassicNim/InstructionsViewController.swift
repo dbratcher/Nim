@@ -9,13 +9,13 @@
 import UIKit
 
 class InstructionsViewController: NimViewController {
-    @IBOutlet weak var buildNumber: UILabel!
+    @IBOutlet private weak var buildNumber: UILabel!
 
-    @IBAction func goBack(_ sender: Any) {
+    @IBAction private func goBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
 
-    @IBAction func viewTutorial(_ sender: Any) {
+    @IBAction private func viewTutorial(_ sender: Any) {
         present(TutorialViewController.create(), animated: true, completion: nil)
     }
 

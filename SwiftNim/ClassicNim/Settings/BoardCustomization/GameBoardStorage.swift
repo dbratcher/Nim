@@ -8,9 +8,9 @@
 
 import Foundation
 
-class GameBoardStorage {
-    static private let boardStackIDListKey = "boardStackIDList"
-    static private let stackStoneCountKeySuffix = "-stoneCount"
+enum GameBoardStorage {
+    private static let boardStackIDListKey = "boardStackIDList"
+    private static let stackStoneCountKeySuffix = "-stoneCount"
 
     static func load() -> GameBoard {
         let defaultBoard = GameBoard()
