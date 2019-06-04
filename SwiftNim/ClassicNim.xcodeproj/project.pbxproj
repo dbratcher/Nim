@@ -35,7 +35,7 @@
 		EAE5E429225595C100AC934B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAE5E427225595C100AC934B /* Main.storyboard */; };
 		EAE5E42B225595C300AC934B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAE5E42A225595C300AC934B /* Assets.xcassets */; };
 		EAE5E42E225595C300AC934B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAE5E42C225595C300AC934B /* LaunchScreen.storyboard */; };
-		EAE5E439225595C300AC934B /* ClassicNimTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5E438225595C300AC934B /* ClassicNimTests.swift */; };
+		EAE5E439225595C300AC934B /* AITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5E438225595C300AC934B /* AITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +81,7 @@
 		EAE5E42D225595C300AC934B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EAE5E42F225595C300AC934B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAE5E434225595C300AC934B /* ClassicNimTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassicNimTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EAE5E438225595C300AC934B /* ClassicNimTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicNimTests.swift; sourceTree = "<group>"; };
+		EAE5E438225595C300AC934B /* AITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AITests.swift; sourceTree = "<group>"; };
 		EAE5E43A225595C300AC934B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -239,7 +239,7 @@
 		EAE5E437225595C300AC934B /* ClassicNimTests */ = {
 			isa = PBXGroup;
 			children = (
-				EAE5E438225595C300AC934B /* ClassicNimTests.swift */,
+				EAE5E438225595C300AC934B /* AITests.swift */,
 				EAE5E43A225595C300AC934B /* Info.plist */,
 			);
 			path = ClassicNimTests;
@@ -414,7 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAE5E439225595C300AC934B /* ClassicNimTests.swift in Sources */,
+				EAE5E439225595C300AC934B /* AITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,7 +607,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CD69SP6A6Z;
-				INFOPLIST_FILE = ClassicNimTests/Resources/Info.plist;
+				INFOPLIST_FILE = ClassicNimTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -628,7 +628,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CD69SP6A6Z;
-				INFOPLIST_FILE = ClassicNimTests/Resources/Info.plist;
+				INFOPLIST_FILE = ClassicNimTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
