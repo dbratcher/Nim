@@ -7,48 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A943DB6235EC1D900C1C332 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A943DB5235EC1D900C1C332 /* AppDelegate.swift */; };
-		3A943DB8235EC1D900C1C332 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A943DB7235EC1D900C1C332 /* SceneDelegate.swift */; };
-		3A943DBA235EC1D900C1C332 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A943DB9235EC1D900C1C332 /* ViewController.swift */; };
-		3A943DBD235EC1D900C1C332 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A943DBB235EC1D900C1C332 /* Main.storyboard */; };
-		3A943DBF235EC1D900C1C332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A943DBE235EC1D900C1C332 /* Assets.xcassets */; };
-		3A943DC2235EC1D900C1C332 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A943DC0235EC1D900C1C332 /* LaunchScreen.storyboard */; };
-		3A943DCD235EC1DA00C1C332 /* RustNimTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A943DCC235EC1DA00C1C332 /* RustNimTests.swift */; };
+		3A861B49238E28D3008C1FF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A861B48238E28D3008C1FF0 /* AppDelegate.swift */; };
+		3A861B4B238E28D3008C1FF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A861B4A238E28D3008C1FF0 /* SceneDelegate.swift */; };
+		3A861B4D238E28D3008C1FF0 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A861B4C238E28D3008C1FF0 /* MainMenuView.swift */; };
+		3A861B4F238E28D8008C1FF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A861B4E238E28D8008C1FF0 /* Assets.xcassets */; };
+		3A861B52238E28D8008C1FF0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A861B51238E28D8008C1FF0 /* Preview Assets.xcassets */; };
+		3A861B55238E28D8008C1FF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A861B53238E28D8008C1FF0 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		3A943DC9235EC1DA00C1C332 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3A943DAA235EC1D900C1C332 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3A943DB1235EC1D900C1C332;
-			remoteInfo = RustNim;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		3A943DB2235EC1D900C1C332 /* RustNim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RustNim.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A943DB5235EC1D900C1C332 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3A943DB7235EC1D900C1C332 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3A943DB9235EC1D900C1C332 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3A943DBC235EC1D900C1C332 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3A943DBE235EC1D900C1C332 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3A943DC1235EC1D900C1C332 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3A943DC3235EC1D900C1C332 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A943DC8235EC1DA00C1C332 /* RustNimTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RustNimTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A943DCC235EC1DA00C1C332 /* RustNimTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RustNimTests.swift; sourceTree = "<group>"; };
-		3A943DCE235EC1DA00C1C332 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A861B45238E28D3008C1FF0 /* RustNim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RustNim.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A861B48238E28D3008C1FF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3A861B4A238E28D3008C1FF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3A861B4C238E28D3008C1FF0 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
+		3A861B4E238E28D8008C1FF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3A861B51238E28D8008C1FF0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3A861B54238E28D8008C1FF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3A861B56238E28D8008C1FF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3A943DAF235EC1D900C1C332 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3A943DC5235EC1DA00C1C332 /* Frameworks */ = {
+		3A861B42238E28D3008C1FF0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -58,57 +37,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3A943DA9235EC1D900C1C332 = {
+		3A861B3C238E28D3008C1FF0 = {
 			isa = PBXGroup;
 			children = (
-				3A943DB4235EC1D900C1C332 /* RustNim */,
-				3A943DCB235EC1DA00C1C332 /* RustNimTests */,
-				3A943DB3235EC1D900C1C332 /* Products */,
+				3A861B47238E28D3008C1FF0 /* RustNim */,
+				3A861B46238E28D3008C1FF0 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		3A943DB3235EC1D900C1C332 /* Products */ = {
+		3A861B46238E28D3008C1FF0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3A943DB2235EC1D900C1C332 /* RustNim.app */,
-				3A943DC8235EC1DA00C1C332 /* RustNimTests.xctest */,
+				3A861B45238E28D3008C1FF0 /* RustNim.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3A943DB4235EC1D900C1C332 /* RustNim */ = {
+		3A861B47238E28D3008C1FF0 /* RustNim */ = {
 			isa = PBXGroup;
 			children = (
-				3A943DB5235EC1D900C1C332 /* AppDelegate.swift */,
-				3A943DB7235EC1D900C1C332 /* SceneDelegate.swift */,
-				3A943DB9235EC1D900C1C332 /* ViewController.swift */,
-				3A943DBB235EC1D900C1C332 /* Main.storyboard */,
-				3A943DBE235EC1D900C1C332 /* Assets.xcassets */,
-				3A943DC0235EC1D900C1C332 /* LaunchScreen.storyboard */,
-				3A943DC3235EC1D900C1C332 /* Info.plist */,
+				3A861B48238E28D3008C1FF0 /* AppDelegate.swift */,
+				3A861B4A238E28D3008C1FF0 /* SceneDelegate.swift */,
+				3A861B4C238E28D3008C1FF0 /* MainMenuView.swift */,
+				3A861B4E238E28D8008C1FF0 /* Assets.xcassets */,
+				3A861B53238E28D8008C1FF0 /* LaunchScreen.storyboard */,
+				3A861B56238E28D8008C1FF0 /* Info.plist */,
+				3A861B50238E28D8008C1FF0 /* Preview Content */,
 			);
 			path = RustNim;
 			sourceTree = "<group>";
 		};
-		3A943DCB235EC1DA00C1C332 /* RustNimTests */ = {
+		3A861B50238E28D8008C1FF0 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				3A943DCC235EC1DA00C1C332 /* RustNimTests.swift */,
-				3A943DCE235EC1DA00C1C332 /* Info.plist */,
+				3A861B51238E28D8008C1FF0 /* Preview Assets.xcassets */,
 			);
-			path = RustNimTests;
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3A943DB1235EC1D900C1C332 /* RustNim */ = {
+		3A861B44238E28D3008C1FF0 /* RustNim */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A943DD1235EC1DA00C1C332 /* Build configuration list for PBXNativeTarget "RustNim" */;
+			buildConfigurationList = 3A861B59238E28D8008C1FF0 /* Build configuration list for PBXNativeTarget "RustNim" */;
 			buildPhases = (
-				3A943DAE235EC1D900C1C332 /* Sources */,
-				3A943DAF235EC1D900C1C332 /* Frameworks */,
-				3A943DB0235EC1D900C1C332 /* Resources */,
+				3A861B41238E28D3008C1FF0 /* Sources */,
+				3A861B42238E28D3008C1FF0 /* Frameworks */,
+				3A861B43238E28D3008C1FF0 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -116,47 +92,25 @@
 			);
 			name = RustNim;
 			productName = RustNim;
-			productReference = 3A943DB2235EC1D900C1C332 /* RustNim.app */;
+			productReference = 3A861B45238E28D3008C1FF0 /* RustNim.app */;
 			productType = "com.apple.product-type.application";
-		};
-		3A943DC7235EC1DA00C1C332 /* RustNimTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3A943DD4235EC1DA00C1C332 /* Build configuration list for PBXNativeTarget "RustNimTests" */;
-			buildPhases = (
-				3A943DC4235EC1DA00C1C332 /* Sources */,
-				3A943DC5235EC1DA00C1C332 /* Frameworks */,
-				3A943DC6235EC1DA00C1C332 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3A943DCA235EC1DA00C1C332 /* PBXTargetDependency */,
-			);
-			name = RustNimTests;
-			productName = RustNimTests;
-			productReference = 3A943DC8235EC1DA00C1C332 /* RustNimTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3A943DAA235EC1D900C1C332 /* Project object */ = {
+		3A861B3D238E28D3008C1FF0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1110;
-				LastUpgradeCheck = 1110;
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Drew Bratcher";
 				TargetAttributes = {
-					3A943DB1235EC1D900C1C332 = {
-						CreatedOnToolsVersion = 11.1;
-					};
-					3A943DC7235EC1DA00C1C332 = {
-						CreatedOnToolsVersion = 11.1;
-						TestTargetID = 3A943DB1235EC1D900C1C332;
+					3A861B44238E28D3008C1FF0 = {
+						CreatedOnToolsVersion = 11.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 3A943DAD235EC1D900C1C332 /* Build configuration list for PBXProject "RustNim" */;
+			buildConfigurationList = 3A861B40238E28D3008C1FF0 /* Build configuration list for PBXProject "RustNim" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -164,79 +118,47 @@
 				en,
 				Base,
 			);
-			mainGroup = 3A943DA9235EC1D900C1C332;
-			productRefGroup = 3A943DB3235EC1D900C1C332 /* Products */;
+			mainGroup = 3A861B3C238E28D3008C1FF0;
+			productRefGroup = 3A861B46238E28D3008C1FF0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3A943DB1235EC1D900C1C332 /* RustNim */,
-				3A943DC7235EC1DA00C1C332 /* RustNimTests */,
+				3A861B44238E28D3008C1FF0 /* RustNim */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3A943DB0235EC1D900C1C332 /* Resources */ = {
+		3A861B43238E28D3008C1FF0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A943DC2235EC1D900C1C332 /* LaunchScreen.storyboard in Resources */,
-				3A943DBF235EC1D900C1C332 /* Assets.xcassets in Resources */,
-				3A943DBD235EC1D900C1C332 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3A943DC6235EC1DA00C1C332 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				3A861B55238E28D8008C1FF0 /* LaunchScreen.storyboard in Resources */,
+				3A861B52238E28D8008C1FF0 /* Preview Assets.xcassets in Resources */,
+				3A861B4F238E28D8008C1FF0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3A943DAE235EC1D900C1C332 /* Sources */ = {
+		3A861B41238E28D3008C1FF0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A943DBA235EC1D900C1C332 /* ViewController.swift in Sources */,
-				3A943DB6235EC1D900C1C332 /* AppDelegate.swift in Sources */,
-				3A943DB8235EC1D900C1C332 /* SceneDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3A943DC4235EC1DA00C1C332 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3A943DCD235EC1DA00C1C332 /* RustNimTests.swift in Sources */,
+				3A861B49238E28D3008C1FF0 /* AppDelegate.swift in Sources */,
+				3A861B4B238E28D3008C1FF0 /* SceneDelegate.swift in Sources */,
+				3A861B4D238E28D3008C1FF0 /* MainMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		3A943DCA235EC1DA00C1C332 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3A943DB1235EC1D900C1C332 /* RustNim */;
-			targetProxy = 3A943DC9235EC1DA00C1C332 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		3A943DBB235EC1D900C1C332 /* Main.storyboard */ = {
+		3A861B53238E28D8008C1FF0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3A943DBC235EC1D900C1C332 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3A943DC0235EC1D900C1C332 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3A943DC1235EC1D900C1C332 /* Base */,
+				3A861B54238E28D8008C1FF0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -244,7 +166,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		3A943DCF235EC1DA00C1C332 /* Debug */ = {
+		3A861B57238E28D8008C1FF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -294,7 +216,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -304,7 +226,7 @@
 			};
 			name = Debug;
 		};
-		3A943DD0235EC1DA00C1C332 /* Release */ = {
+		3A861B58238E28D8008C1FF0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -348,7 +270,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -358,12 +280,14 @@
 			};
 			name = Release;
 		};
-		3A943DD2235EC1DA00C1C332 /* Debug */ = {
+		3A861B5A238E28D8008C1FF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"RustNim/Preview Content\"";
 				DEVELOPMENT_TEAM = CD69SP6A6Z;
+				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = RustNim/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -376,12 +300,14 @@
 			};
 			name = Debug;
 		};
-		3A943DD3235EC1DA00C1C332 /* Release */ = {
+		3A861B5B238E28D8008C1FF0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"RustNim/Preview Content\"";
 				DEVELOPMENT_TEAM = CD69SP6A6Z;
+				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = RustNim/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -391,84 +317,31 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		3A943DD5235EC1DA00C1C332 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CD69SP6A6Z;
-				INFOPLIST_FILE = RustNimTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Drew-Bratcher.RustNimTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RustNim.app/RustNim";
-			};
-			name = Debug;
-		};
-		3A943DD6235EC1DA00C1C332 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CD69SP6A6Z;
-				INFOPLIST_FILE = RustNimTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Drew-Bratcher.RustNimTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RustNim.app/RustNim";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3A943DAD235EC1D900C1C332 /* Build configuration list for PBXProject "RustNim" */ = {
+		3A861B40238E28D3008C1FF0 /* Build configuration list for PBXProject "RustNim" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3A943DCF235EC1DA00C1C332 /* Debug */,
-				3A943DD0235EC1DA00C1C332 /* Release */,
+				3A861B57238E28D8008C1FF0 /* Debug */,
+				3A861B58238E28D8008C1FF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A943DD1235EC1DA00C1C332 /* Build configuration list for PBXNativeTarget "RustNim" */ = {
+		3A861B59238E28D8008C1FF0 /* Build configuration list for PBXNativeTarget "RustNim" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3A943DD2235EC1DA00C1C332 /* Debug */,
-				3A943DD3235EC1DA00C1C332 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3A943DD4235EC1DA00C1C332 /* Build configuration list for PBXNativeTarget "RustNimTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3A943DD5235EC1DA00C1C332 /* Debug */,
-				3A943DD6235EC1DA00C1C332 /* Release */,
+				3A861B5A238E28D8008C1FF0 /* Debug */,
+				3A861B5B238E28D8008C1FF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3A943DAA235EC1D900C1C332 /* Project object */;
+	rootObject = 3A861B3D238E28D3008C1FF0 /* Project object */;
 }
