@@ -11,7 +11,6 @@ import UIKit
 typealias PageVC = UIPageViewController
 
 class TutorialViewController: PageVC {
-
     static func create() -> TutorialViewController {
         let tutorialTitles = ["Each game starts with a board of stones",
                               "Select stones in a single stack to remove 🔘",
@@ -48,40 +47,6 @@ class TutorialViewController: PageVC {
     }
 }
 
-extension TutorialViewController: UIPageViewControllerDataSource {
-    func pageViewController(_ page: PageVC, viewControllerBefore current: UIViewController) -> UIViewController? {
-        guard let currentPage = current as? TutorialContentController else { return nil }
-        guard let currentTitle = currentPage.titleText else { return nil }
-        guard let index = titles.firstIndex(of: currentTitle) else { return nil }
-
-        return viewControllerAtIndex(index: index - 1)
-    }
-
-    func pageViewController(_ page: PageVC, viewControllerAfter current: UIViewController) -> UIViewController? {
-        guard let currentPage = current as? TutorialContentController else { return nil }
-        guard let currentTitle = currentPage.titleText else { return nil }
-        guard let index = titles.firstIndex(of: currentTitle) else { return nil }
-
-        return viewControllerAtIndex(index: index + 1)
-    }
-
-    func viewControllerAtIndex(index: Int) -> UIViewController? {
-        guard index >= 0 else { return nil }
-        guard index < titles.count else { return nil }
-
-        let isFinal = index == titles.count - 1
-        return TutorialContentController(text: titles[index], image: images[index], bgColor: bgColor, isFinal: isFinal)
-    }
-
-    func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return titles.count
-    }
-
-    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-        return 0
-    }
-}
-
 class TutorialContentController: UIViewController {
     private let tutorialText: UILabel
     private let tutorialImage: UIImageView
@@ -92,12 +57,21 @@ class TutorialContentController: UIViewController {
         return tutorialText.text
     }
 
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+    @objc
+    func skip() {
+        dismiss(animated: true, completion: nil)
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
+    }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     init(text: String, image: String, bgColor: UIColor, isFinal: Bool) {
@@ -145,13 +119,38 @@ class TutorialContentController: UIViewController {
         stackView.heightAnchor.constraint(lessThanOrEqualToConstant: 800).isActive = true
         stackView.widthAnchor.constraint(lessThanOrEqualToConstant: 400).isActive = true
     }
+}
 
-    @objc
-    func skip() {
-        dismiss(animated: true, completion: nil)
+extension TutorialViewController: UIPageViewControllerDataSource {
+    func pageViewController(_ page: PageVC, viewControllerBefore current: UIViewController) -> UIViewController? {
+        guard let currentPage = current as? TutorialContentController else { return nil }
+        guard let currentTitle = currentPage.titleText else { return nil }
+        guard let index = titles.firstIndex(of: currentTitle) else { return nil }
+
+        return viewControllerAtIndex(index: index - 1)
     }
 
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    func pageViewController(_ page: PageVC, viewControllerAfter current: UIViewController) -> UIViewController? {
+        guard let currentPage = current as? TutorialContentController else { return nil }
+        guard let currentTitle = currentPage.titleText else { return nil }
+        guard let index = titles.firstIndex(of: currentTitle) else { return nil }
+
+        return viewControllerAtIndex(index: index + 1)
+    }
+
+    func viewControllerAtIndex(index: Int) -> UIViewController? {
+        guard index >= 0 else { return nil }
+        guard index < titles.count else { return nil }
+
+        let isFinal = index == titles.count - 1
+        return TutorialContentController(text: titles[index], image: images[index], bgColor: bgColor, isFinal: isFinal)
+    }
+
+    func presentationCount(for pageViewController: UIPageViewController) -> Int {
+        return titles.count
+    }
+
+    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
+        return 0
     }
 }

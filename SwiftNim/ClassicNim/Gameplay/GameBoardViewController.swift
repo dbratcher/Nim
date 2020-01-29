@@ -10,11 +10,12 @@ import StoreKit
 import UIKit
 
 class GameBoardViewController: NimViewController {
-    @IBOutlet private weak var turnLabel: UILabel!
-    @IBOutlet private weak var removeButton: UIButton!
+    @IBOutlet private var turnLabel: UILabel!
+    @IBOutlet private var removeButton: UIButton!
 
     private let soundManager = SoundManager()
     private let engine = MoveEngine()
+    private var start: DispatchTime?
     var gameBoardView: GameBoardView?
     var currentWinner = ""
 
@@ -29,9 +30,35 @@ class GameBoardViewController: NimViewController {
         engine.endTurn()
     }
 
-    override func loadView() {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
         engine.delegate = self
         configureBoardView()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        start = DispatchTime.now()
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+
+        logTimePlayed()
+    }
+
+    private func logTimePlayed() {
+        if let start = start {
+            let recentTimePlayed = (DispatchTime.now().uptimeNanoseconds - start.uptimeNanoseconds) / 1_000_000_000
+            if engine.settings.opponent == .computer {
+                Statistics.shared.onePlayerTimePlayed += Double(recentTimePlayed)
+            } else {
+                Statistics.shared.twoPlayerTimePlayed += Double(recentTimePlayed)
+            }
+            Statistics.shared.save()
+        }
+        start = DispatchTime.now()
     }
 
     func configureBoardView() {
@@ -56,8 +83,8 @@ extension GameBoardViewController: MoveEngineDelegate {
     }
 
     func updateViews(for state: GameState) {
-        turnLabel.text = "\(state.currentPlayer.toString())'s Turn"
-        removeButton.isEnabled = state.currentPlayer != .computer
+        turnLabel?.text = "\(state.currentPlayer.toString())'s Turn"
+        removeButton?.isEnabled = state.currentPlayer != .computer
     }
 
     func views(for stones: Int, in stack: Stack) -> [StoneView] {
@@ -86,6 +113,7 @@ extension GameBoardViewController: MoveEngineDelegate {
     }
 
     func displayEndPrompt(for state: GameState) {
+        logTimePlayed()
         currentWinner = state.currentPlayer.toString()
         performSegue(withIdentifier: "endGame", sender: self)
         soundManager.play(sound: .endgame)

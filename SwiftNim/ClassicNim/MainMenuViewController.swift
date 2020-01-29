@@ -10,20 +10,24 @@ import AVFoundation
 import UIKit
 
 class MainMenuViewController: NimViewController {
-    @IBOutlet private weak var player1: UIButton!
-    @IBOutlet private weak var player2: UIButton!
-    @IBOutlet private weak var settings: UIButton!
-    @IBOutlet private weak var help: UIButton!
+    @IBOutlet private var player1: UIButton!
+    @IBOutlet private var player2: UIButton!
+    @IBOutlet private var statistics: UIButton!
+    @IBOutlet private var settings: UIButton!
+    @IBOutlet private var help: UIButton!
+
+    private var allButtons: [UIButton] {
+        return [player1, player2, statistics, settings, help]
+    }
 
     private let soundManager = SoundManager()
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        let buttons = [player1, player2, settings, help]
         var duration = 0.3
-        for button in buttons {
-            button?.alpha = 0.0
+        for button in allButtons {
+            button.alpha = 0.0
             duration += 0.3
         }
     }
@@ -31,11 +35,10 @@ class MainMenuViewController: NimViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        let buttons = [player1, player2, settings, help]
         var duration = 0.3
-        for button in buttons {
+        for button in allButtons {
             UIView.animate(withDuration: duration) {
-                button?.alpha = 1.0
+                button.alpha = 1.0
             }
             duration += 0.3
         }
@@ -49,6 +52,8 @@ class MainMenuViewController: NimViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+
         var settings = GameSettingsStorage.load()
         if segue.identifier == "1 Player" {
             settings.opponent = .computer

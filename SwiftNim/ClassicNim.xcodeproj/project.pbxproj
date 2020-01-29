@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A86458123E142D600994B03 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A86458023E142D600994B03 /* StatisticsViewController.swift */; };
+		3A86458323E14D0100994B03 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A86458223E14D0100994B03 /* Statistics.swift */; };
 		EA08E22822583DD100D54BC8 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA08E22722583DD100D54BC8 /* InstructionsViewController.swift */; };
 		EA08E22B22583FB200D54BC8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA08E22A22583FB200D54BC8 /* SettingsViewController.swift */; };
 		EA27B30422780611000FD652 /* GameBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B30322780611000FD652 /* GameBoardView.swift */; };
@@ -49,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A86458023E142D600994B03 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		3A86458223E14D0100994B03 /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
 		EA08E22722583DD100D54BC8 /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		EA08E22A22583FB200D54BC8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EA27B30322780611000FD652 /* GameBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardView.swift; sourceTree = "<group>"; };
@@ -178,6 +182,7 @@
 				EA27B30F227BF021000FD652 /* MoveEngine.swift */,
 				EADA52F622965B7B001731E2 /* SoundManager.swift */,
 				EA74BDFE22A0F324001CBF39 /* AIEngine.swift */,
+				3A86458223E14D0100994B03 /* Statistics.swift */,
 			);
 			path = GameEngine;
 			sourceTree = "<group>";
@@ -232,6 +237,7 @@
 				EA08E22722583DD100D54BC8 /* InstructionsViewController.swift */,
 				EAE5E425225595C100AC934B /* MainMenuViewController.swift */,
 				EA4E9C81227E2D130021AAE5 /* NimViewController.swift */,
+				3A86458023E142D600994B03 /* StatisticsViewController.swift */,
 			);
 			path = ClassicNim;
 			sourceTree = "<group>";
@@ -399,6 +405,7 @@
 				EAE5E426225595C100AC934B /* MainMenuViewController.swift in Sources */,
 				EAB7C7E7227F9433006D9383 /* EndGameViewController.swift in Sources */,
 				EA6462202271364800C68933 /* UISegmentedControl.swift in Sources */,
+				3A86458123E142D600994B03 /* StatisticsViewController.swift in Sources */,
 				EAE5E424225595C100AC934B /* AppDelegate.swift in Sources */,
 				EA3592DF226B7C9100AED06A /* CustomizeBoardViewController.swift in Sources */,
 				EA86B890225920F3001BA2D7 /* GameBoardViewController.swift in Sources */,
@@ -406,6 +413,7 @@
 				EA27B307227807F4000FD652 /* StoneView.swift in Sources */,
 				EA27B310227BF021000FD652 /* MoveEngine.swift in Sources */,
 				EA3592E4226B816800AED06A /* LabeledStepper.swift in Sources */,
+				3A86458323E14D0100994B03 /* Statistics.swift in Sources */,
 				EA27B30E227954FF000FD652 /* GameBoard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

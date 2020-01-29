@@ -65,6 +65,7 @@ class LabeledStepper: UIStackView {
         stepper.maximumValue = Double(maxValue)
         stepper.minimumValue = Double(minValue)
         stepper.addTarget(self, action: #selector(valueChanged), for: .valueChanged)
+        stepper.backgroundColor = .lightGray
     }
 
     @objc

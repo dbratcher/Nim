@@ -9,8 +9,7 @@
 import UIKit
 
 class SameStackErrorViewController: UIViewController {
-
-    @IBOutlet private weak var backgroundView: UIView!
+    @IBOutlet private var backgroundView: UIView!
 
     @IBAction private func ok(_ sender: Any) {
         dismiss(animated: true, completion: nil)

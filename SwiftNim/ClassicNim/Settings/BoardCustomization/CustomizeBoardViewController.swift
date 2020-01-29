@@ -9,19 +9,12 @@
 import UIKit
 
 class CustomizeBoardViewController: NimViewController {
-    @IBOutlet private weak var stackNumber: UISegmentedControl!
-    @IBOutlet private weak var stack1: LabeledStepper!
-    @IBOutlet private weak var stack2: LabeledStepper!
-    @IBOutlet private weak var stack3: LabeledStepper!
-    @IBOutlet private weak var stack4: LabeledStepper!
-    @IBOutlet private weak var stack5: LabeledStepper!
-
-    private let firstStackNumber = 3
-    private var board = GameBoardStorage.load()
-
-    private var stackSteppers: [LabeledStepper] {
-        return [stack1, stack2, stack3, stack4, stack5]
-    }
+    @IBOutlet private var stackNumber: UISegmentedControl!
+    @IBOutlet private var stack1: LabeledStepper!
+    @IBOutlet private var stack2: LabeledStepper!
+    @IBOutlet private var stack3: LabeledStepper!
+    @IBOutlet private var stack4: LabeledStepper!
+    @IBOutlet private var stack5: LabeledStepper!
 
     @IBAction private func stackNumberChanged(_ sender: Any) {
         if stackNumber.selectedSegmentIndex < 0 || stackNumber.selectedSegmentIndex > stackNumber.numberOfSegments {
@@ -36,6 +29,13 @@ class CustomizeBoardViewController: NimViewController {
 
     @IBAction private func goBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+
+    private let firstStackNumber = 3
+    private var board = GameBoardStorage.load()
+
+    private var stackSteppers: [LabeledStepper] {
+        return [stack1, stack2, stack3, stack4, stack5]
     }
 
     override func viewWillAppear(_ animated: Bool) {

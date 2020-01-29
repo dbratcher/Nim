@@ -86,13 +86,6 @@ enum Difficulty: String {
     }
 }
 
-struct GameSettings {
-    var randomizeBoard: Bool = false
-    var firstMove: FirstMoveType = .player1
-    var opponent: PlayerType = .computer
-    var difficulty: Difficulty = .easy
-}
-
 enum GameSettingsStorage {
     private static let firstMoveKey = "firstMove"
     private static let difficultyKey = "difficulty"
@@ -125,4 +118,11 @@ enum GameSettingsStorage {
         UserDefaults.standard.set(settings.randomizeBoard, forKey: randomizeKey)
         UserDefaults.standard.set(settings.opponent.rawValue, forKey: opponentKey)
     }
+}
+
+struct GameSettings {
+    var randomizeBoard: Bool = false
+    var firstMove: FirstMoveType = .player1
+    var opponent: PlayerType = .computer
+    var difficulty: Difficulty = .easy
 }

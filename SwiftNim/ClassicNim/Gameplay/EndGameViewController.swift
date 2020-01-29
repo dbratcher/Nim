@@ -9,18 +9,16 @@
 import UIKit
 
 class EndGameViewController: UIViewController {
-
-    @IBOutlet private weak var stackView: UIStackView!
-    @IBOutlet private weak var backgroundView: UIView!
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var messageLabel: UILabel!
+    @IBOutlet private var stackView: UIStackView!
+    @IBOutlet private var backgroundView: UIView!
+    @IBOutlet private var titleLabel: UILabel!
+    @IBOutlet private var messageLabel: UILabel!
     var winner = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         backgroundView.layer.cornerRadius = 30
-        backgroundView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.8470588235)
         titleLabel.text = "\(winner) Won!"
     }
 

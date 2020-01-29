@@ -19,7 +19,7 @@ protocol MoveEngineDelegate: AnyObject {
 
 class MoveEngine {
     private let soundManager = SoundManager()
-    private var settings = GameSettingsStorage.load()
+    var settings = GameSettingsStorage.load()
     private var gameState = GameState(currentPlayer: .player1, opponent: .computer)
     private var isAnimating = false
 
@@ -55,9 +55,11 @@ class MoveEngine {
         case .player1:
             gameState.currentPlayer = .player1
             gameState.opponent = settings.opponent
+
         case .opponent:
             gameState.currentPlayer = settings.opponent
             gameState.opponent = .player1
+
         case .random :
             let mixItUp = Bool.random()
             gameState.currentPlayer = mixItUp ? settings.opponent : .player1
@@ -66,7 +68,10 @@ class MoveEngine {
 
         board = settings.randomizeBoard ? GameBoard.randomBoard() : GameBoardStorage.load()
 
-        delegate?.updateViews(for: gameState)
+        DispatchQueue.main.async {
+            self.delegate?.updateViews(for: self.gameState)
+        }
+
         if gameState.currentPlayer == .computer {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 // wait a second for user to get bearings before moving computer
@@ -119,6 +124,10 @@ class MoveEngine {
         delegate?.updateViews(for: gameState)
 
         if someoneWon() {
+            if settings.opponent == .computer {
+                let playerWon = gameState.currentPlayer == .player1
+                Statistics.shared.onePlayerGameEnded(with: playerWon, on: settings.difficulty)
+            }
             delegate?.displayEndPrompt(for: gameState)
             return
         }

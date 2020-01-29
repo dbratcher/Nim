@@ -9,7 +9,7 @@
 import UIKit
 
 class InstructionsViewController: NimViewController {
-    @IBOutlet private weak var buildNumber: UILabel!
+    @IBOutlet private var buildNumber: UILabel!
 
     @IBAction private func goBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)

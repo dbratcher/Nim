@@ -9,12 +9,10 @@
 import UIKit
 
 class SettingsViewController: NimViewController {
-    @IBOutlet private weak var firstMover: UISegmentedControl!
-    @IBOutlet private weak var difficulty: UISegmentedControl!
-    @IBOutlet private weak var randomize: UISwitch!
-    @IBOutlet private weak var customizeBoard: UIButton!
-
-    private var settings: GameSettings = GameSettingsStorage.load()
+    @IBOutlet private var firstMover: UISegmentedControl!
+    @IBOutlet private var difficulty: UISegmentedControl!
+    @IBOutlet private var randomize: UISwitch!
+    @IBOutlet private var customizeBoard: UIButton!
 
     @IBAction private func goBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -30,17 +28,6 @@ class SettingsViewController: NimViewController {
         settings.randomizeBoard = randomize.isOn
         customizeBoard.isEnabled = randomize.isOn == false
         GameSettingsStorage.save(settings)
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        settings = GameSettingsStorage.load()
-        difficulty.selectSegment(titled: settings.difficulty.toString())
-        firstMover.selectSegment(titled: settings.firstMove.toString())
-        randomize.isOn = settings.randomizeBoard
-        customizeBoard.isEnabled = randomize.isOn == false
-
     }
 
     @IBAction private func firstMoverChanged(_ sender: UISegmentedControl) {
@@ -61,5 +48,17 @@ class SettingsViewController: NimViewController {
 
         settings.difficulty = difficulty
         GameSettingsStorage.save(settings)
+    }
+
+    private var settings: GameSettings = GameSettingsStorage.load()
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        settings = GameSettingsStorage.load()
+        difficulty.selectSegment(titled: settings.difficulty.toString())
+        firstMover.selectSegment(titled: settings.firstMove.toString())
+        randomize.isOn = settings.randomizeBoard
+        customizeBoard.isEnabled = randomize.isOn == false
     }
 }

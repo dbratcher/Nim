@@ -10,7 +10,6 @@
 import XCTest
 
 class AIEngineTests: XCTestCase {
-
     func testEasyAI() {
         let easyAI = AIEngine(difficulty: .easy)
 
