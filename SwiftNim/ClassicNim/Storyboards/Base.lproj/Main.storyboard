@@ -130,8 +130,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="gE3-s8-vc6">
-                                <rect key="frame" x="66.666666666666686" y="133.66666666666663" width="242" height="555"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gE3-s8-vc6">
+                                <rect key="frame" x="66.666666666666686" y="125" width="242" height="572.33333333333337"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTE-vr-b90">
                                         <rect key="frame" x="0.0" y="0.0" width="242" height="52.333333333333336"/>
@@ -140,13 +140,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who Goes First" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lot-7u-vgx">
-                                        <rect key="frame" x="0.0" y="82.333333333333343" width="242" height="26.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="72.333333333333343" width="242" height="26.333333333333329"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hm0-br-Hp8">
-                                        <rect key="frame" x="0.0" y="138.66666666666666" width="242" height="32"/>
+                                        <rect key="frame" x="0.0" y="118.66666666666666" width="242" height="32"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <segments>
                                             <segment title="Player 1"/>
@@ -160,13 +160,13 @@
                                         </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer Difficulty" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRD-q3-5T6">
-                                        <rect key="frame" x="0.0" y="199.66666666666666" width="242" height="26.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="169.66666666666669" width="242" height="26.333333333333343"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XVC-0I-JYQ">
-                                        <rect key="frame" x="0.0" y="256" width="242" height="32"/>
+                                        <rect key="frame" x="0.0" y="216" width="242" height="32"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <segments>
                                             <segment title="Easy"/>
@@ -178,11 +178,29 @@
                                             <action selector="difficultyChanged:" destination="99i-jL-Baj" eventType="valueChanged" id="Vk3-Vc-zW6"/>
                                         </connections>
                                     </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Board Layout" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L23-Yx-KQR">
+                                        <rect key="frame" x="0.0" y="267" width="242" height="26.333333333333314"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UAz-Al-EeN">
+                                        <rect key="frame" x="0.0" y="313.33333333333331" width="242" height="32"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <segments>
+                                            <segment title="Vertical"/>
+                                            <segment title="Horizontal"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="layoutChanged:" destination="99i-jL-Baj" eventType="valueChanged" id="wAR-cg-2RS"/>
+                                        </connections>
+                                    </segmentedControl>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5F9-np-65Q">
-                                        <rect key="frame" x="0.0" y="317" width="242" height="31"/>
+                                        <rect key="frame" x="0.0" y="364.33333333333331" width="242" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Randomize Board:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAx-FT-1pF">
-                                                <rect key="frame" x="0.0" y="2.3333333333333144" width="175" height="26.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="2.3333333333333712" width="175" height="26.333333333333332"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -196,7 +214,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbC-tB-k7I">
-                                        <rect key="frame" x="0.0" y="378" width="242" height="39"/>
+                                        <rect key="frame" x="0.0" y="415.33333333333337" width="242" height="39"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
                                         <state key="normal" title="Customize Board">
                                             <color key="titleColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -206,7 +224,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Xy-oP-aFA">
-                                        <rect key="frame" x="0.0" y="447" width="242" height="39"/>
+                                        <rect key="frame" x="0.0" y="474.33333333333337" width="242" height="39"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
                                         <state key="normal" title="Support &amp; Rate App 🙏">
                                             <color key="titleColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -216,7 +234,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNR-eL-Fkv">
-                                        <rect key="frame" x="0.0" y="516" width="242" height="39"/>
+                                        <rect key="frame" x="0.0" y="533.33333333333337" width="242" height="39"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
                                         <state key="normal" title="Done">
                                             <color key="titleColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -241,6 +259,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="DMS-kQ-V0s"/>
                     <connections>
+                        <outlet property="boardLayout" destination="UAz-Al-EeN" id="RH8-qv-dqk"/>
                         <outlet property="customizeBoard" destination="vbC-tB-k7I" id="nFQ-4I-ahQ"/>
                         <outlet property="difficulty" destination="XVC-0I-JYQ" id="omE-l7-SUV"/>
                         <outlet property="firstMover" destination="hm0-br-Hp8" id="Xgi-TZ-sFo"/>

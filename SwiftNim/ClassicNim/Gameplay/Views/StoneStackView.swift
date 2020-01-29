@@ -53,10 +53,12 @@ class StoneStackView: UIStackView {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
 
-        axis = .vertical
         alignment = .fill
         distribution = .fillEqually
         spacing = 10
+
+        let settings = GameSettingsStorage.load()
+        axis = settings.boardLayout == .vertical ? .vertical : .horizontal
 
         guard let stack = engine.stack(for: stackID) else {
             assert(false, "\(self) could not setup for missing stack \(stackID)")

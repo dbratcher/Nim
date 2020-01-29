@@ -15,10 +15,12 @@ class GameBoardView: UIStackView {
         super.init(frame: .zero)
 
         translatesAutoresizingMaskIntoConstraints = false
-        axis = .horizontal
-        alignment = .lastBaseline
         distribution = .fillEqually
         spacing = 20
+
+        let settings = GameSettingsStorage.load()
+        axis = settings.boardLayout == .vertical ? .horizontal : .vertical
+        alignment = settings.boardLayout == .vertical ? .bottom : .trailing
 
         for stack in engine.board.stacks {
             let stoneStackView = StoneStackView(for: stack.identifier, with: engine)
