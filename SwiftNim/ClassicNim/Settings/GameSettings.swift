@@ -90,7 +90,6 @@ enum GameSettingsStorage {
     private static let firstMoveKey = "firstMove"
     private static let difficultyKey = "difficulty"
     private static let randomizeKey = "randomize"
-    private static let boardLayoutKey = "boardLayout"
     private static let opponentKey = "opponent"
 
     static func load() -> GameSettings {
@@ -101,9 +100,6 @@ enum GameSettingsStorage {
             settings.difficulty = difficulty
             settings.randomizeBoard = UserDefaults.standard.bool(forKey: randomizeKey)
         }
-
-        let loadedBoardLayout = UserDefaults.standard.string(forKey: boardLayoutKey)
-        settings.boardLayout = BoardLayout(rawValue: loadedBoardLayout ?? "") ?? .vertical
 
         if let firstMove = FirstMoveType(rawValue: UserDefaults.standard.string(forKey: firstMoveKey) ?? "") {
             settings.firstMove = firstMove
@@ -120,36 +116,12 @@ enum GameSettingsStorage {
         UserDefaults.standard.set(settings.firstMove.rawValue, forKey: firstMoveKey)
         UserDefaults.standard.set(settings.difficulty.rawValue, forKey: difficultyKey)
         UserDefaults.standard.set(settings.randomizeBoard, forKey: randomizeKey)
-        UserDefaults.standard.set(settings.boardLayout.rawValue, forKey: boardLayoutKey)
         UserDefaults.standard.set(settings.opponent.rawValue, forKey: opponentKey)
-    }
-}
-
-enum BoardLayout: String {
-    case vertical
-    case horizontal
-
-    init?(from title: String?) {
-        if title == "Vertical" {
-            self = .vertical
-        } else if title == "Horizontal" {
-            self = .horizontal
-        } else {
-            return nil
-        }
-    }
-
-    func toString() -> String {
-        switch self {
-        case .vertical: return "Vertical"
-        case .horizontal: return "Horizontal"
-        }
     }
 }
 
 struct GameSettings {
     var randomizeBoard: Bool = false
-    var boardLayout: BoardLayout = .vertical
     var firstMove: FirstMoveType = .player1
     var opponent: PlayerType = .computer
     var difficulty: Difficulty = .easy
