@@ -11,12 +11,15 @@ import UIKit
 class StoneStackView: UIStackView {
     private let soundManager = SoundManager()
     let stackID: UUID
+    private var stack: Stack?
     var hiddenStoneCount: Int {
         return subviews.filter({ $0 is StoneView && $0.alpha == 0 }).count
     }
 
     func hide(stoneViews: [StoneView], dispatchGroup: DispatchGroup) {
-        for view in arrangedSubviews.reversed() {
+        let settings = GameSettingsStorage.load()
+        let views = settings.boardLayout == .vertical ? arrangedSubviews.reversed() : arrangedSubviews
+        for view in views {
             guard let stoneView = view as? StoneView else { continue }
             if stoneViews.contains(stoneView) {
                 dispatchGroup.enter()
@@ -32,8 +35,17 @@ class StoneStackView: UIStackView {
             assert(false, "\(self) trying to remove not present stoneView: \(stoneView)")
             return
         }
-        let newIndex = hiddenStoneCount
-        let duration = Double(newIndex - currentIndex)
+
+        guard let stackCount = stack?.stoneCount else {
+            assert(false, "\(self) could not setup for missing stack \(stackID)")
+            return
+        }
+
+        let settings = GameSettingsStorage.load()
+        let horizontalIndex = stackCount - hiddenStoneCount - 1
+        let newIndex = settings.boardLayout == .vertical ? hiddenStoneCount : horizontalIndex
+        let indexDiff = Double(newIndex - currentIndex)
+        let duration = settings.boardLayout == .vertical ? indexDiff : -indexDiff
 
         soundManager.play(sound: .swoosh)
         UIView.animate(withDuration: duration, animations: {
@@ -64,6 +76,7 @@ class StoneStackView: UIStackView {
             assert(false, "\(self) could not setup for missing stack \(stackID)")
             return
         }
+        self.stack = stack
 
         for _ in 0..<stack.stoneCount {
             let stone = StoneView(for: stackID, with: engine)

@@ -20,7 +20,7 @@ class GameBoardView: UIStackView {
 
         let settings = GameSettingsStorage.load()
         axis = settings.boardLayout == .vertical ? .horizontal : .vertical
-        alignment = settings.boardLayout == .vertical ? .bottom : .trailing
+        alignment = settings.boardLayout == .vertical ? .bottom : .leading
 
         for stack in engine.board.stacks {
             let stoneStackView = StoneStackView(for: stack.identifier, with: engine)
