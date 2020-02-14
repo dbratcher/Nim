@@ -13,15 +13,25 @@ class SettingsViewController: NimViewController {
     @IBOutlet private var difficulty: UISegmentedControl!
     @IBOutlet private var randomize: UISwitch!
     @IBOutlet private var customizeBoard: UIButton!
+    @IBOutlet private var boardLayout: UISegmentedControl!
 
     @IBAction private func goBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
 
     @IBAction private func rateApp(_ sender: Any) {
-        let urlString = "https://itunes.apple.com/us/app/classic-nim/id501414326?ls=1&mt=8&action=write-review"
+        #if targetEnvironment(macCatalyst)
+            let urlString = "macappstore://itunes.apple.com/app/id1498572491?mt=12&action=write-review"
+        #else
+            let urlString = "https://itunes.apple.com/us/app/classic-nim/id501414326?ls=1&mt=8&action=write-review"
+        #endif
         guard let validURL = URL(string: urlString) else { return }
         UIApplication.shared.open(validURL, options: [:], completionHandler: nil)
+    }
+
+    @IBAction private func layoutChanged(_ sender: UISegmentedControl) {
+        settings.boardLayout = BoardLayout(from: sender.selectedTitle) ?? .vertical
+        GameSettingsStorage.save(settings)
     }
 
     @IBAction private func randomizeChanged(_ sender: Any) {
@@ -59,6 +69,7 @@ class SettingsViewController: NimViewController {
         difficulty.selectSegment(titled: settings.difficulty.toString())
         firstMover.selectSegment(titled: settings.firstMove.toString())
         randomize.isOn = settings.randomizeBoard
+        boardLayout.selectSegment(titled: settings.boardLayout.toString())
         customizeBoard.isEnabled = randomize.isOn == false
     }
 }

@@ -24,7 +24,12 @@ class TutorialViewController: PageVC {
     private let images: [String]
     private let bgColor: UIColor
 
+    private let nextButton: UIButton
+    private let prevButton: UIButton
+
     init(titles: [String], images: [String], bgColor: UIColor) {
+        self.nextButton = UIButton(type: .custom)
+        self.prevButton = UIButton(type: .custom)
         self.titles = titles
         self.images = images
         self.bgColor = bgColor
@@ -32,6 +37,24 @@ class TutorialViewController: PageVC {
 
         view.backgroundColor = bgColor
 
+        prevButton.setTitle("Previous", for: .normal)
+        prevButton.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(prevButton)
+        prevButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
+        prevButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10).isActive = true
+        prevButton.addTarget(self, action: #selector(prevAction), for: .touchUpInside)
+        prevButton.isHidden = true
+        prevButton.setTitleColor(#colorLiteral(red: 0.6064376235, green: 0.8653294444, blue: 0.9825807214, alpha: 1), for: .normal)
+
+        nextButton.setTitle("Next", for: .normal)
+        nextButton.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(nextButton)
+        nextButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
+        nextButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10).isActive = true
+        nextButton.addTarget(self, action: #selector(nextAction), for: .touchUpInside)
+        nextButton.setTitleColor(#colorLiteral(red: 0.6064376235, green: 0.8653294444, blue: 0.9825807214, alpha: 1), for: .normal)
+
+        delegate = self
         dataSource = self
         guard let firstVC = viewControllerAtIndex(index: 0) else {
             assert(false, "Failed to setup page view controller.")
@@ -44,6 +67,16 @@ class TutorialViewController: PageVC {
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    @objc
+    private func nextAction() {
+        setViewControllers(viewControllers, direction: .reverse, animated: true, completion: nil)
+    }
+
+    @objc
+    private func prevAction() {
+        setViewControllers(viewControllers, direction: .forward, animated: true, completion: nil)
     }
 }
 
@@ -60,10 +93,6 @@ class TutorialContentController: UIViewController {
     @objc
     func skip() {
         dismiss(animated: true, completion: nil)
-    }
-
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -118,6 +147,18 @@ class TutorialContentController: UIViewController {
         stackView.leftAnchor.constraint(greaterThanOrEqualTo: view.leftAnchor, constant: 20).isActive = true
         stackView.heightAnchor.constraint(lessThanOrEqualToConstant: 800).isActive = true
         stackView.widthAnchor.constraint(lessThanOrEqualToConstant: 400).isActive = true
+    }
+}
+
+extension TutorialViewController: UIPageViewControllerDelegate {
+    func pageViewController(_ page: PageVC, willTransitionTo pendingViewControllers: [UIViewController]) {
+        let nextViewController = pendingViewControllers.first as? TutorialContentController
+        let firstViewController = viewControllerAtIndex(index: 0) as? TutorialContentController
+        prevButton.isHidden = nextViewController?.titleText == firstViewController?.titleText
+
+        let lastIndex = presentationCount(for: self) - 1
+        let lastViewController = viewControllerAtIndex(index: lastIndex) as? TutorialContentController
+        nextButton.isHidden = nextViewController?.titleText == lastViewController?.titleText
     }
 }
 
