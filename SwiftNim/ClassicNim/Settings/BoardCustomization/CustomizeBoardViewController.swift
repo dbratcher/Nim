@@ -34,9 +34,7 @@ class CustomizeBoardViewController: NimViewController {
     private let firstStackNumber = 3
     private var board = GameBoardStorage.load()
 
-    private var stackSteppers: [LabeledStepper] {
-        return [stack1, stack2, stack3, stack4, stack5]
-    }
+    private var stackSteppers: [LabeledStepper] { [stack1, stack2, stack3, stack4, stack5] }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

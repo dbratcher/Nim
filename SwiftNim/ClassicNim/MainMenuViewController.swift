@@ -16,9 +16,7 @@ class MainMenuViewController: NimViewController {
     @IBOutlet private var settings: UIButton!
     @IBOutlet private var help: UIButton!
 
-    private var allButtons: [UIButton] {
-        return [player1, player2, statistics, settings, help]
-    }
+    private var allButtons: [UIButton] { [player1, player2, statistics, settings, help] }
 
     private let soundManager = SoundManager()
 

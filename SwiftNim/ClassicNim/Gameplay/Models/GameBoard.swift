@@ -15,9 +15,7 @@ struct Stack {
 
 struct GameBoard {
     var stacks: [Stack]
-    var totalStones: Int {
-        return stacks.reduce(0, { $0 + $1.stoneCount })
-    }
+    var totalStones: Int { stacks.reduce(0, { $0 + $1.stoneCount }) }
 
     var randomStack: Stack {
         let validStacks = stacks.filter { $0.stoneCount > 0 }

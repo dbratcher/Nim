@@ -12,9 +12,7 @@ class StoneStackView: UIStackView {
     private let soundManager = SoundManager()
     let stackID: UUID
     private var stack: Stack?
-    var hiddenStoneCount: Int {
-        return subviews.filter({ $0 is StoneView && $0.alpha == 0 }).count
-    }
+    var hiddenStoneCount: Int { subviews.filter({ $0 is StoneView && $0.alpha == 0 }).count }
 
     func hide(stoneViews: [StoneView], dispatchGroup: DispatchGroup) {
         let settings = GameSettingsStorage.load()

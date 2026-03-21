@@ -45,7 +45,7 @@ class AIEngineTests: XCTestCase {
         let board = GameBoard(stacks: [stack1, stack2, stack3])
 
         let (stones, stack) = hardAI.nextMove(for: board)
-        XCTAssert(stones == 3)
-        XCTAssert(stack.identifier == stack1.identifier)
+        XCTAssertEqual(stones, 3)
+        XCTAssertEqual(stack.identifier, stack1.identifier)
     }
 }

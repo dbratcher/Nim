@@ -86,18 +86,14 @@ class TutorialContentController: UIViewController {
     private let skipButton: UIButton
     private let isFinal: Bool
 
-    var titleText: String? {
-        return tutorialText.text
-    }
+    var titleText: String? { tutorialText.text }
 
     @objc
     func skip() {
         dismiss(animated: true, completion: nil)
     }
 
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
+    override var preferredStatusBarStyle: UIStatusBarStyle { .lightContent }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -187,11 +183,7 @@ extension TutorialViewController: UIPageViewControllerDataSource {
         return TutorialContentController(text: titles[index], image: images[index], bgColor: bgColor, isFinal: isFinal)
     }
 
-    func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return titles.count
-    }
+    func presentationCount(for pageViewController: UIPageViewController) -> Int { titles.count }
 
-    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-        return 0
-    }
+    func presentationIndex(for pageViewController: UIPageViewController) -> Int { 0 }
 }

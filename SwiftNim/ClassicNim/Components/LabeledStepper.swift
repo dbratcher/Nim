@@ -23,7 +23,7 @@ class LabeledStepper: UIStackView {
     private let font = UIFont(name: "MarkerFelt-Thin", size: 24)
     private let color = UIColor.white
 
-    public weak var delegate: LabelStepperDelegate?
+    weak var delegate: LabelStepperDelegate?
 
     @IBInspectable var text: String = "Stepper:" {
         didSet {

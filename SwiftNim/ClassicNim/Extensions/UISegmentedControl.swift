@@ -31,10 +31,8 @@ extension UISegmentedControl {
     /// - Parameter title: The title of the segment to return the index for
     /// - Returns: The index of the segment with the given title or nil if not present
     func index(for title: String) -> Int? {
-        for index in 0..<numberOfSegments {
-            if titleForSegment(at: index) == title {
-                return index
-            }
+        for index in 0..<numberOfSegments where titleForSegment(at: index) == title {
+            return index
         }
 
         return nil

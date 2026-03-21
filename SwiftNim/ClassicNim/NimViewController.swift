@@ -9,9 +9,7 @@
 import UIKit
 
 class NimViewController: UIViewController {
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
+    override var preferredStatusBarStyle: UIStatusBarStyle { .lightContent }
         // Show some help.
     @IBAction private func showHelp(_ sender: Any) {
         guard let url = URL(string: "https://github.com/dbratcher/nim/issues") else { return }

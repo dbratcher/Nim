@@ -45,9 +45,7 @@ class MoveEngine {
         }
     }
 
-    func stack(for stackID: UUID) -> Stack? {
-        return board.stacks.first { $0.identifier == stackID }
-    }
+    func stack(for stackID: UUID) -> Stack? { board.stacks.first { $0.identifier == stackID } }
 
     func configureBoard() {
         settings = GameSettingsStorage.load()
@@ -60,7 +58,7 @@ class MoveEngine {
             gameState.currentPlayer = settings.opponent
             gameState.opponent = .player1
 
-        case .random :
+        case .random:
             let mixItUp = Bool.random()
             gameState.currentPlayer = mixItUp ? settings.opponent : .player1
             gameState.opponent = mixItUp ? .player1 : settings.opponent

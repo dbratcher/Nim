@@ -24,10 +24,12 @@ class AIEngine {
             if board.totalStones < 6 {
                 (stones, stack) = idealMove(for: board)
             }
+
         case .medium: // random move if less than 10 stones on the board
             if board.totalStones < 10 {
                 (stones, stack) = idealMove(for: board)
             }
+
         case .hard: // ideal stack ideal number of stones
             (stones, stack) = idealMove(for: board)
         }

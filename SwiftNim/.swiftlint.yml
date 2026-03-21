@@ -1,5 +1,4 @@
 opt_in_rules:
-  - anyobject_protocol
   - array_init
   - attributes
   - closure_body_length
@@ -25,7 +24,7 @@ opt_in_rules:
   - legacy_random
   - let_var_whitespace
   - literal_expression_end_indentation
-  - lower_acl_than_[arent
+  - lower_acl_than_parent
   - modifier_order
   - multiline_function_chains
   - multiline_parameters
@@ -57,8 +56,6 @@ opt_in_rules:
   - unneeded_parentheses_in_closure_argument
   - unowned_variable_capture
   - untyped_error_in_catch
-  - unused_import
-  - unused_private_declaration
   - vertical_parameter_alignment_on_call
   - vertical_whitespace_between_cases
   - vertical_whitespace_closing_braces
