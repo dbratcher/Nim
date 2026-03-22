@@ -10,7 +10,7 @@ import UIKit
 
 typealias PageVC = UIPageViewController
 
-class TutorialViewController: PageVC {
+class TutorialViewController: PageVC, UIPageViewControllerDelegate {
     static func create() -> TutorialViewController {
         let tutorialTitles = ["Each game starts with a board of stones",
                               "Select stones in a single stack to remove 🔘",
@@ -27,6 +27,8 @@ class TutorialViewController: PageVC {
     private let nextButton: UIButton
     private let prevButton: UIButton
 
+    private var currentIndex = 0
+
     init(titles: [String], images: [String], bgColor: UIColor) {
         self.nextButton = UIButton(type: .custom)
         self.prevButton = UIButton(type: .custom)
@@ -40,8 +42,10 @@ class TutorialViewController: PageVC {
         prevButton.setTitle("Previous", for: .normal)
         prevButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(prevButton)
-        prevButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
-        prevButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10).isActive = true
+        let prevLeadingAnchor = view.safeAreaLayoutGuide.leadingAnchor
+        prevButton.leadingAnchor.constraint(equalTo: prevLeadingAnchor, constant: 10).isActive = true
+        let prevBottomAnchor = view.safeAreaLayoutGuide.bottomAnchor
+        prevButton.bottomAnchor.constraint(equalTo: prevBottomAnchor, constant: -10).isActive = true
         prevButton.addTarget(self, action: #selector(prevAction), for: .touchUpInside)
         prevButton.isHidden = true
         prevButton.setTitleColor(#colorLiteral(red: 0.6064376235, green: 0.8653294444, blue: 0.9825807214, alpha: 1), for: .normal)
@@ -49,8 +53,10 @@ class TutorialViewController: PageVC {
         nextButton.setTitle("Next", for: .normal)
         nextButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(nextButton)
-        nextButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
-        nextButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10).isActive = true
+        let nextTrailingAnchor = view.safeAreaLayoutGuide.trailingAnchor
+        nextButton.trailingAnchor.constraint(equalTo: nextTrailingAnchor, constant: -10).isActive = true
+        let nextBottomAnchor = view.safeAreaLayoutGuide.bottomAnchor
+        nextButton.bottomAnchor.constraint(equalTo: nextBottomAnchor, constant: -10).isActive = true
         nextButton.addTarget(self, action: #selector(nextAction), for: .touchUpInside)
         nextButton.setTitleColor(#colorLiteral(red: 0.6064376235, green: 0.8653294444, blue: 0.9825807214, alpha: 1), for: .normal)
 
@@ -71,12 +77,48 @@ class TutorialViewController: PageVC {
 
     @objc
     private func nextAction() {
-        setViewControllers(viewControllers, direction: .reverse, animated: true, completion: nil)
+        guard let currentVC = self.viewControllers?.first as? TutorialContentController else { return }
+
+        let nextIndex = currentVC.index + 1
+        guard let nextVC = viewControllerAtIndex(index: nextIndex) as? TutorialContentController else { return }
+
+        setViewControllers([nextVC], direction: .forward, animated: true) { [weak self] _ in
+            guard let self else { return }
+            self.currentIndex = nextIndex
+            self.updateUI()
+            self.setViewControllers([nextVC], direction: .forward, animated: false, completion: nil)
+        }
     }
 
     @objc
     private func prevAction() {
-        setViewControllers(viewControllers, direction: .forward, animated: true, completion: nil)
+        guard let currentVC = viewControllers?.first as? TutorialContentController else { return }
+
+        let prevIndex = currentVC.index - 1
+        guard let prevVC = viewControllerAtIndex(index: prevIndex) as? TutorialContentController else { return }
+
+        setViewControllers([prevVC], direction: .reverse, animated: true) { [weak self] _ in
+            guard let self else { return }
+            self.currentIndex = prevIndex
+            self.updateUI()
+            self.setViewControllers([prevVC], direction: .reverse, animated: false, completion: nil)
+        }
+    }
+
+    @objc
+    func pageViewController(_ pageViewController: UIPageViewController,
+                            didFinishAnimating finished: Bool,
+                            previousViewControllers: [UIViewController],
+                            transitionCompleted completed: Bool) {
+        guard completed, let currentVC = viewControllers?.first as? TutorialContentController else { return }
+
+        currentIndex = currentVC.index
+        updateUI()
+    }
+
+    private func updateUI() {
+        prevButton.isHidden = currentIndex == 0
+        nextButton.isHidden = currentIndex == titles.count - 1
     }
 }
 
@@ -85,6 +127,7 @@ class TutorialContentController: UIViewController {
     private let tutorialImage: UIImageView
     private let skipButton: UIButton
     private let isFinal: Bool
+    let index: Int
 
     var titleText: String? { tutorialText.text }
 
@@ -99,7 +142,8 @@ class TutorialContentController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    init(text: String, image: String, bgColor: UIColor, isFinal: Bool) {
+    init(text: String, image: String, bgColor: UIColor, isFinal: Bool, index: Int) {
+        self.index = index
         self.isFinal = isFinal
 
         tutorialImage = UIImageView(frame: .zero)
@@ -146,18 +190,6 @@ class TutorialContentController: UIViewController {
     }
 }
 
-extension TutorialViewController: UIPageViewControllerDelegate {
-    func pageViewController(_ page: PageVC, willTransitionTo pendingViewControllers: [UIViewController]) {
-        let nextViewController = pendingViewControllers.first as? TutorialContentController
-        let firstViewController = viewControllerAtIndex(index: 0) as? TutorialContentController
-        prevButton.isHidden = nextViewController?.titleText == firstViewController?.titleText
-
-        let lastIndex = presentationCount(for: self) - 1
-        let lastViewController = viewControllerAtIndex(index: lastIndex) as? TutorialContentController
-        nextButton.isHidden = nextViewController?.titleText == lastViewController?.titleText
-    }
-}
-
 extension TutorialViewController: UIPageViewControllerDataSource {
     func pageViewController(_ page: PageVC, viewControllerBefore current: UIViewController) -> UIViewController? {
         guard let currentPage = current as? TutorialContentController else { return nil }
@@ -180,10 +212,10 @@ extension TutorialViewController: UIPageViewControllerDataSource {
         guard index < titles.count else { return nil }
 
         let isFinal = index == titles.count - 1
-        return TutorialContentController(text: titles[index], image: images[index], bgColor: bgColor, isFinal: isFinal)
+        return TutorialContentController(text: titles[index], image: images[index], bgColor: bgColor, isFinal: isFinal, index: index)
     }
 
     func presentationCount(for pageViewController: UIPageViewController) -> Int { titles.count }
 
-    func presentationIndex(for pageViewController: UIPageViewController) -> Int { 0 }
+    func presentationIndex(for pageViewController: UIPageViewController) -> Int { currentIndex }
 }
