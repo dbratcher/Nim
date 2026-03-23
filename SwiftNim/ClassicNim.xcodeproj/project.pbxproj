@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A39CEB02F71DF1A0088624B /* TutorialContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A39CEAF2F71DF140088624B /* TutorialContentController.swift */; };
 		3A86458123E142D600994B03 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A86458023E142D600994B03 /* StatisticsViewController.swift */; };
 		3A86458323E14D0100994B03 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A86458223E14D0100994B03 /* Statistics.swift */; };
 		EA08E22822583DD100D54BC8 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA08E22722583DD100D54BC8 /* InstructionsViewController.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A39CEAF2F71DF140088624B /* TutorialContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialContentController.swift; sourceTree = "<group>"; };
 		3A86458023E142D600994B03 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		3A86458223E14D0100994B03 /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
 		EA08E22722583DD100D54BC8 /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 		EA64622322728B7C00C68933 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				3A39CEAF2F71DF140088624B /* TutorialContentController.swift */,
 				EAE5C7602282843F00297664 /* TutorialViewController.swift */,
 				EA3592E3226B816800AED06A /* LabeledStepper.swift */,
 			);
@@ -407,6 +410,7 @@
 				EAE5E426225595C100AC934B /* MainMenuViewController.swift in Sources */,
 				EAB7C7E7227F9433006D9383 /* EndGameViewController.swift in Sources */,
 				EA6462202271364800C68933 /* UISegmentedControl.swift in Sources */,
+				3A39CEB02F71DF1A0088624B /* TutorialContentController.swift in Sources */,
 				3A86458123E142D600994B03 /* StatisticsViewController.swift in Sources */,
 				EAE5E424225595C100AC934B /* AppDelegate.swift in Sources */,
 				EA3592DF226B7C9100AED06A /* CustomizeBoardViewController.swift in Sources */,
