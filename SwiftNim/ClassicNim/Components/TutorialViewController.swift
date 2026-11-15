@@ -29,6 +29,17 @@ class TutorialViewController: PageVC, UIPageViewControllerDelegate {
 
     private var currentIndex = 0
 
+    /// True while a page transition (button-driven or swipe) is in flight.
+    /// UIPageViewController throws "Unexpected view controller" if
+    /// setViewControllers is called again before the previous transition ends,
+    /// which happens easily on Mac where clicks land faster than the animation.
+    private var isTransitioning = false {
+        didSet {
+            nextButton.isEnabled = !isTransitioning
+            prevButton.isEnabled = !isTransitioning
+        }
+    }
+
     init(titles: [String], images: [String]) {
         self.nextButton = UIButton(type: .custom)
         self.prevButton = UIButton(type: .custom)
@@ -76,32 +87,51 @@ class TutorialViewController: PageVC, UIPageViewControllerDelegate {
 
     @objc
     private func nextAction() {
+        guard !isTransitioning else { return }
         guard let currentVC = self.viewControllers?.first as? TutorialContentController else { return }
 
         let nextIndex = currentVC.index + 1
         guard let nextVC = viewControllerAtIndex(index: nextIndex) as? TutorialContentController else { return }
 
+        isTransitioning = true
         setViewControllers([nextVC], direction: .forward, animated: true) { [weak self] _ in
-            guard let self else { return }
-            self.currentIndex = nextIndex
-            self.updateUI()
-            self.setViewControllers([nextVC], direction: .forward, animated: false, completion: nil)
+            // Re-set without animation on the next run loop turn to flush
+            // UIPageViewController's cached neighbours, then unlock the buttons.
+            DispatchQueue.main.async {
+                guard let self else { return }
+                self.setViewControllers([nextVC], direction: .forward, animated: false, completion: nil)
+                self.currentIndex = nextIndex
+                self.updateUI()
+                self.isTransitioning = false
+            }
         }
     }
 
     @objc
     private func prevAction() {
+        guard !isTransitioning else { return }
         guard let currentVC = viewControllers?.first as? TutorialContentController else { return }
 
         let prevIndex = currentVC.index - 1
         guard let prevVC = viewControllerAtIndex(index: prevIndex) as? TutorialContentController else { return }
 
+        isTransitioning = true
         setViewControllers([prevVC], direction: .reverse, animated: true) { [weak self] _ in
-            guard let self else { return }
-            self.currentIndex = prevIndex
-            self.updateUI()
-            self.setViewControllers([prevVC], direction: .reverse, animated: false, completion: nil)
+            // Re-set without animation on the next run loop turn to flush
+            // UIPageViewController's cached neighbours, then unlock the buttons.
+            DispatchQueue.main.async {
+                guard let self else { return }
+                self.setViewControllers([prevVC], direction: .reverse, animated: false, completion: nil)
+                self.currentIndex = prevIndex
+                self.updateUI()
+                self.isTransitioning = false
+            }
         }
+    }
+
+    func pageViewController(_ pageViewController: UIPageViewController,
+                            willTransitionTo pendingViewControllers: [UIViewController]) {
+        isTransitioning = true
     }
 
     @objc
@@ -109,6 +139,7 @@ class TutorialViewController: PageVC, UIPageViewControllerDelegate {
                             didFinishAnimating finished: Bool,
                             previousViewControllers: [UIViewController],
                             transitionCompleted completed: Bool) {
+        isTransitioning = false
         guard completed, let currentVC = viewControllers?.first as? TutorialContentController else { return }
 
         currentIndex = currentVC.index
