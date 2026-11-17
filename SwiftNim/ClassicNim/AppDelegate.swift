@@ -8,22 +8,22 @@
 
 import UIKit
 
-@UIApplicationMain
+@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var window: UIWindow?
-
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         true
     }
 
-    func applicationWillResignActive(_ application: UIApplication) { }
+    func application(_ application: UIApplication,
+                     configurationForConnecting connectingSceneSession: UISceneSession,
+                     options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+        UISceneConfiguration(name: "Default", sessionRole: connectingSceneSession.role)
+    }
+}
 
-    func applicationDidEnterBackground(_ application: UIApplication) { }
-
-    func applicationWillEnterForeground(_ application: UIApplication) { }
-
-    func applicationDidBecomeActive(_ application: UIApplication) { }
-
-    func applicationWillTerminate(_ application: UIApplication) { }
+/// iOS 27 requires the UIScene lifecycle. The window and root view controller
+/// come from Main.storyboard via the scene manifest in Info.plist.
+class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    var window: UIWindow?
 }
