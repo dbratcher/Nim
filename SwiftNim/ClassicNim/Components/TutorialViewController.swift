@@ -78,7 +78,7 @@ class TutorialViewController: PageVC, UIPageViewControllerDelegate {
 
             return
         }
-        setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
+        setViewControllers([firstVC], direction: .forward, animated: false, completion: nil)
     }
 
     required init?(coder: NSCoder) {
@@ -86,51 +86,59 @@ class TutorialViewController: PageVC, UIPageViewControllerDelegate {
     }
 
     @objc
-    private func nextAction() {
-        guard !isTransitioning else { return }
-        guard let currentVC = self.viewControllers?.first as? TutorialContentController else { return }
+    private func nextAction() { showPage(offset: 1) }
 
-        let nextIndex = currentVC.index + 1
-        guard let nextVC = viewControllerAtIndex(index: nextIndex) as? TutorialContentController else { return }
+    @objc
+    private func prevAction() { showPage(offset: -1) }
 
+    /// Bumped for every transition so stale completions and timeouts are ignored.
+    private var transitionID = 0
+
+    private func showPage(offset: Int) {
+        guard !isTransitioning,
+              let currentVC = viewControllers?.first as? TutorialContentController,
+              let target = viewControllerAtIndex(index: currentVC.index + offset) as? TutorialContentController
+        else { return }
+
+        let direction: UIPageViewController.NavigationDirection = offset > 0 ? .forward : .reverse
+        transitionID += 1
+        let id = transitionID
         isTransitioning = true
-        setViewControllers([nextVC], direction: .forward, animated: true) { [weak self] _ in
-            // Re-set without animation on the next run loop turn to flush
-            // UIPageViewController's cached neighbours, then unlock the buttons.
-            DispatchQueue.main.async {
-                guard let self else { return }
-                self.setViewControllers([nextVC], direction: .forward, animated: false, completion: nil)
-                self.currentIndex = nextIndex
-                self.updateUI()
-                self.isTransitioning = false
+        // The page dots read presentationIndex during the transition.
+        currentIndex = target.index
+
+        // Start on the next run loop turn. iOS 27 silently drops an animated
+        // setViewControllers issued while the button's touch is still being
+        // handled, and never calls its completion.
+        DispatchQueue.main.async { [weak self] in
+            self?.setViewControllers([target], direction: direction, animated: true) { _ in
+                DispatchQueue.main.async {
+                    self?.finishTransition(id, to: target, direction: direction)
+                }
             }
+        }
+
+        // Safety net: never leave the buttons locked if the completion is dropped.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak self] in
+            self?.finishTransition(id, to: target, direction: direction)
         }
     }
 
-    @objc
-    private func prevAction() {
-        guard !isTransitioning else { return }
-        guard let currentVC = viewControllers?.first as? TutorialContentController else { return }
+    private func finishTransition(_ id: Int,
+                                  to target: TutorialContentController,
+                                  direction: UIPageViewController.NavigationDirection) {
+        guard isTransitioning, id == transitionID else { return }
 
-        let prevIndex = currentVC.index - 1
-        guard let prevVC = viewControllerAtIndex(index: prevIndex) as? TutorialContentController else { return }
-
-        isTransitioning = true
-        setViewControllers([prevVC], direction: .reverse, animated: true) { [weak self] _ in
-            // Re-set without animation on the next run loop turn to flush
-            // UIPageViewController's cached neighbours, then unlock the buttons.
-            DispatchQueue.main.async {
-                guard let self else { return }
-                self.setViewControllers([prevVC], direction: .reverse, animated: false, completion: nil)
-                self.currentIndex = prevIndex
-                self.updateUI()
-                self.isTransitioning = false
-            }
-        }
+        // Re-set without animation to flush UIPageViewController's cached neighbours.
+        setViewControllers([target], direction: direction, animated: false, completion: nil)
+        currentIndex = target.index
+        updateUI()
+        isTransitioning = false
     }
 
     func pageViewController(_ pageViewController: UIPageViewController,
                             willTransitionTo pendingViewControllers: [UIViewController]) {
+        transitionID += 1
         isTransitioning = true
     }
 
