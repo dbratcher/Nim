@@ -15,7 +15,9 @@ class TutorialViewController: PageVC, UIPageViewControllerDelegate {
         let tutorialTitles = ["Each game starts with a board of stones",
                               "Select stones in a single stack to remove 🔘",
                               "Players take turns each removing stones 🤼",
-                              "Last person to remove a stone loses 😁"]
+                              GameSettingsStorage.load().lastStone == .wins
+                                  ? "Last person to remove a stone wins 🏆"
+                                  : "Last person to remove a stone loses 😁"]
         let tutorialImages = ["GameBoard", "SelectStones", "RemoveStones", "DontLose"]
         return TutorialViewController(titles: tutorialTitles, images: tutorialImages)
     }

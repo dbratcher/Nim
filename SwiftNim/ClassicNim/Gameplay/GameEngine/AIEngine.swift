@@ -10,9 +10,11 @@ import Foundation
 
 class AIEngine {
     let difficulty: Difficulty
+    let lastStone: LastStoneRule
 
-    init(difficulty: Difficulty) {
+    init(difficulty: Difficulty, lastStone: LastStoneRule = .loses) {
         self.difficulty = difficulty
+        self.lastStone = lastStone
     }
 
     func nextMove(for board: GameBoard) -> (Int, Stack) {
@@ -54,8 +56,10 @@ class AIEngine {
             let stackXor = xorSum ^ stack.stoneCount
             if stackXor < stack.stoneCount {
                 var idealStoneCount = stack.stoneCount - stackXor
-                if board.stacks.allSatisfy({ $0.stoneCount <= 1 || $0.identifier == stack.identifier }) {
-                    // handle endgame of stacks of 1
+                if lastStone == .loses,
+                   board.stacks.allSatisfy({ $0.stoneCount <= 1 || $0.identifier == stack.identifier }) {
+                    // misère endgame: leave an odd number of stacks of 1
+                    // (normal play needs no adjustment, the xor move is ideal)
                     let stacksOfOne = board.stacks.filter({ $0.stoneCount == 1 }).count
                     if stacksOfOne % 2 == 0 {
                         idealStoneCount -= 1

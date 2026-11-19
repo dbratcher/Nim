@@ -141,22 +141,36 @@ class MoveEngine {
         gameState.opponent = newOpponent
     }
 
+    /// Called after the players have been swapped, so `currentPlayer` is the one
+    /// about to move. Returns true when the game is over, leaving the winner in
+    /// `currentPlayer`.
     private func someoneWon() -> Bool {
-        if board.totalStones == 0 {
-            return true
-        }
+        switch settings.lastStone {
+        case .loses:
+            if board.totalStones == 0 {
+                // the previous player took the last stone and lost
+                return true
+            }
 
-        if board.totalStones == 1 {
-            // on next turn current player loses
-            swapCurrentPlayer()
-            return true
+            if board.totalStones == 1 {
+                // on next turn current player is forced to take the last stone
+                swapCurrentPlayer()
+                return true
+            }
+
+        case .wins:
+            if board.totalStones == 0 {
+                // the previous player took the last stone and won
+                swapCurrentPlayer()
+                return true
+            }
         }
 
         return false
     }
 
     private func moveForComputer() {
-        let computer = AIEngine(difficulty: settings.difficulty)
+        let computer = AIEngine(difficulty: settings.difficulty, lastStone: settings.lastStone)
         let (stones, stack) = computer.nextMove(for: board)
 
         guard let stoneViews = delegate?.views(for: stones, in: stack) else {

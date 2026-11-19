@@ -192,6 +192,24 @@
                                             <action selector="difficultyChanged:" destination="99i-jL-Baj" eventType="valueChanged" id="Vk3-Vc-zW6"/>
                                         </connections>
                                     </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Stone" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsR-7a-Lb1">
+                                        <rect key="frame" x="0.0" y="249.5" width="242" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="16"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LsS-7a-Sg2">
+                                        <rect key="frame" x="0.0" y="287" width="242" height="32"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <segments>
+                                            <segment title="Loses"/>
+                                            <segment title="Wins"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.60641503330000002" green="0.86524373290000001" blue="0.98662871119999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="lastStoneChanged:" destination="99i-jL-Baj" eventType="valueChanged" id="LsA-7a-Ac3"/>
+                                        </connections>
+                                    </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Board Layout" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAg-pB-sVl">
                                         <rect key="frame" x="0.0" y="249.5" width="242" height="17.5"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="16"/>
@@ -278,6 +296,7 @@
                         <outlet property="customizeBoard" destination="vbC-tB-k7I" id="nFQ-4I-ahQ"/>
                         <outlet property="difficulty" destination="XVC-0I-JYQ" id="omE-l7-SUV"/>
                         <outlet property="firstMover" destination="hm0-br-Hp8" id="Xgi-TZ-sFo"/>
+                        <outlet property="lastStone" destination="LsS-7a-Sg2" id="LsO-7a-Ot4"/>
                         <outlet property="randomize" destination="57t-Up-lLg" id="SU5-MZ-7Ot"/>
                     </connections>
                 </viewController>
@@ -973,6 +992,7 @@
                     <navigationItem key="navigationItem" id="ejf-pP-9at"/>
                     <connections>
                         <outlet property="buildNumber" destination="t0X-4f-v7B" id="I9A-D9-Buk"/>
+                        <outlet property="lastStoneRule" destination="yIp-YG-oES" id="RuL-8b-Ot5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5RO-5s-C7i" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -14,6 +14,7 @@ class SettingsViewController: NimViewController {
     @IBOutlet private var randomize: UISwitch!
     @IBOutlet private var customizeBoard: UIButton!
     @IBOutlet private var boardLayout: UISegmentedControl!
+    @IBOutlet private var lastStone: UISegmentedControl!
 
     @IBAction private func goBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -60,6 +61,16 @@ class SettingsViewController: NimViewController {
         GameSettingsStorage.save(settings)
     }
 
+    @IBAction private func lastStoneChanged(_ sender: UISegmentedControl) {
+        guard let lastStone = LastStoneRule(from: sender.selectedTitle) else {
+            assert(false, "Unknown last stone rule selected.")
+            return
+        }
+
+        settings.lastStone = lastStone
+        GameSettingsStorage.save(settings)
+    }
+
     private var settings: GameSettings = GameSettingsStorage.load()
 
     override func viewWillAppear(_ animated: Bool) {
@@ -70,6 +81,7 @@ class SettingsViewController: NimViewController {
         firstMover.selectSegment(titled: settings.firstMove.toString())
         randomize.isOn = settings.randomizeBoard
         boardLayout.selectSegment(titled: settings.boardLayout.toString())
+        lastStone.selectSegment(titled: settings.lastStone.toString())
         customizeBoard.isEnabled = randomize.isOn == false
     }
 }

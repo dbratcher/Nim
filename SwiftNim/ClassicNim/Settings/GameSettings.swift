@@ -86,12 +86,43 @@ enum Difficulty: String {
     }
 }
 
+/// What happens to the player who removes the last stone.
+enum LastStoneRule: String {
+    case loses // misère play, the classic rule
+    case wins // normal play
+
+    init?(from title: String?) {
+        if title == "Loses" {
+            self = .loses
+        } else if title == "Wins" {
+            self = .wins
+        } else {
+            return nil
+        }
+    }
+
+    func toString() -> String {
+        switch self {
+        case .loses: return "Loses"
+        case .wins: return "Wins"
+        }
+    }
+
+    var ruleDescription: String {
+        switch self {
+        case .loses: return "The last player to remove a stone loses"
+        case .wins: return "The last player to remove a stone wins"
+        }
+    }
+}
+
 enum GameSettingsStorage {
     private static let firstMoveKey = "firstMove"
     private static let difficultyKey = "difficulty"
     private static let randomizeKey = "randomize"
     private static let boardLayoutKey = "boardLayout"
     private static let opponentKey = "opponent"
+    private static let lastStoneKey = "lastStone"
 
     static func load() -> GameSettings {
         var settings = GameSettings()
@@ -113,6 +144,10 @@ enum GameSettingsStorage {
             settings.opponent = opponent
         }
 
+        if let lastStone = LastStoneRule(rawValue: UserDefaults.standard.string(forKey: lastStoneKey) ?? "") {
+            settings.lastStone = lastStone
+        }
+
         return settings
     }
 
@@ -122,6 +157,7 @@ enum GameSettingsStorage {
         UserDefaults.standard.set(settings.randomizeBoard, forKey: randomizeKey)
         UserDefaults.standard.set(settings.boardLayout.rawValue, forKey: boardLayoutKey)
         UserDefaults.standard.set(settings.opponent.rawValue, forKey: opponentKey)
+        UserDefaults.standard.set(settings.lastStone.rawValue, forKey: lastStoneKey)
     }
 }
 
@@ -153,4 +189,5 @@ struct GameSettings {
     var firstMove: FirstMoveType = .player1
     var opponent: PlayerType = .computer
     var difficulty: Difficulty = .easy
+    var lastStone: LastStoneRule = .loses
 }

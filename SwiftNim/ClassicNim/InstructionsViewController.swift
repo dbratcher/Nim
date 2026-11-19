@@ -10,6 +10,7 @@ import UIKit
 
 class InstructionsViewController: NimViewController {
     @IBOutlet private var buildNumber: UILabel!
+    @IBOutlet private var lastStoneRule: UILabel!
 
     @IBAction private func goBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -24,5 +25,10 @@ class InstructionsViewController: NimViewController {
 
         let buildNumberString = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? "Unknown"
         buildNumber.text = "Build Number: \(buildNumberString)"
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        lastStoneRule.text = GameSettingsStorage.load().lastStone.ruleDescription
     }
 }

@@ -50,6 +50,45 @@ class AIEngineTests: XCTestCase {
     }
 }
 
+class LastStoneRuleTests: XCTestCase {
+    private func board(_ counts: [Int]) -> GameBoard {
+        GameBoard(stacks: counts.map { Stack(identifier: UUID(), stoneCount: $0) })
+    }
+
+    private func hardMove(_ counts: [Int], _ rule: LastStoneRule) -> (stones: Int, stackCount: Int) {
+        let (stones, stack) = AIEngine(difficulty: .hard, lastStone: rule).nextMove(for: board(counts))
+        return (stones, stack.stoneCount)
+    }
+
+    func testOneStackLeft() {
+        // last stone loses: leave exactly one stone for the opponent
+        XCTAssertEqual(hardMove([0, 0, 3], .loses).stones, 2)
+        // last stone wins: take the whole stack
+        XCTAssertEqual(hardMove([0, 0, 3], .wins).stones, 3)
+    }
+
+    func testStackOfOneAndStackOfTwo() {
+        // last stone loses: empty the stack of two, opponent must take the last stone
+        let loses = hardMove([1, 2], .loses)
+        XCTAssertEqual(loses.stackCount, 2)
+        XCTAssertEqual(loses.stones, 2)
+
+        // last stone wins: balance the stacks at 1 and 1
+        let wins = hardMove([1, 2], .wins)
+        XCTAssertEqual(wins.stackCount, 2)
+        XCTAssertEqual(wins.stones, 1)
+    }
+
+    func testWinsRuleLeavesZeroNimSum() {
+        let counts = [3, 4, 5]
+        let move = hardMove(counts, .wins)
+        var remaining = counts
+        let index = remaining.firstIndex(of: move.stackCount)!
+        remaining[index] -= move.stones
+        XCTAssertEqual(remaining.reduce(0, ^), 0)
+    }
+}
+
 // Regression: rapid Next/Previous clicks crashed UIPageViewController on Mac (App Review 2.2.4)
 import UIKit
 class TutorialReproTests: XCTestCase {
